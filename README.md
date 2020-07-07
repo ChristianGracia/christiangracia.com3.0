@@ -6,9 +6,9 @@ This repo contains the code for my personal website reritten from scratch for th
 
 this code here is live at https://www.christiangracia.com | **TypeScript**
 
-my last website | code: https://github.com/ChristianGracia/christiangracia2.0 | **TypeScript**
+my last website | https://github.com/ChristianGracia/christiangracia2.0 | **TypeScript**
 
-my website before that | code: https://github.com/ChristianGracia/christiangracia.com | **JavaScript**
+my website before that | https://github.com/ChristianGracia/christiangracia.com | **JavaScript**
 
 ## Installation
 
