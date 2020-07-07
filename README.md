@@ -1,14 +1,14 @@
 # christiangracia3.0
 
-This repo contains the code for my personal website rerewritten in typescript
+This repo contains the code for my personal website reritten from scratch for the third time.
 
 **100% TypeScript React Site with React Hooks and only functional components (no class based)**
 
-code live at https://www.christiangracia.com
+this code here is live at https://www.christiangracia.com | **TypeScript**
 
-old website code: https://github.com/ChristianGracia/christiangracia2.0 (TypeScript)
+my last website | code: https://github.com/ChristianGracia/christiangracia2.0 | **TypeScript**
 
-older website code: https://github.com/ChristianGracia/christiangracia.com (JavaScript)
+my website before that | code: https://github.com/ChristianGracia/christiangracia.com | **JavaScript**
 
 ## Installation
 
