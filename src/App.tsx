@@ -1,58 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HomePage } from "./pages/home/home.component";
+// import { NavMenu } from "./components/nav/nav.component";
+// import { MainPage } from "./pages/main/main.component";
+// import { ProjectsPage } from "./pages/projects/projects.component";
+// import { AboutPage } from "./pages/about/about.component";
+// import { ContactPage } from "./pages/contact/contact.component";
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <Router>
+        <Route exact path="/" component={HomePage} />
+      </Router>
     </div>
   );
-}
+};
 
 export default App;
+
+// <Router>
+//   <Route exact path="/main" component={MainPage} />
+// </Router>
+//   <Router>
+//     <Route exact path="/about" component={AboutPage} />
+//   </Router>
+//   <Router>
+//     <Route exact path="/contact" component={ContactPage} />
+//   </Router>
+//   <Router>
+//     <Route exact path="/projects" component={ProjectsPage} />
+//   </Router>
