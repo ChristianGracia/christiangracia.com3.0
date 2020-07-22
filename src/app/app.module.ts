@@ -5,9 +5,25 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { MaterialModule } from "./material.module";
 
+import { FlexLayoutModule } from "@angular/flex-layout";
+
+import { FormsModule } from "@angular/forms";
+
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { HomePageComponent } from './screens/home-page/home-page.component';
+import { AboutPageComponent } from './screens/about-page/about-page.component';
+import { ContactPageComponent } from './screens/contact-page/contact-page.component';
+
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, MaterialModule],
+  declarations: [AppComponent, HomePageComponent, AboutPageComponent, ContactPageComponent],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    FlexLayoutModule,
+    FormsModule,
+    AppRoutingModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
