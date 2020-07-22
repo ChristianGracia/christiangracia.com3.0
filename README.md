@@ -1,27 +1,13 @@
-# ChristianGraciaSite
+# christiangracia3.0
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
+This repo contains the code for my personal website reritten from scratch for the third time but this time in Angular
 
-## Development server
+this code here will be live at https://www.christiangracia.com
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+my last website | **100% TypeScript React Site with React Hooks and only functional components**
 
-## Code scaffolding
+code: https://github.com/ChristianGracia/christiangracia2.0
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+my website before that | **Javascript**
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+code: https://github.com/ChristianGracia/christiangracia.com
