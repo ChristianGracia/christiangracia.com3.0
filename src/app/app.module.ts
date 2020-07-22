@@ -10,14 +10,23 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { FormsModule } from "@angular/forms";
 
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { HomePageComponent } from './screens/home-page/home-page.component';
-import { AboutPageComponent } from './screens/about-page/about-page.component';
-import { ContactPageComponent } from './screens/contact-page/contact-page.component';
-import { HeaderComponent } from './navigation/header/header.component';
-import { ProjectsPageComponent } from './screens/projects-page/projects-page.component';
+import { HomePageComponent } from "./screens/home-page/home-page.component";
+import { AboutPageComponent } from "./screens/about-page/about-page.component";
+import { ContactPageComponent } from "./screens/contact-page/contact-page.component";
+import { HeaderComponent } from "./navigation/header/header.component";
+import { ProjectsPageComponent } from "./screens/projects-page/projects-page.component";
+import { SideNavigationBarComponent } from "./navigation/side-navigation-bar/side-navigation-bar.component";
 
 @NgModule({
-  declarations: [AppComponent, HomePageComponent, AboutPageComponent, ContactPageComponent, HeaderComponent, ProjectsPageComponent],
+  declarations: [
+    AppComponent,
+    HomePageComponent,
+    AboutPageComponent,
+    ContactPageComponent,
+    HeaderComponent,
+    ProjectsPageComponent,
+    SideNavigationBarComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
