@@ -13,9 +13,11 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HomePageComponent } from './screens/home-page/home-page.component';
 import { AboutPageComponent } from './screens/about-page/about-page.component';
 import { ContactPageComponent } from './screens/contact-page/contact-page.component';
+import { HeaderComponent } from './navigation/header/header.component';
+import { ProjectsPageComponent } from './screens/projects-page/projects-page.component';
 
 @NgModule({
-  declarations: [AppComponent, HomePageComponent, AboutPageComponent, ContactPageComponent],
+  declarations: [AppComponent, HomePageComponent, AboutPageComponent, ContactPageComponent, HeaderComponent, ProjectsPageComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
