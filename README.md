@@ -7,9 +7,9 @@ this code here will be live at https://www.christiangracia.com
 
 # Pipeline
 
-staging = www.christiangracia-staging.herokuapp.com
+staging - https://christiangracia-staging.herokuapp.com/
 
-production - www.christiangracia-prod.herokuapp.com
+production - https://christiangracia-prod.herokuapp.com/
 
 
 ## My Previous sites
