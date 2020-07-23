@@ -9,7 +9,7 @@ import { AnimationOptions } from "ngx-lottie";
 })
 export class AnimatedDownArrowComponent {
   options: AnimationOptions = {
-    path: "../../assets/down-arrow",
+    path: "../../assets/arrow-down.json",
     autoplay: true,
     loop: true,
   };
