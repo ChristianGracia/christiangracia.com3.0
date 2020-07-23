@@ -1,4 +1,4 @@
-<section class="contact-form" fxFlex="400px">
+<section class="contact-form" fxFlex="500px" fxFlex.xs="300px">
   <form
     fxLayout="column"
     fxLayoutGap="10px"
@@ -40,6 +40,21 @@
         >Field must not be empty.</mat-error
       >
     </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <textarea
+        matInput
+        placeholder="Leave a message"
+        ngModel
+        name="message"
+        #messageInput="ngModel"
+        required
+      ></textarea>
+      <mat-error *ngIf="messageInput.hasError('required')"
+        >Field must not be empty.</mat-error
+      >
+    </mat-form-field>
+
     <button mat-raised-button color="primary" [disabled]="contactForm.invalid">
       Submit
     </button>
