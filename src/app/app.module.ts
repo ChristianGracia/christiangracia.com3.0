@@ -16,7 +16,7 @@ import { ContactPageComponent } from "./screens/contact-page/contact-page.compon
 import { HeaderComponent } from "./navigation/header/header.component";
 import { ProjectsPageComponent } from "./screens/projects-page/projects-page.component";
 import { SideNavigationBarComponent } from "./navigation/side-navigation-bar/side-navigation-bar.component";
-import { PersonalInfoComponent } from './screens/home-page/personal-info/personal-info.component';
+import { PersonalInfoComponent } from "./screens/home-page/personal-info/personal-info.component";
 
 @NgModule({
   declarations: [

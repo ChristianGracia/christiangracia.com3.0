@@ -1,14 +1,23 @@
-<div fxLayout="column" fxLayoutAlign="center center">
-  <mat-card fxFlex.xs="100" fxFlex="100px" class="name-card">
-    <mat-card-title color="" class="white-text"
+<div
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  fxLayoutGap="50px"
+  fxLayoutGap.xs="20%"
+>
+  <mat-card fxFlex.xs="100$" fxFlex="100px" class="name-card">
+    <mat-card-title color="" class="white-text name-text"
       >Christian Gracia
     </mat-card-title>
-    <mat-card-content class="white-text"
+    <mat-card-content class="white-text job-location-text"
       >Software Engineer | Providence, RI
     </mat-card-content>
+    <mat-card-content class="white-text job-location-text"
+      ><mat-icon class="email-icon">email</mat-icon>
+      christianmgracia@gmail.com
+    </mat-card-content>
   </mat-card>
-  <!-- <mat-card fxFlex.xs="100" fxFlex="200px">
-    <mat-card-title>Hi </mat-card-title>
-    <mat-card-content>Heres what I do </mat-card-content>
-  </mat-card> -->
+
+  <button mat-raised-button color="accent" (click)="navigateToSiteContent()">
+    Click me
+  </button>
 </div>
