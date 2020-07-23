@@ -22,6 +22,12 @@ import { SideNavigationBarComponent } from "./navigation/side-navigation-bar/sid
 import { PersonalInfoComponent } from "./screens/home-page/personal-info/personal-info.component";
 import { AnimatedDownArrowComponent } from "./components/animated-down-arrow/animated-down-arrow.component";
 import { LightningBoltComponent } from './components/lightning-bolt/lightning-bolt.component';
+import { SocialMediaLinksComponent } from './screens/home-page/social-media-links/social-media-links.component';
+import { ContactFormComponent } from './screens/contact-page/contact-form/contact-form.component';
+import { GithubRepoComponent } from './screens/projects-page/github-repo/github-repo.component';
+import { AboutMeComponent } from './screens/about-page/about-me/about-me.component';
+import { SkillsComponent } from './screens/about-page/skills/skills.component';
+import { CurrentJobComponent } from './screens/about-page/current-job/current-job.component';
 
 export function playerFactory() {
   return player;
@@ -39,6 +45,12 @@ export function playerFactory() {
     PersonalInfoComponent,
     AnimatedDownArrowComponent,
     LightningBoltComponent,
+    SocialMediaLinksComponent,
+    ContactFormComponent,
+    GithubRepoComponent,
+    AboutMeComponent,
+    SkillsComponent,
+    CurrentJobComponent,
   ],
   imports: [
     BrowserModule,
