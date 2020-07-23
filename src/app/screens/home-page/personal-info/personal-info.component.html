@@ -1,8 +1,8 @@
 <div
   fxLayout="column"
   fxLayoutAlign="center center"
-  fxLayoutGap="130px"
-  fxLayoutGap.xs="200px"
+  fxLayoutGap="30vh"
+  fxLayoutGap.xs="140px"
   class="container"
 >
   <mat-card fxFlex.xs="100$" fxFlex="100px" class="name-card">
@@ -13,7 +13,7 @@
       <app-lightning-bolt></app-lightning-bolt>
     </div>
     <mat-card-content class="white-text job-location-text"
-      >Software Engineer | Providence, RI
+      >Software Engineer <span class="pipe-color">|</span> Providence, RI
     </mat-card-content>
     <mat-card-content class="white-text job-location-text"
       ><mat-icon class="email-icon">email</mat-icon>
@@ -21,14 +21,42 @@
     </mat-card-content>
   </mat-card>
 
-  <div fxLayout="row">
+  <!-- mobile button -->
+  <div
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    fxLayoutGap="13vh"
+    fxHide.gt-xs
+  >
+    <div fxLayout="column" fxLayoutAlign="center center" fxFlex="1 1 auto">
+      <button
+        mat-raised-button
+        (click)="navigateToSiteContent()"
+        color="primary"
+        class="swipe-button"
+      >
+        <span class="white-text swipe-text">Swipe or click</span>
+      </button>
+      <app-animated-down-arrow
+        (click)="navigateToSiteContent()"
+      ></app-animated-down-arrow>
+    </div>
+  </div>
+
+  <!-- desktop button -->
+
+  <div
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    fxLayoutGap="13vh"
+    fxHide.lt-sm
+  >
     <button
       mat-raised-button
       (click)="navigateToSiteContent()"
-      class="swipe-button white-text"
+      class="enter-button"
     >
-      Swipe or click here
+      <span>See what I do</span>
     </button>
-    <app-animated-down-arrow></app-animated-down-arrow>
   </div>
 </div>

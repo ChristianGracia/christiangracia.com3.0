@@ -18,12 +18,23 @@
   }
   .job-location-text {
     font-size: 18px;
+    .pipe-color {
+      color: yellow;
+    }
   }
+
   .email-icon {
     margin-top: 5px;
   }
   .swipe-button {
     background-color: transparent;
-    font-size: 15px;
+    font-size: 20px;
   }
+  .swipe-text {
+    font-size: 20px;
+  }
+  // .black-text {
+  //   font-size: 20px;
+  //   font-weight: bold;
+  // }
 }
