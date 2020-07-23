@@ -1,15 +1,18 @@
-<mat-nav-list>
+<mat-nav-list class="side-nav-bar">
+  <div class="site-navigation-header">
+    <span class="site-navigation-text">Navigation</span>
+  </div>
   <a mat-list-item routerLink="/about">
     <span class="nav-caption" (click)="onClose()">About </span>
 
-    <mat-icon>face</mat-icon>
+    <mat-icon class="nav-icon">face</mat-icon>
   </a>
   <a mat-list-item routerLink="/projects">
     <span class="nav-caption" (click)="onClose()">Projects </span>
-    <mat-icon>design_services</mat-icon>
+    <mat-icon class="nav-icon">design_services</mat-icon>
   </a>
   <a mat-list-item routerLink="/contact">
     <span class="nav-caption" (click)="onClose()">Contact </span>
-    <mat-icon>email</mat-icon>
+    <mat-icon class="nav-icon">email</mat-icon>
   </a>
 </mat-nav-list>
