@@ -28,6 +28,7 @@ import { GithubRepoComponent } from './screens/projects-page/github-repo/github-
 import { AboutMeComponent } from './screens/about-page/about-me/about-me.component';
 import { SkillsComponent } from './screens/about-page/skills/skills.component';
 import { CurrentJobComponent } from './screens/about-page/current-job/current-job.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 export function playerFactory() {
   return player;
@@ -51,6 +52,7 @@ export function playerFactory() {
     AboutMeComponent,
     SkillsComponent,
     CurrentJobComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
