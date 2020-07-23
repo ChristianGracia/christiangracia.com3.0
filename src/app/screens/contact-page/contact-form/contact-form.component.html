@@ -1,1 +1,47 @@
-<p>contact-form works!</p>
+<section class="contact-form" fxFlex="400px">
+  <form
+    fxLayout="column"
+    fxLayoutGap="10px"
+    fxLayoutAlign="center center"
+    #contactForm="ngForm"
+    (ngSubmit)="submit(contactForm)"
+  >
+    <mat-form-field>
+      <input
+        type="text"
+        matInput
+        placeholder="Name"
+        ngModel
+        name="name"
+        required
+        minLength="4"
+        #nameInput="ngModel"
+      />
+      <!-- <mat-hint>Should be at least 6 characters long</mat-hint> -->
+      <mat-error *ngIf="nameInput.hasError('required')"
+        >Field must not be empty.</mat-error
+      >
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        type="email"
+        matInput
+        placeholder="Email"
+        ngModel
+        name="email"
+        required
+        email
+        #emailInput="ngModel"
+      />
+      <mat-error *ngIf="!emailInput.hasError('required')"
+        >Must be a valid email address.</mat-error
+      >
+      <mat-error *ngIf="emailInput.hasError('required')"
+        >Field must not be empty.</mat-error
+      >
+    </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="contactForm.invalid">
+      Submit
+    </button>
+  </form>
+</section>
