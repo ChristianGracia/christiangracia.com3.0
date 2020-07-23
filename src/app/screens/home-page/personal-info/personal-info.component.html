@@ -1,13 +1,17 @@
 <div
   fxLayout="column"
   fxLayoutAlign="center center"
-  fxLayoutGap="50px"
-  fxLayoutGap.xs="20%"
+  fxLayoutGap="20%"
+  fxLayoutGap.xs="200px"
+  class="container"
 >
   <mat-card fxFlex.xs="100$" fxFlex="100px" class="name-card">
-    <mat-card-title color="" class="white-text name-text"
-      >Christian Gracia
-    </mat-card-title>
+    <div fxLayout="row">
+      <mat-card-title color="" class="white-text name-text">
+        Christian Gracia
+      </mat-card-title>
+      <app-lightning-bolt></app-lightning-bolt>
+    </div>
     <mat-card-content class="white-text job-location-text"
       >Software Engineer | Providence, RI
     </mat-card-content>

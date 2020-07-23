@@ -3,16 +3,16 @@ import { Component } from "@angular/core";
 import { AnimationOptions } from "ngx-lottie";
 
 @Component({
-  selector: "app-animated-down-arrow",
+  selector: "app-lightning-bolt",
   template: `<ng-lottie [options]="options"></ng-lottie>`,
-  styleUrls: ["./animated-down-arrow.component.scss"],
+  styleUrls: ["./lightning-bolt.component.scss"],
 })
-export class AnimatedDownArrowComponent {
+export class LightningBoltComponent {
+  constructor() {}
+
   options: AnimationOptions = {
-    path: "../../assets/arrow-down.json",
+    path: "../../assets/lightning-bolt.json",
     autoplay: true,
     loop: true,
   };
-
-  constructor() {}
 }

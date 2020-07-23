@@ -21,6 +21,7 @@ import { ProjectsPageComponent } from "./screens/projects-page/projects-page.com
 import { SideNavigationBarComponent } from "./navigation/side-navigation-bar/side-navigation-bar.component";
 import { PersonalInfoComponent } from "./screens/home-page/personal-info/personal-info.component";
 import { AnimatedDownArrowComponent } from "./components/animated-down-arrow/animated-down-arrow.component";
+import { LightningBoltComponent } from './components/lightning-bolt/lightning-bolt.component';
 
 export function playerFactory() {
   return player;
@@ -37,6 +38,7 @@ export function playerFactory() {
     SideNavigationBarComponent,
     PersonalInfoComponent,
     AnimatedDownArrowComponent,
+    LightningBoltComponent,
   ],
   imports: [
     BrowserModule,

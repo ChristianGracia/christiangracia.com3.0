@@ -1,22 +1,28 @@
 @import "../../../../styles.scss";
-.name-card {
-  // padding: 30px;
-  height: 40px;
-  margin-top: 30px;
-  background-color: transparent;
-}
-.white-text {
-  color: #fff;
-}
-.name-text {
-  font-size: 25px;
-}
-.job-location-text {
-  font-size: 18px;
-}
-.email-icon {
-  margin-top: 5px;
-}
-.swipe-button {
-  background-color: transparent;
+
+.container {
+  margin-top: 50px;
+
+  .name-card {
+    // padding: 30px;
+    height: 40px;
+    margin-top: 30px;
+    background-color: transparent;
+  }
+  .white-text {
+    color: #fff;
+  }
+  .name-text {
+    font-size: 25px;
+    margin-right: 5px;
+  }
+  .job-location-text {
+    font-size: 18px;
+  }
+  .email-icon {
+    margin-top: 5px;
+  }
+  .swipe-button {
+    background-color: transparent;
+  }
 }
