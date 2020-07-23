@@ -17,7 +17,14 @@
     </mat-card-content>
   </mat-card>
 
-  <button mat-raised-button (click)="navigateToSiteContent()" fxFlex="10px">
-    Swipe up or click<app-animated-down-arrow></app-animated-down-arrow>
-  </button>
+  <div fxLayout="row">
+    <button
+      mat-raised-button
+      (click)="navigateToSiteContent()"
+      class="swipe-button white-text"
+    >
+      Swipe up or click
+    </button>
+    <app-animated-down-arrow></app-animated-down-arrow>
+  </div>
 </div>
