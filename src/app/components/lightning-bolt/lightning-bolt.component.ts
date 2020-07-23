@@ -11,7 +11,7 @@ export class LightningBoltComponent {
   constructor() {}
 
   options: AnimationOptions = {
-    path: "../../assets/lightning-bolt.json",
+    path: "../../assets/tech-hello.json",
     autoplay: true,
     loop: true,
   };

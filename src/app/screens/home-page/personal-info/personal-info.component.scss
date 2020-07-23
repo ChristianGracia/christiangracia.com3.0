@@ -33,6 +33,18 @@
   .swipe-text {
     font-size: 20px;
   }
+  .enter-button {
+    background-color: white;
+
+    .enter-text {
+      font-weight: bold;
+    }
+    &:hover {
+      color: black;
+
+      background-color: yellow;
+    }
+  }
   // .black-text {
   //   font-size: 20px;
   //   font-weight: bold;
