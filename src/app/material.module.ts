@@ -16,6 +16,7 @@ import {
     MatIconModule,
     MatSidenavModule,
     MatListModule,
+    MatCardModule,
   ],
   exports: [
     MatButtonModule,
