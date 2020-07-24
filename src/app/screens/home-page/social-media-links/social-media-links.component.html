@@ -1,24 +1,14 @@
 <div
   fxLayout="row"
-  fxLayoutAlign="space-between center"
-  fxLayoutGap="5px"
-  class="social-link-container"
+  fxLayoutAlign="center center"
+  fxLayoutGap="20px"
+  class="social-media-container"
 >
-  <div class="social-link">
-    <a href="https://github.com/ChristianGracia">
-      <i className="fab fa-github" class="social-icon"></i>
-    </a>
-  </div>
-  <div class="social-link">
-    <a href="https://www.linkedin.com/in/christiangracia">
-      <i className="fab fa-linkedin" class="social-icon"></i>
-    </a>
-  </div>
-  <div class="social-link">
-    <a href="http://www.twitter.com/CG_CODING">
-      <span class="social-icon">
-        <i className="fab fa-twitter" style="color: white;"></i>
-      </span>
-    </a>
-  </div>
+  <mat-icon
+    *ngFor="let social of socialMediaLinks; let i = index"
+    class="social-link"
+    svgIcon="{{ social }}"
+    (click)="openLink(social)"
+  >
+  </mat-icon>
 </div>

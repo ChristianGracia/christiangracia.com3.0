@@ -29,6 +29,7 @@ import { AboutMeComponent } from "./screens/about-page/about-me/about-me.compone
 import { SkillsComponent } from "./screens/about-page/skills/skills.component";
 import { CurrentJobComponent } from "./screens/about-page/current-job/current-job.component";
 import { FooterComponent } from "./components/footer/footer.component";
+import { HttpClientModule } from "@angular/common/http";
 
 export function playerFactory() {
   return player;
@@ -61,6 +62,7 @@ export function playerFactory() {
     FlexLayoutModule,
     FormsModule,
     AppRoutingModule,
+    HttpClientModule,
     LottieModule.forRoot({ player: playerFactory }),
   ],
   providers: [],

@@ -1,20 +1,12 @@
 @import "../../../../styles.scss";
 
-.social-link-container {
+.social-media-container {
+  margin-top: 20px;
   .social-link {
     color: white;
-    font-size: 20px;
-    a {
-      color: white;
-      font-size: 20px;
-    }
-    .social-icon {
-      font-size: 20px;
-      color: white;
+    cursor: pointer;
+    &:hover {
+      color: yellow;
     }
   }
-}
-.social-icon {
-  font-size: 20px;
-  color: white;
 }
