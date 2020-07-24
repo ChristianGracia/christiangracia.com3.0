@@ -9,16 +9,17 @@ import { RoutingService } from "../../../services/routing.service";
 export class PersonalInfoComponent implements OnInit {
   constructor(private routingService: RoutingService) {}
 
-  showCopiedText: boolean = false;
+  showCopiedText = false;
 
-  showCopyHint: boolean = false;
+  showCopyHint = false;
 
   ngOnInit() {}
   navigateToSiteContent() {
     this.routingService.navigateToSiteContent();
   }
   copyToKeyboard() {
-    let mockElement = document.createElement("textarea");
+    this.showCopyHint = false;
+    const mockElement = document.createElement("textarea");
 
     mockElement.style.display = "none";
     document.body.appendChild(mockElement);
