@@ -69,6 +69,7 @@
         <span class="white-text swipe-text">Swipe or click</span>
       </button>
       <app-animated-down-arrow
+        *ngIf="showDownArrow"
         (click)="navigateToSiteContent()"
       ></app-animated-down-arrow>
     </div>

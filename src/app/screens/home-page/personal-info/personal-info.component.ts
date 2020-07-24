@@ -13,7 +13,16 @@ export class PersonalInfoComponent implements OnInit {
 
   showCopyHint = false;
 
-  ngOnInit() {}
+  showDownArrow = false;
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.showDownArrow = true;
+      setTimeout(() => {
+        this.showDownArrow = false;
+      }, 4000);
+    }, 2000);
+  }
   navigateToSiteContent() {
     this.routingService.navigateToSiteContent();
   }
