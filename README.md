@@ -3,19 +3,21 @@
 This repo contains the code for my personal website reritten from scratch for the third time but this time in Angular
 
 
-this code here will be live at https://www.christiangracia.com
+this code is live at https://www.christiangracia.com
 
 # Pipeline
 
 staging - https://christiangracia-staging.herokuapp.com/
 
-production - https://christiangracia-prod.herokuapp.com/
+production - https://christiangracia.herokuapp.com/
 
 
 ## My Previous sites
 
 
 most recent | **100% TypeScript React Site with React Hooks and only functional components**
+
+live at : https://christiangracia-old.herokuapp.com/ (on a free dyno so will take a 1-2 mins to wake up)
 
 code: https://github.com/ChristianGracia/christiangracia2.0
 
