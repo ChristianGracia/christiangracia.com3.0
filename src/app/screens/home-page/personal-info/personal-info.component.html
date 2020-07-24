@@ -2,7 +2,7 @@
   fxLayout="column"
   fxLayoutAlign="center center"
   fxLayoutGap="30vh"
-  fxLayoutGap.xs="140px"
+  fxLayoutGap.xs="220px"
   class="container"
 >
   <mat-card fxFlex.xs="100$" fxFlex="100px" class="name-card">
@@ -15,10 +15,22 @@
     <mat-card-content class="white-text job-location-text"
       >Software Engineer <span class="pipe-color">|</span> Providence, RI
     </mat-card-content>
+
     <mat-card-content class="white-text job-location-text"
-      ><mat-icon class="email-icon">email</mat-icon>
+      >React, Angular, Java, C#, iOS, ++
+    </mat-card-content>
+
+    <mat-card-content
+      class="white-text email-container"
+      fxLayout="row"
+      fxLayoutAlign="space-between center"
+      fxLayoutGap="5px"
+      ><div class="email-icon-container">
+        <mat-icon class="email-icon">email</mat-icon>
+      </div>
       christianmgracia@gmail.com
     </mat-card-content>
+    <app-social-media-links></app-social-media-links>
   </mat-card>
 
   <!-- mobile button -->
