@@ -9,13 +9,17 @@ import { RoutingService } from "../../../services/routing.service";
 export class PersonalInfoComponent implements OnInit {
   constructor(private routingService: RoutingService) {}
 
-  showCopiedText = false;
+  public showCopiedText = false;
 
-  showCopyHint = false;
+  public showCopyHint = false;
 
-  showDownArrow = false;
+  public showDownArrow = false;
 
   ngOnInit() {
+    this.showDownArrowAnimation();
+  }
+
+  showDownArrowAnimation() {
     setTimeout(() => {
       this.showDownArrow = true;
       setTimeout(() => {
