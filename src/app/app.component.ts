@@ -32,5 +32,12 @@ export class AppComponent {
         "../assets/images/github.svg"
       )
     );
+
+    this.matIconRegistry.addSvgIcon(
+      "self-pic",
+      this.domSanitizer.bypassSecurityTrustResourceUrl(
+        "../assets/images/me-on-computer.svg"
+      )
+    );
   }
 }

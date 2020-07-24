@@ -41,8 +41,8 @@
     />
   </head>
   <body>
-    <app-root
-      ><div class="loader-container">
+    <app-root>
+      <div class="loader-container">
         <div class="container">
           <div class="row">
             <div id="loader">
@@ -54,26 +54,16 @@
               <div class="dot"></div>
               <div class="dot"></div>
               <div class="dot"></div>
-              <div class="loading"></div>
+              <div class="loading">
+                <p class="spinner-message">Loading christiangracia.com</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="loading-text-container">
-        <p class="loading-text">Loading christiangracia.com</p>
-      </div>
     </app-root>
   </body>
   <style>
-    .loading-text-container {
-      display: flex;
-      justify-content: center;
-      width: 290px;
-      margin: 0 auto;
-      margin-top: 70vh;
-      border-bottom: 1px solid gold;
-    }
-
     .loading-text {
       color: #2a00ff;
       font-size: 20px;
@@ -224,6 +214,8 @@
 
     .spinner-message {
       text-align: center;
+      font-size: 20px;
+      color: gold;
     }
   </style>
 </html>
