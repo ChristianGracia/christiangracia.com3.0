@@ -26,6 +26,18 @@
     font-size: 18px;
     .email-icon-container {
     }
+    .email-text {
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: white;
+        transform: scale(1.008);
+      }
+    }
+    .copy-text {
+      color: yellow;
+      font-style: italic;
+      margin-right: 35px;
+    }
   }
 
   .email-icon {

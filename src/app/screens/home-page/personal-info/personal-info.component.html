@@ -28,7 +28,16 @@
       ><div class="email-icon-container">
         <mat-icon class="email-icon">email</mat-icon>
       </div>
-      christianmgracia@gmail.com
+      <span
+        *ngIf="!showCopiedText"
+        #emailAddress
+        class="email-text"
+        (click)="copyToKeyboard(emailAddress)"
+        >christianmgracia@gmail.com</span
+      >
+      <span *ngIf="showCopiedText" class="copy-text"
+        >Copied to your clipboard!</span
+      >
     </mat-card-content>
     <app-social-media-links></app-social-media-links>
   </mat-card>
