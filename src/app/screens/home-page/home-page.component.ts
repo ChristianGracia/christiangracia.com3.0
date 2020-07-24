@@ -33,7 +33,8 @@ export class HomePageComponent implements OnInit {
 
         let offset = -30;
 
-        if (currentY - initialY < offset) {
+        //leaving both swipe up and swipe down as a trigger for now
+        if (currentY - initialY < offset || initialY - currentY < offset) {
           this.navigatingToSite = true;
           this.routingService.navigateToSiteContent();
         }
