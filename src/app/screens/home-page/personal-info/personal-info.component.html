@@ -29,7 +29,10 @@
       <div class="email-icon-container">
         <mat-icon class="email-icon">email</mat-icon>
       </div>
+
+      <!-- desktop -->
       <span
+        fxHide.lt-sm
         *ngIf="!showCopiedText"
         #emailAddress
         class="email-text"
@@ -38,7 +41,11 @@
         (mouseleave)="showCopyHint = false"
         >christianmgracia@gmail.com</span
       >
-      <span *ngIf="showCopiedText" class="copy-text"
+      <!-- mobile -->
+      <span fxHide.gt-sm #emailAddress class="email-text"
+        >christianmgracia@gmail.com</span
+      >
+      <span fxHide.lt-sm *ngIf="showCopiedText" class="copy-text"
         >Copied to your clipboard!</span
       >
     </mat-card-content>
