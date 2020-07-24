@@ -25,7 +25,8 @@
       fxLayout="row"
       fxLayoutAlign="space-between center"
       fxLayoutGap="5px"
-      ><div class="email-icon-container">
+    >
+      <div class="email-icon-container">
         <mat-icon class="email-icon">email</mat-icon>
       </div>
       <span
@@ -33,6 +34,8 @@
         #emailAddress
         class="email-text"
         (click)="copyToKeyboard(emailAddress)"
+        (mouseenter)="showCopyHint = true"
+        (mouseleave)="showCopyHint = false"
         >christianmgracia@gmail.com</span
       >
       <span *ngIf="showCopiedText" class="copy-text"
@@ -73,11 +76,16 @@
     fxHide.lt-sm
   >
     <button
+      *ngIf="!showCopyHint"
       mat-raised-button
       (click)="navigateToSiteContent()"
       class="enter-button"
     >
       <span class="enter-text">Click here to see what I do</span>
     </button>
+
+    <span *ngIf="showCopyHint" class="copy-hint-text"
+      >Click my email to copy it to your keyboard</span
+    >
   </div>
 </div>

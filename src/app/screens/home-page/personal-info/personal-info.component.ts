@@ -11,6 +11,8 @@ export class PersonalInfoComponent implements OnInit {
 
   showCopiedText: boolean = false;
 
+  showCopyHint: boolean = false;
+
   ngOnInit() {}
   navigateToSiteContent() {
     this.routingService.navigateToSiteContent();
