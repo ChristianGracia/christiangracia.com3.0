@@ -36,7 +36,7 @@ export class AppComponent {
     this.matIconRegistry.addSvgIcon(
       "self-pic",
       this.domSanitizer.bypassSecurityTrustResourceUrl(
-        "../assets/images/me-on-computer.svg"
+        "../assets/images/self-pic.svg"
       )
     );
   }
