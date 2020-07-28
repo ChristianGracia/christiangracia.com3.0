@@ -37,15 +37,13 @@ export class PersonalInfoComponent implements OnInit {
   }
   copyToKeyboard() {
     this.showCopyHint = false;
-    const mockElement = document.createElement("textarea");
 
-    mockElement.style.display = "none";
-    document.body.appendChild(mockElement);
-
+    var mockElement = document.createElement("textarea");
     mockElement.value = "christianmgracia@gmail.com";
+    document.body.appendChild(mockElement);
     mockElement.select();
-    document.execCommand("copy");
-    document.body.removeChild(mockElement);
+    document.execCommand("Copy");
+    mockElement.remove();
 
     this.showCopiedText = true;
     setTimeout(() => {
