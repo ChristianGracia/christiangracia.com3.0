@@ -9,6 +9,7 @@
     class="social-link"
     svgIcon="{{ social }}"
     (click)="openLink(social)"
+    [class.active]="activeIconArray[i]"
   >
   </mat-icon>
 </div>
