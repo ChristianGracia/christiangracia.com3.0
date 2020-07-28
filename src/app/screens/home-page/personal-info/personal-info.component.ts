@@ -21,7 +21,7 @@ export class PersonalInfoComponent implements OnInit {
     this.showDownArrowAnimation();
     setTimeout(() => {
       this.showTechAnimation = true;
-    }, 2000);
+    }, 3000);
   }
 
   showDownArrowAnimation() {
