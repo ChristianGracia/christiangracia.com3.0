@@ -1,6 +1,13 @@
 .card {
   margin: 4px;
+  text-align: center;
+  .title {
+    padding: 5px;
+    color: black;
+  }
+  .skill-list-item {
+  }
 }
 .mat-list .mat-list-item {
-  height: 30px;
+  height: 80px;
 }

@@ -12,8 +12,5 @@ export class SkillCardComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
-    console.log("list item");
-    console.log(this.listItems);
-  }
+  ngOnInit() {}
 }

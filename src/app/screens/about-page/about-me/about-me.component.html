@@ -15,19 +15,23 @@
   <div class="about-me-text-container">
     <p class="white-text">Full Stack</p>
   </div>
-  <div fxLayout="row wrap" fxLayoutAlign="center">
+  <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="5px">
     <app-skill-card
       listTitle="Languages"
       [listItems]="languagesArray"
     ></app-skill-card>
     <app-skill-card
-      listTitle="Technologies"
-      listItems="technologiesArray"
-    ></app-skill-card>
-    <app-skill-card listTitle="Skills" listItems="skillsArray"></app-skill-card>
-    <app-skill-card
       listTitle="Libraries + Frameworks"
-      listItems="librariesAndFrameworksArray"
+      [listItems]="librariesAndFrameworksArray"
     ></app-skill-card>
+    <app-skill-card
+      listTitle="Technologies"
+      [listItems]="technologiesArray"
+    ></app-skill-card>
+    <app-skill-card
+      listTitle="Skills"
+      [listItems]="skillsArray"
+    ></app-skill-card>
+    <p>More to come</p>
   </div>
 </div>

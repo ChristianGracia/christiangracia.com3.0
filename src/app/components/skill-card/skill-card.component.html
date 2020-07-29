@@ -1,9 +1,12 @@
 <mat-card class="card">
   <mat-card-content>
     <mat-list>
-      <mat-card-title>{{ listTitle }}</mat-card-title>
+      <mat-card-title class="title">{{ listTitle }}</mat-card-title>
 
-      <mat-list-item *ngFor="let listItem of listItems; let i = index">
+      <mat-list-item
+        *ngFor="let listItem of listItems; let i = index"
+        class="skill-list-item"
+      >
         {{ listItem }}
       </mat-list-item>
     </mat-list>
