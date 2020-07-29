@@ -31,7 +31,7 @@ export class HomePageComponent implements OnInit {
       .addEventListener("touchend", (event) => {
         let currentY = event.changedTouches[0].screenY;
 
-        let offset = -30;
+        let offset = -60;
 
         //leaving both swipe up and swipe down as a trigger for now
         if (currentY - initialY < offset || initialY - currentY < offset) {
