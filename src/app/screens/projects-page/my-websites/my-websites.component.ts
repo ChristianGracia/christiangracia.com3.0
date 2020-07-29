@@ -5,7 +5,7 @@ const CHRISTIAN_GRACIA_SITE: Site = new Site(
   "christiangracia.com v2",
   `My previous site that I wrote in TypeScript with only stateless functional components and React Hooks.
   React/Redux + Sass front-end. This is hosted on a free dyno so it takes 2 mins to wake up`,
-  "https://christiangracia-old.herokuapp.com/"
+  "https://www.christiangracia-old.herokuapp.com/"
 );
 
 const ON_A_BEAT_SITE: Site = new Site(
@@ -13,13 +13,13 @@ const ON_A_BEAT_SITE: Site = new Site(
   `MERN stack site I wrote and host for my friends in On a Beat. Hosted on Heroku on a single server.
   React/Redux front-end with a Node Js back-end and a MongoDB database. Users can make accounts, sign in,
   add/delete videos, songs, pics, and gifs to front page, and more with a site dashboard I built.`,
-  "https://onabeat.com"
+  "https://www.onabeat.com"
 );
 
 const NFL_SITE: Site = new Site(
   "Nature's Frontier Landscaping",
   "React front-end + NodeJS back-end site I made for Nature's Frontier Landscaping",
-  "https://nflandscaping.com"
+  "https://www.nflandscaping.com"
 );
 
 @Component({

@@ -42,6 +42,8 @@ const LIBRARY_AND_FRAMEWORKS = [
   "Angular",
   "React Native",
   "Rails/RoR",
+  "Django",
+  "Flask",
   "VueJS",
   "Redux",
   "NgRx",
