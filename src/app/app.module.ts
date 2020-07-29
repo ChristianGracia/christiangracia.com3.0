@@ -30,6 +30,7 @@ import { SkillsComponent } from "./screens/about-page/skills/skills.component";
 import { CurrentJobComponent } from "./screens/about-page/current-job/current-job.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { HttpClientModule } from "@angular/common/http";
+import { SkillCardComponent } from './components/skill-card/skill-card.component';
 
 export function playerFactory() {
   return player;
@@ -54,6 +55,7 @@ export function playerFactory() {
     SkillsComponent,
     CurrentJobComponent,
     FooterComponent,
+    SkillCardComponent,
   ],
   imports: [
     BrowserModule,

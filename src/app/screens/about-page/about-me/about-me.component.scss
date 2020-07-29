@@ -1,10 +1,16 @@
 @import "../../../../styles.scss";
-.self-pic-container {
-  margin: 0 auto;
-  .self-pic-image {
-    border-radius: 100px;
+
+.about-me-container {
+  // margin: 5px;
+  text-align: center;
+  .self-pic-container {
+    margin: 0 auto;
+
+    .self-pic-image {
+      border-radius: 100px;
+    }
   }
-}
-.white-text {
-  color: white;
+  .white-text {
+    color: white;
+  }
 }

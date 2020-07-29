@@ -1,0 +1,11 @@
+<mat-card class="card">
+  <mat-card-content>
+    <mat-list>
+      <mat-card-title>{{ listTitle }}</mat-card-title>
+
+      <mat-list-item *ngFor="let listItem of listItems; let i = index">
+        {{ listItem }}
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
