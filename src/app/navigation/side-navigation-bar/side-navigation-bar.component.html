@@ -3,21 +3,44 @@
     <span class="site-navigation-text">Navigation</span>
   </div>
   <a mat-list-item routerLink="/">
-    <span class="nav-caption" (click)="onClose()">Home </span>
+    <span
+      class="nav-caption"
+      (click)="onClose()"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Home
+    </span>
 
-    <!-- <mat-icon class="nav-icon">face</mat-icon> -->
+    <mat-icon
+      class="nav-icon"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >house</mat-icon
+    >
   </a>
   <a mat-list-item routerLink="/about">
-    <span class="nav-caption" (click)="onClose()">About </span>
+    <span class="nav-caption" (click)="onClose()" routerLinkActive="active-link"
+      >About
+    </span>
 
-    <!-- <mat-icon class="nav-icon">face</mat-icon> -->
+    <mat-icon class="nav-icon" routerLinkActive="active-link"
+      >perm_identity</mat-icon
+    >
   </a>
   <a mat-list-item routerLink="/projects">
-    <span class="nav-caption" (click)="onClose()">Projects </span>
-    <!-- <mat-icon class="nav-icon">design_services</mat-icon> -->
+    <span class="nav-caption" (click)="onClose()" routerLinkActive="active-link"
+      >Projects
+    </span>
+    <mat-icon class="nav-icon" routerLinkActive="active-link"
+      >dashboard</mat-icon
+    >
   </a>
   <a mat-list-item routerLink="/contact">
-    <span class="nav-caption" (click)="onClose()">Contact </span>
-    <!-- <mat-icon class="nav-icon">email</mat-icon> -->
+    <span class="nav-caption" (click)="onClose()" routerLinkActive="active-link"
+      >Contact
+    </span>
+    <mat-icon class="nav-icon" routerLinkActive="active-link"
+      >record_voice_over</mat-icon
+    >
   </a>
 </mat-nav-list>

@@ -3,7 +3,7 @@ a {
   color: #fff;
 
   &:hover {
-    color: grey;
+    color: yellow;
   }
 }
 .nav-caption {
@@ -24,11 +24,14 @@ a {
 .site-navigation-header {
   margin: 5px;
   padding: 10px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid yellow;
   .site-navigation-text {
     color: white;
     font-size: 28px;
     font-weight: bold;
     margin-left: 10px;
   }
+}
+.active-link {
+  color: yellow;
 }
