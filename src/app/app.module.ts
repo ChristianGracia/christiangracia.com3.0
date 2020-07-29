@@ -31,6 +31,8 @@ import { CurrentJobComponent } from "./screens/about-page/current-job/current-jo
 import { FooterComponent } from "./components/footer/footer.component";
 import { HttpClientModule } from "@angular/common/http";
 import { SkillCardComponent } from './components/skill-card/skill-card.component';
+import { MyWebsitesComponent } from './screens/projects-page/my-websites/my-websites.component';
+import { SiteComponent } from './screens/projects-page/my-websites/site/site.component';
 
 export function playerFactory() {
   return player;
@@ -56,6 +58,8 @@ export function playerFactory() {
     CurrentJobComponent,
     FooterComponent,
     SkillCardComponent,
+    MyWebsitesComponent,
+    SiteComponent,
   ],
   imports: [
     BrowserModule,
