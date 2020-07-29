@@ -6,11 +6,28 @@
   class="container"
 >
   <mat-card fxFlex.xs="100$" fxFlex="100px" class="name-card">
+    <div class="fire">
+      <div class="fire-left">
+        <div class="main-fire"></div>
+        <div class="particle-fire"></div>
+      </div>
+      <div class="fire-main">
+        <div class="main-fire"></div>
+        <div class="particle-fire"></div>
+      </div>
+      <div class="fire-right">
+        <div class="main-fire"></div>
+        <div class="particle-fire"></div>
+      </div>
+      <div class="fire-bottom">
+        <div class="main-fire"></div>
+      </div>
+    </div>
     <div fxLayout="row">
       <mat-card-title color="" class="white-text name-text">
         Christian Gracia
       </mat-card-title>
-      <app-lightning-bolt *ngIf="showTechAnimation"></app-lightning-bolt>
+      <!-- <app-lightning-bolt *ngIf="showTechAnimation"></app-lightning-bolt> -->
     </div>
     <mat-card-content class="white-text job-location-text"
       >Software Engineer <span class="pipe-color">|</span> Providence, RI
