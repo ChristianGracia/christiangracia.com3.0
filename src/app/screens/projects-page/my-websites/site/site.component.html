@@ -1,18 +1,17 @@
-<p></p>
-
 <mat-card>
   <mat-card-title>
     {{ site.title }}
   </mat-card-title>
-  <mat-card-content *ngIf="site.imageUrls">
+  <mat-card-content>
     <slideshow
-      [height]="'300px'"
-      [minHeight]="'525px'"
+      [height]="'350px'"
+      [minHeight]="'325px'"
       [autoPlay]="true"
       [showArrows]="false"
       [imageUrls]="site.imageUrls"
       [lazyLoad]="site.imageUrls?.length > 1"
       [autoPlayWaitForLazyLoad]="true"
+      [showDots]="true"
     >
     </slideshow>
   </mat-card-content>

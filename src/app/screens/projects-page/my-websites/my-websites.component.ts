@@ -5,7 +5,12 @@ const CHRISTIAN_GRACIA_SITE: Site = new Site(
   "christiangracia.com v2",
   `My previous site that I wrote in TypeScript with only stateless functional components and React Hooks.
   React/Redux + Sass front-end. This is hosted on a free dyno so it takes 2 mins to wake up`,
-  "https://christiangracia-old.herokuapp.com/"
+  "https://christiangracia-old.herokuapp.com/",
+  [
+    "https://www.ilac.com/wp-content/uploads/2019/06/placeholder-600x400.png",
+    "https://www.ilac.com/wp-content/uploads/2019/06/placeholder-600x400.png",
+    "https://www.ilac.com/wp-content/uploads/2019/06/placeholder-600x400.png",
+  ]
 );
 
 const ON_A_BEAT_SITE: Site = new Site(
@@ -17,7 +22,7 @@ const ON_A_BEAT_SITE: Site = new Site(
   [
     "https://i.imgur.com/h9Bm4yj.jpeg",
     "https://i.imgur.com/7zTCFnk.png",
-    "https://i.imgur.com/TIkU3jl.png",
+    "https://i.imgur.com/4eXhLGA.png",
     "https://i.imgur.com/c68FKLo.jpeg",
   ]
 );

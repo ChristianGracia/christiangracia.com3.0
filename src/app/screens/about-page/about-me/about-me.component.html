@@ -5,6 +5,9 @@
   fxLayoutGap="20px"
   class="about-me-container"
 >
+  <div class="about-me-text-container">
+    <h1 class="white-text">Full Stack</h1>
+  </div>
   <div class="self-pic-container">
     <img
       class="self-pic-image"
@@ -13,26 +16,24 @@
       width="100px"
     />
   </div>
-  <div class="about-me-text-container">
-    <p class="white-text">Full Stack</p>
-  </div>
-  <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="5px">
+
+  <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="20px">
     <app-skill-card
       listTitle="Languages"
       [listItems]="languagesArray"
     ></app-skill-card>
-    <app-skill-card
-      listTitle="Libraries + Frameworks"
-      [listItems]="librariesAndFrameworksArray"
+    <div>
+      <button mat-raised-button color="primary">See full resume</button>
+    </div>
+    <!-- <app-skill-card
+      listTitle="Front-end"
+      [listItems]="frontendArray"
     ></app-skill-card>
     <app-skill-card
-      listTitle="Technologies"
+      listTitle="Back-end"
       [listItems]="technologiesArray"
-    ></app-skill-card>
-    <app-skill-card
-      listTitle="Skills"
-      [listItems]="skillsArray"
-    ></app-skill-card>
-    <p>More to come</p>
+    ></app-skill-card> -->
+    <!-- <app-skill-card listTitle="APIs" [listItems]="skillsArray"></app-skill-card> -->
+    <p class="white-text">More to come</p>
   </div>
 </div>
