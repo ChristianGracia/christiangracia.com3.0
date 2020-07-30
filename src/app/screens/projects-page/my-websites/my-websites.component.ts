@@ -5,7 +5,7 @@ const CHRISTIAN_GRACIA_SITE: Site = new Site(
   "christiangracia.com v2",
   `My previous site that I wrote in TypeScript with only stateless functional components and React Hooks.
   React/Redux + Sass front-end. This is hosted on a free dyno so it takes 2 mins to wake up`,
-  "https://www.christiangracia-old.herokuapp.com/"
+  "https://christiangracia-old.herokuapp.com/"
 );
 
 const ON_A_BEAT_SITE: Site = new Site(
