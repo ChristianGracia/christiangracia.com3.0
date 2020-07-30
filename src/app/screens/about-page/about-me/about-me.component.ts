@@ -12,7 +12,13 @@ const LANGUAGES = [
   "HTML/CSS + Sass",
 ];
 
-const TECHNOLOGIES = [
+const FRONTEND_SKILLS = [
+  "React",
+  "Angular",
+  "React Native",
+  "Vue.js",
+  "mobile iOS/Android",
+
   // "SQL/PostgreSQL",
   // "NoSQL",
   // "Git",
@@ -24,8 +30,9 @@ const TECHNOLOGIES = [
   // "Linux",
 ];
 
-const SKILLS = [
+const BACKEND_SKILLS = [
   // "API Design",
+  // "REST"z
   // "iOS mobile development",
   // "Algorithns",
   // "Agile",
@@ -60,8 +67,8 @@ const LIBRARY_AND_FRAMEWORKS = [
 })
 export class AboutMeComponent implements OnInit {
   public languagesArray: string[] = [LANGUAGES.join(", ")];
-  public technologiesArray: string[] = [TECHNOLOGIES.join(", ")];
-  public skillsArray: string[] = [SKILLS.join(", ")];
+  public frontendArray: string[] = [FRONTEND_SKILLS.join(", ")];
+  // public skillsArray: string[] = [SKILLS.join(", ")];
   public librariesAndFrameworksArray: string[] = [
     LIBRARY_AND_FRAMEWORKS.join(", "),
   ];

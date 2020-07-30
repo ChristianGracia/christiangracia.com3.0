@@ -1,5 +1,5 @@
 <mat-card>
-  <mat-card-title>
+  <mat-card-title class="site-title">
     {{ site.title }}
   </mat-card-title>
   <mat-card-content>
@@ -17,6 +17,8 @@
   </mat-card-content>
   <mat-card-content>
     <p>{{ site.bottomText }}</p>
-    <a href="{{ site.url }}" target="_blank">{{ site.url }}</a>
+    <button mat-raised-button color="primary">
+      <a href="{{ site.url }}" target="_blank">{{ site.url }}</a>
+    </button>
   </mat-card-content>
 </mat-card>
