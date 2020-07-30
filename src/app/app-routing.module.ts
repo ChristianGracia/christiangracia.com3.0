@@ -22,6 +22,7 @@ const routes: Routes = [
     path: "projects",
     component: ProjectsPageComponent,
   },
+  { path: "**", redirectTo: "" },
 ];
 
 @NgModule({
