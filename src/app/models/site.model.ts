@@ -3,6 +3,6 @@ export class Site {
     public title?: string,
     public bottomText?: string,
     public url?: string,
-    public imageUrl?: string
+    public imageUrls?: string[]
   ) {}
 }

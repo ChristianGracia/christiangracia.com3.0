@@ -4,14 +4,14 @@
   <mat-card-title>
     {{ site.title }}
   </mat-card-title>
-  <mat-card-content>
+  <mat-card-content *ngIf="site.imageUrls">
     <slideshow
-      [height]="300"
+      [height]="'300px'"
       [minHeight]="'525px'"
       [autoPlay]="true"
       [showArrows]="false"
-      [imageUrls]="onabeatImageUrls"
-      [lazyLoad]="onabeatImageUrls?.length > 1"
+      [imageUrls]="site.imageUrls"
+      [lazyLoad]="site.imageUrls?.length > 1"
       [autoPlayWaitForLazyLoad]="true"
     >
     </slideshow>

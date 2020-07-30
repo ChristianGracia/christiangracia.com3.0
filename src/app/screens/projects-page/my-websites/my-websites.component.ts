@@ -13,13 +13,24 @@ const ON_A_BEAT_SITE: Site = new Site(
   `MERN stack site I wrote and host for my friends in On a Beat. Hosted on Heroku on a single server.
   React/Redux front-end with a Node Js back-end and a MongoDB database. Users can make accounts, sign in,
   add/delete videos, songs, pics, and gifs to front page, and more with a site dashboard I built.`,
-  "https://www.onabeat.com"
+  "https://www.onabeat.com",
+  [
+    "https://i.imgur.com/h9Bm4yj.jpeg",
+    "https://i.imgur.com/7zTCFnk.png",
+    "https://i.imgur.com/TIkU3jl.png",
+    "https://i.imgur.com/c68FKLo.jpeg",
+  ]
 );
 
 const NFL_SITE: Site = new Site(
   "Nature's Frontier Landscaping",
   "React front-end + NodeJS back-end site I made for Nature's Frontier Landscaping",
-  "https://www.nflandscaping.com"
+  "https://www.nflandscaping.com",
+  [
+    "https://i.imgur.com/TTgeW7Y.jpeg",
+    "https://i.imgur.com/dufsNaC.png",
+    "https://i.imgur.com/TIkU3jl.png",
+  ]
 );
 
 @Component({
@@ -28,19 +39,7 @@ const NFL_SITE: Site = new Site(
   styleUrls: ["./my-websites.component.scss"],
 })
 export class MyWebsitesComponent implements OnInit {
-  public sites: Site[] = [CHRISTIAN_GRACIA_SITE, ON_A_BEAT_SITE, NFL_SITE];
-  public nflandscapingImageUrls: string[] = [
-    "https://i.imgur.com/TTgeW7Y.jpeg",
-    "https://i.imgur.com/dufsNaC.png",
-    "https://i.imgur.com/TIkU3jl.png",
-  ];
-
-  public onabeatImageUrls: string[] = [
-    "https://i.imgur.com/h9Bm4yj.jpeg",
-    "https://i.imgur.com/7zTCFnk.png",
-    "https://i.imgur.com/TIkU3jl.png",
-    "https://i.imgur.com/c68FKLo.jpeg",
-  ];
+  public sites: Site[] = [ON_A_BEAT_SITE, NFL_SITE, CHRISTIAN_GRACIA_SITE];
 
   constructor() {}
 
