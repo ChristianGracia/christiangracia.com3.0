@@ -30,9 +30,11 @@ import { SkillsComponent } from "./screens/about-page/skills/skills.component";
 import { CurrentJobComponent } from "./screens/about-page/current-job/current-job.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { HttpClientModule } from "@angular/common/http";
-import { SkillCardComponent } from './components/skill-card/skill-card.component';
-import { MyWebsitesComponent } from './screens/projects-page/my-websites/my-websites.component';
-import { SiteComponent } from './screens/projects-page/my-websites/site/site.component';
+import { SkillCardComponent } from "./components/skill-card/skill-card.component";
+import { MyWebsitesComponent } from "./screens/projects-page/my-websites/my-websites.component";
+import { SiteComponent } from "./screens/projects-page/my-websites/site/site.component";
+
+import { SlideshowModule } from "ng-simple-slideshow";
 
 export function playerFactory() {
   return player;
@@ -69,6 +71,7 @@ export function playerFactory() {
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    SlideshowModule,
 
     LottieModule.forRoot({ player: playerFactory }),
   ],

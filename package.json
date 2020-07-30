@@ -25,6 +25,7 @@
     "@angular/router": "~8.2.14",
     "express": "^4.17.1",
     "lottie-web": "^5.7.1",
+    "ng-simple-slideshow": "^1.2.9",
     "ngx-lottie": "^6.2.1",
     "rxjs": "~6.4.0",
     "rxjs-compat": "^6.6.0",

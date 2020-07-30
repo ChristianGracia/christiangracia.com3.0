@@ -29,11 +29,19 @@ const NFL_SITE: Site = new Site(
 })
 export class MyWebsitesComponent implements OnInit {
   public sites: Site[] = [CHRISTIAN_GRACIA_SITE, ON_A_BEAT_SITE, NFL_SITE];
-  // tiles: any[] = [
-  //   { text: "One", cols: 1, rows: 1, color: "lightblue" },
-  //   { text: "Two", cols: 1, rows: 1, color: "lightgreen" },
-  //   { text: "Three", cols: 1, rows: 1, color: "lightpink" },
-  // ];
+  public nflandscapingImageUrls: string[] = [
+    "https://i.imgur.com/TTgeW7Y.jpeg",
+    "https://i.imgur.com/dufsNaC.png",
+    "https://i.imgur.com/TIkU3jl.png",
+  ];
+
+  public onabeatImageUrls: string[] = [
+    "https://i.imgur.com/h9Bm4yj.jpeg",
+    "https://i.imgur.com/7zTCFnk.png",
+    "https://i.imgur.com/TIkU3jl.png",
+    "https://i.imgur.com/c68FKLo.jpeg",
+  ];
+
   constructor() {}
 
   ngOnInit() {

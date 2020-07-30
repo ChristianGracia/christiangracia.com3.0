@@ -1,15 +1,7 @@
-<div fxLayout="row wrap" fxLayoutAlign="center center">
+<div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="center center">
   <div *ngFor="let site of sites; let i = index">
-    <app-site [site]="site"></app-site>
+    <div class="site-container">
+      <app-site [site]="site"></app-site>
+    </div>
   </div>
 </div>
-<!-- <mat-grid-list cols="4" rowHeight="200px">
-      <mat-grid-tile
-        *ngFor="let tile of tiles"
-        [colspan]="tile.cols"
-        [rowspan]="tile.rows"
-        [style.background]="tile.color"
-      >
-        <img src="https://picsum.photos/200/300/?random" />
-      </mat-grid-tile>
-    </mat-grid-list> -->
