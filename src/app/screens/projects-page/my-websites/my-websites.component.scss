@@ -3,3 +3,15 @@
   max-width: 500px;
   padding: 10px;
 }
+
+.header-container {
+  text-align: center;
+  margin-bottom: 20px;
+
+  .header-text {
+    color: white;
+
+    font-size: 40px;
+    width: 100vw;
+  }
+}
