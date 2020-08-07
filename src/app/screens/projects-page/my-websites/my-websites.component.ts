@@ -7,9 +7,9 @@ const CHRISTIAN_GRACIA_SITE: Site = new Site(
   React/Redux + Sass front-end. This is hosted on a free dyno so it takes 2 mins to wake up`,
   "https://christiangracia-old.herokuapp.com/",
   [
-    "https://www.ilac.com/wp-content/uploads/2019/06/placeholder-600x400.png",
-    "https://www.ilac.com/wp-content/uploads/2019/06/placeholder-600x400.png",
-    "https://www.ilac.com/wp-content/uploads/2019/06/placeholder-600x400.png",
+    "https://i.imgur.com/dga9J4G.jpg",
+    "https://i.imgur.com/SKBvjbr.jpg",
+    "https://i.imgur.com/gNBNVGJ.jpg",
   ]
 );
 
