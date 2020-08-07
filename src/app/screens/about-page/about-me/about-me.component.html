@@ -6,7 +6,7 @@
   class="about-me-container"
 >
   <div class="about-me-text-container">
-    <h1 class="white-text">Full Stack</h1>
+    <h1>Full Stack</h1>
   </div>
   <!-- <div class="self-pic-container">
     <img
@@ -17,11 +17,14 @@
     />
   </div> -->
 
+  <app-current-job></app-current-job>
+
   <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="20px">
     <app-skill-card
       listTitle="Languages"
       [listItems]="languagesArray"
     ></app-skill-card>
+
     <!-- <div>
       <button mat-raised-button color="primary">See full resume</button>
     </div> -->
