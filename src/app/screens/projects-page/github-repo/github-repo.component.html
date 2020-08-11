@@ -1,4 +1,15 @@
-<div fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="center center">
+<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
+  <h1 style="color: white;">Github</h1>
+  <button
+    (click)="
+      openLink('https://christiangracia-api.herokuapp.com/github/all-repos')
+    "
+    mat-raised-button
+  >
+    rendered from my API (see here)
+  </button>
+</div>
+<div fxLayout="row wrap" fxLayoutAlign="center center">
   <mat-card
     *ngFor="let repo of gitRepos"
     fxLayout="column"
