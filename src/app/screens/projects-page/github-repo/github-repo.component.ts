@@ -10,6 +10,6 @@ export class GithubRepoComponent implements OnInit {
   constructor(private githubService: GithubService) {}
 
   ngOnInit() {
-    console.log(this.githubService.sayHi());
+    console.log(this.githubService.getAllRepos());
   }
 }
