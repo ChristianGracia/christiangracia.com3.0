@@ -9,6 +9,7 @@ import { Repo } from "src/app/models";
 })
 export class GithubRepoComponent implements OnInit {
   public gitRepos: Repo[] = [];
+  window: Window = window;
   constructor(private githubService: GithubService) {}
 
   ngOnInit() {
@@ -19,5 +20,9 @@ export class GithubRepoComponent implements OnInit {
     this.githubService
       .getAllRepos()
       .subscribe((repos: Repo[]) => (this.gitRepos = repos));
+  }
+
+  openLink(url: string) {
+    window.open(url, "_blank");
   }
 }

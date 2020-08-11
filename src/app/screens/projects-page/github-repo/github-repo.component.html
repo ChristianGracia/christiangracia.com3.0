@@ -1,1 +1,22 @@
-<p style="color: white;">github-repo works!</p>
+<div fxLayout="row wrap" fxLayoutGap="20px" fxLayoutAlign="center center">
+  <mat-card
+    *ngFor="let repo of gitRepos"
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    class="repo-card"
+  >
+    <mat-card-title class="repo-title">
+      {{ repo.name }}
+    </mat-card-title>
+    <mat-card-content>
+      <span class="repo-description">
+        {{ repo.description }}
+      </span>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="openLink(repo.url)">
+        See code
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
