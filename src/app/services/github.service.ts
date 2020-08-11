@@ -10,8 +10,8 @@ import { Repo } from "../models";
 export class GithubService {
   constructor(private http: HttpClient) {}
 
-  public getAllRepos(): Repo[] {
-    return this.http.get(environment.apiUrl + "/github/all-repos").pipe(
+  public getAllRepos() {
+    return this.http.get<Repo[]>(environment.apiUrl + "/github/all-repos").pipe(
       map((data: Repo[]) => {
         return data;
       })
