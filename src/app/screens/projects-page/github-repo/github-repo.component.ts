@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { GithubService } from "../../../services/github.service";
+import { Repo } from "src/app/models";
 
 @Component({
   selector: "app-github-repo",
@@ -7,9 +8,16 @@ import { GithubService } from "../../../services/github.service";
   styleUrls: ["./github-repo.component.scss"],
 })
 export class GithubRepoComponent implements OnInit {
+  public gitRepos: Repo[] = [];
   constructor(private githubService: GithubService) {}
 
   ngOnInit() {
-    console.log(this.githubService.getAllRepos());
+    this.getGithubRepos();
+  }
+
+  getGithubRepos() {
+    this.githubService
+      .getAllRepos()
+      .subscribe((repos: Repo[]) => (this.gitRepos = repos));
   }
 }
