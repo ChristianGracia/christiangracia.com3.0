@@ -9,12 +9,16 @@
     rendered from my API (see here)
   </button>
 </div>
-<div fxLayout="row wrap" fxLayoutAlign="center center">
+<div
+  fxLayout="row wrap"
+  fxLayoutAlign="center center"
+  style="background-color: white;"
+>
   <mat-card
     *ngFor="let repo of gitRepos"
     fxLayout="column"
     fxLayoutAlign="center center"
-    class="repo-card"
+    class="repo-card mat-elevation-z6"
   >
     <mat-card-title class="repo-title">
       {{ repo.name }}
