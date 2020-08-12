@@ -10,4 +10,8 @@ export class RoutingService {
   public navigateToSiteContent() {
     this.router.navigate(["/projects"]);
   }
+
+  public navigateToHomePage() {
+    this.router.navigate(["/"]);
+  }
 }

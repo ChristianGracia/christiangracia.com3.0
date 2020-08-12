@@ -1,4 +1,4 @@
-<section class="contact-form">
+<section class="contact-form" *ngIf="!emailReceived">
   <form
     fxLayout="column"
     fxLayoutGap="20px"
@@ -53,12 +53,15 @@
         >Field must not be empty.</mat-error
       >
     </mat-form-field>
-    <p style="color: red;">
-      This isnt implemented yet! Dont send me a message here lol
-    </p>
 
     <button mat-raised-button color="primary" [disabled]="contactForm.invalid">
       Submit
     </button>
   </form>
+</section>
+<section *ngIf="emailReceived" fxLayout="column" fxLayoutAlign="center center">
+  <h1>I have recived your email!</h1>
+  <button (click)="goToSite()" mat-raised-button color="primary">
+    Back to site
+  </button>
 </section>

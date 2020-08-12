@@ -1,6 +1,9 @@
+import { EmailMessage } from "./../../../models/email-message.model";
 import { Component, OnInit } from "@angular/core";
 import { NgForm } from "@angular/forms";
 import { EmailService } from "../../../services/email.service";
+import { EmailMessage } from "src/app/models/email-message.model";
+import { RoutingService } from "src/app/services/routing.service";
 
 @Component({
   selector: "app-contact-form",
@@ -8,19 +11,29 @@ import { EmailService } from "../../../services/email.service";
   styleUrls: ["./contact-form.component.scss"],
 })
 export class ContactFormComponent implements OnInit {
-  constructor(private emailService: EmailService) {}
+  constructor(
+    private emailService: EmailService,
+    private routingService: RoutingService
+  ) {}
+
+  emailReceived: boolean = false;
 
   ngOnInit() {}
 
   submit(form: NgForm) {
-    console.log(form);
-    let messageParams = {
-      ...form.value,
-    };
+    const messageParams = new EmailMessage(
+      form.value.name,
+      form.value.email,
+      form.value.message
+    );
+    this.emailService.sendContactEmail(messageParams).subscribe((data) => {
+      if (data.name) {
+        this.emailReceived = true;
+      }
+    });
+  }
 
-    let url = "https://sendpoint.io/id/gWFzbxh9O";
-    this.emailService
-      .sendContactEmail(url, messageParams)
-      .subscribe((data) => console.log(data));
+  goToSite() {
+    this.routingService.navigateToHomePage();
   }
 }
