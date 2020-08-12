@@ -25,7 +25,7 @@ export class ContactFormComponent implements OnInit {
       form.value.email,
       form.value.message
     );
-    this.emailService.sendContactEmail(messageParams).subscribe((data) => {
+    this.emailService.sendContactEmail(messageParams).subscribe((data: any) => {
       if (data.name) {
         this.emailReceived = true;
       }
