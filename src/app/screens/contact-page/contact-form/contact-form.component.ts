@@ -1,4 +1,3 @@
-import { EmailMessage } from "./../../../models/email-message.model";
 import { Component, OnInit } from "@angular/core";
 import { NgForm } from "@angular/forms";
 import { EmailService } from "../../../services/email.service";
