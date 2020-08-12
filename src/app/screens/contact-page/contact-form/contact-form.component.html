@@ -1,12 +1,12 @@
-<section class="contact-form" fxFlex="500px" fxFlex.xs="300px">
+<section class="contact-form">
   <form
     fxLayout="column"
-    fxLayoutGap="10px"
+    fxLayoutGap="20px"
     fxLayoutAlign="center center"
     #contactForm="ngForm"
     (ngSubmit)="submit(contactForm)"
   >
-    <mat-form-field>
+    <mat-form-field color="accent">
       <input
         type="text"
         matInput
@@ -17,12 +17,11 @@
         minLength="4"
         #nameInput="ngModel"
       />
-      <!-- <mat-hint>Should be at least 6 characters long</mat-hint> -->
       <mat-error *ngIf="nameInput.hasError('required')"
         >Field must not be empty.</mat-error
       >
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field color="accent">
       <input
         type="email"
         matInput
@@ -41,7 +40,7 @@
       >
     </mat-form-field>
 
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="example-full-width" color="accent">
       <textarea
         matInput
         placeholder="Leave a message"
