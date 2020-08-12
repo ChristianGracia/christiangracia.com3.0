@@ -2,8 +2,13 @@
 
 This repo contains the code for my personal website reritten from scratch for the third time but this time in Angular
 
-
 this code is live at https://www.christiangracia.com
+
+# API
+
+this site is served by my Typescript Node API back-end
+
+link to live api: https://christiangracia-api.herokuapp.com/
 
 # Pipeline
 
@@ -11,9 +16,7 @@ staging - https://christiangracia-staging.herokuapp.com/
 
 production - https://christiangracia.herokuapp.com/
 
-
 ## My Previous sites
-
 
 most recent | **100% TypeScript React Site with React Hooks and only functional components**
 
