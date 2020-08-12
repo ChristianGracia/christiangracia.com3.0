@@ -10,3 +10,23 @@ body {
 body {
   margin: 0;
 }
+
+.page-header-container {
+  display: flex;
+  flex-direction: column;
+  // width: auto;
+  text-align: center;
+  padding-bottom: 20px;
+  .page-header {
+    font-size: 40px;
+    padding: 10px 10px;
+    border-bottom: 1px solid black;
+    // max-width: 150px;
+    margin: 0 auto;
+  }
+  .page-description-text {
+    margin-top: 20px;
+    padding: 0px 10px;
+    display: inline;
+  }
+}

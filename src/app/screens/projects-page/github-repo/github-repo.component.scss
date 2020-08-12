@@ -1,3 +1,4 @@
+@import "../../../../styles.scss";
 .repo-description {
   // max-width: 290px;
   // display: inline;
@@ -12,8 +13,4 @@
   @media (min-width: 500px) {
     margin: 15px 30px;
   }
-}
-.api-description-text {
-  padding: 0px 10px;
-  display: inline;
 }
