@@ -8,5 +8,12 @@
 .repo-card {
   max-width: 300px;
   min-width: 300px;
-  margin: 10px 30px;
+  margin: 30px 5px;
+  @media (min-width: 500px) {
+    margin: 15px 30px;
+  }
+}
+.api-description-text {
+  padding: 0px 10px;
+  display: inline;
 }
