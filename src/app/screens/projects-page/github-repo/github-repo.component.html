@@ -1,33 +1,18 @@
-<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
-  <!-- <button
-    (click)="
-      openLink('https://christiangracia-api.herokuapp.com/github/all-repos')
-    "
-    mat-raised-button
-  >
-    These cards are rendered by my API (see here)
-  </button> -->
-
-  <div class="page-header-container">
-    <span class="page-header">GitHub Repos</span>
-    <span class="page-description-text"
-      >All my public reposotories on GitHub. Click open to view each of my repos
-      code. These repo cards are rendered from JSON that comes from my back-end
-      API located at
-      <a href="https://christiangracia-api.herokuapp.com/" target="_blank"
-        >christiangracia-api.herokuapp.com/</a
-      >.
-    </span>
-    <span class="api-description-text">
-      Click
-      <a
-        href="https://christiangracia-api.herokuapp.com/github/all-repos"
-        target="_blank"
-        >here</a
-      >
-      to see the JSON that is used to render each card below</span
+<app-content-header
+  contentTitle="GitHub Repos"
+  contentDescription="My public github repositories. Click view to see each of my repo's code."
+></app-content-header>
+<div class="api-description-container">
+  <span class="api-description-text">
+    Click
+    <a
+      href="https://christiangracia-api.herokuapp.com/github/all-repos"
+      target="_blank"
+      >here</a
     >
-  </div>
+    to see the JSON that is used to render each card below from my back-end
+    API</span
+  >
 </div>
 <div
   fxLayout="row wrap"
@@ -50,7 +35,7 @@
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="primary" (click)="openLink(repo.url)">
-        Code&nbsp;<mat-icon>search</mat-icon>
+        View&nbsp;<mat-icon>search</mat-icon>
       </button>
     </mat-card-actions>
   </mat-card>

@@ -35,6 +35,7 @@ import { MyWebsitesComponent } from "./screens/projects-page/my-websites/my-webs
 import { SiteComponent } from "./screens/projects-page/my-websites/site/site.component";
 
 import { SlideshowModule } from "ng-simple-slideshow";
+import { ContentHeaderComponent } from './components/content-header/content-header.component';
 
 export function playerFactory() {
   return player;
@@ -62,6 +63,7 @@ export function playerFactory() {
     SkillCardComponent,
     MyWebsitesComponent,
     SiteComponent,
+    ContentHeaderComponent,
   ],
   imports: [
     BrowserModule,
