@@ -19,4 +19,8 @@ export class EmailService {
       ...emailBody,
     });
   }
+
+  public sendSiteVisitEmail() {
+    return this.http.post(environment.apiUrl + "/email/site-visit", {});
+  }
 }
