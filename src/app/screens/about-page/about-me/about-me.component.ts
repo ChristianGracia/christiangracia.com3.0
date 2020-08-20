@@ -7,6 +7,7 @@ const LANGUAGES = [
   "C#",
   "Ruby",
   "Swift",
+  "Objective-C",
   "C",
   "TypeScript",
   "HTML/CSS + Sass",
@@ -17,8 +18,12 @@ const FRONTEND_SKILLS = [
   "Angular",
   "React Native",
   "Vue.js",
-  "mobile iOS/Android",
-
+  "Mobile iOS/Android",
+  "Bootstrap",
+  "Material Design",
+  "Tailwind CSS",
+  "ASP.NET Web apps",
+  "Java Web apps",
   // "SQL/PostgreSQL",
   // "NoSQL",
   // "Git",
@@ -31,16 +36,16 @@ const FRONTEND_SKILLS = [
 ];
 
 const BACKEND_SKILLS = [
-  // "API Design",
-  // "REST"z
-  // "iOS mobile development",
-  // "Algorithns",
-  // "Agile",
-  // "Unit Testing",
-  // "MERN stacks",
-  // "OOP",
-  // "SOLID",
-  // "TDD",
+  "RESTful API Design",
+  "NodeJS",
+  "Spring Boot",
+  "Ruby on Rails",
+  "GraphQL",
+  "AWS Serverless APIs",
+  ".NET Core",
+  ".NET",
+  "SOAP",
+  "JSON and XML APIs",
 ];
 
 const LIBRARY_AND_FRAMEWORKS = [
@@ -67,10 +72,10 @@ const LIBRARY_AND_FRAMEWORKS = [
 })
 export class AboutMeComponent implements OnInit {
   public languagesArray: string[] = [LANGUAGES.join(", ")];
-  public frontendArray: string[] = [FRONTEND_SKILLS.join(", ")];
+  public frontEndArray: string[] = [FRONTEND_SKILLS.join(", ")];
   // public skillsArray: string[] = [SKILLS.join(", ")];
-  public librariesAndFrameworksArray: string[] = [
-    LIBRARY_AND_FRAMEWORKS.join(", "),
+  public backEndArray: string[] = [
+    BACKEND_SKILLS.join(", "),
   ];
 
   constructor() {}

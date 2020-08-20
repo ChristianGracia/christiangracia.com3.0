@@ -20,16 +20,28 @@
 
   <app-current-job></app-current-job>
 
-  <!-- <mat-list>
-    <mat-list-item>Web Development</mat-list-item>
-    <mat-list-item>iOS Development</mat-list-item>
-    <mat-list-item>API Engineer</mat-list-item>
-  </mat-list> -->
+  <!-- <app-content-header
+    contentTitle="Skills"
+    contentDescription="What I'm good at and enjoy using"
+  ></app-content-header> -->
 
-  <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="20px">
+  <div
+    fxLayout="column"
+    fxLayoutAlign="center"
+    fxLayoutGap="20px"
+    class="skill-card-container"
+  >
     <app-skill-card
       listTitle="Languages"
       [listItems]="languagesArray"
+    ></app-skill-card>
+    <app-skill-card
+      listTitle="Front-end"
+      [listItems]="frontEndArray"
+    ></app-skill-card>
+    <app-skill-card
+      listTitle="Back-end"
+      [listItems]="backEndArray"
     ></app-skill-card>
 
     <!-- <div>
