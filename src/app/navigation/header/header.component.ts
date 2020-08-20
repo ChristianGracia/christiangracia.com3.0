@@ -6,7 +6,8 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
   styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent implements OnInit {
-  @Output() sidenavToggle = new EventEmitter<void>();
+  @Output()
+  sidenavToggle = new EventEmitter<void>();
   constructor() {}
 
   ngOnInit() {}

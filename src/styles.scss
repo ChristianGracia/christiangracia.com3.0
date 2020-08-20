@@ -25,8 +25,11 @@ body {
     margin: 0 auto;
   }
   .page-description-text {
-    margin-top: 20px;
+    text-align: left;
+
     padding: 0px 10px;
     display: inline;
+    max-width: 70vw;
+    margin: 20px 0px auto;
   }
 }

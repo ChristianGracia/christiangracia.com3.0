@@ -9,15 +9,23 @@
   </button> -->
 
   <div class="page-header-container">
-    <span class="page-header">Github</span>
+    <span class="page-header">GitHub Repos</span>
     <span class="page-description-text"
-      >These cards are rendered from JSON that comes from my API. Click
+      >All my public reposotories on GitHub. Click open to view each of my repos
+      code. These repo cards are rendered from JSON that comes from my back-end
+      API located at
+      <a href="https://christiangracia-api.herokuapp.com/" target="_blank"
+        >christiangracia-api.herokuapp.com/</a
+      >.
+    </span>
+    <span class="api-description-text">
+      Click
       <a
         href="https://christiangracia-api.herokuapp.com/github/all-repos"
         target="_blank"
         >here</a
       >
-      to see its output</span
+      to see the JSON that is used to render each card below</span
     >
   </div>
 </div>
@@ -42,7 +50,7 @@
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="primary" (click)="openLink(repo.url)">
-        See code
+        Code&nbsp;<mat-icon>search</mat-icon>
       </button>
     </mat-card-actions>
   </mat-card>
