@@ -40,17 +40,12 @@ export class PersonalInfoComponent implements OnInit {
     }, 2000);
   }
   navigateToSiteContent() {
-    this.locationService.getLocationData().subscribe(
-      (locationData: LocationData) => {
-        this.emailService.sendSiteVisitEmail(locationData).subscribe((data) =>
-          console.log(data)
-        );
+    this.locationService.getLocationJSON().subscribe(
+      (locationData: LocationData) => { // (locationData: LocationData) => {
+        this.emailService.sendSiteVisitEmail(locationData).subscribe(() => {});
       },
     );
-    // this.emailService.sendSiteVisitEmail().subscribe((data) =>
-    //   console.log(data)
-    // );
-    // this.routingService.navigateToSiteContent();
+    this.routingService.navigateToSiteContent();
   }
   copyToKeyboard() {
     this.showCopyHint = false;

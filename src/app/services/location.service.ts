@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { LocationData } from "../models/location-data.model";
+import { map } from "rxjs/operators/map";
 
 @Injectable({
   providedIn: "root",
@@ -8,7 +9,11 @@ import { LocationData } from "../models/location-data.model";
 export class LocationService {
   constructor(private http: HttpClient) {}
 
-  public getLocationData() {
-    return this.http.get<LocationData>("http://ip-api.com/json");
+  public getLocationJSON() {
+    return this.http.get<LocationData>("https://json.geoiplookup.io/").pipe(
+      map((data: LocationData) => {
+        return LocationData.fromJSON(data);
+      }),
+    );
   }
 }
