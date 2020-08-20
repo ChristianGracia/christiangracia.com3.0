@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { environment } from "src/environments/environment";
 import { EmailMessage } from "../models/email-message.model";
+import { LocationData } from "../models/location-data.model";
 
 @Injectable({
   providedIn: "root",
@@ -20,7 +21,10 @@ export class EmailService {
     });
   }
 
-  public sendSiteVisitEmail() {
-    return this.http.post(environment.apiUrl + "/email/site-visit", {});
+  public sendSiteVisitEmail(locationData: LocationData) {
+    return this.http.post(
+      environment.apiUrl + "/email/site-visit",
+      locationData,
+    );
   }
 }

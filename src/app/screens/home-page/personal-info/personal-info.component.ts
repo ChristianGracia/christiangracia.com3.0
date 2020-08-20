@@ -1,6 +1,8 @@
 import { Component, OnInit, SystemJsNgModuleLoader } from "@angular/core";
 import { RoutingService } from "../../../services/routing.service";
 import { EmailService } from "src/app/services/email.service";
+import { LocationService } from "../../../services/location.service";
+import { LocationData } from "src/app/models/location-data.model";
 
 @Component({
   selector: "app-personal-info",
@@ -11,6 +13,7 @@ export class PersonalInfoComponent implements OnInit {
   constructor(
     private routingService: RoutingService,
     private emailService: EmailService,
+    private locationService: LocationService,
   ) {}
 
   public showCopiedText = false;
@@ -37,10 +40,17 @@ export class PersonalInfoComponent implements OnInit {
     }, 2000);
   }
   navigateToSiteContent() {
-    this.emailService.sendSiteVisitEmail().subscribe((data) =>
-      console.log(data)
+    this.locationService.getLocationData().subscribe(
+      (locationData: LocationData) => {
+        this.emailService.sendSiteVisitEmail(locationData).subscribe((data) =>
+          console.log(data)
+        );
+      },
     );
-    this.routingService.navigateToSiteContent();
+    // this.emailService.sendSiteVisitEmail().subscribe((data) =>
+    //   console.log(data)
+    // );
+    // this.routingService.navigateToSiteContent();
   }
   copyToKeyboard() {
     this.showCopyHint = false;
