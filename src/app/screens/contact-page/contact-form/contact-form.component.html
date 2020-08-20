@@ -1,7 +1,7 @@
 <section class="contact-form" *ngIf="!emailReceived">
   <form
     fxLayout="column"
-    fxLayoutGap="20px"
+    fxLayoutGap="16px"
     fxLayoutAlign="center center"
     #contactForm="ngForm"
     (ngSubmit)="submit(contactForm)"
@@ -64,5 +64,4 @@
   <button (click)="goToSite()" mat-raised-button color="primary">
     Back to site
   </button>
-  <div style="padding-bottom: 300px;"></div>
 </section>
