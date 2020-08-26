@@ -17,8 +17,8 @@ const ON_A_BEAT_SITE: Site = new Site(
   "On a Beat!",
   `MERN stack site I wrote and host for my friends in On a Beat. Hosted on Heroku on a single server.
   React/Redux front-end with a Node Js back-end and a MongoDB database. Users can make accounts, sign in,
-  add/delete videos, songs, pics, and gifs to front page, and more with a site dashboard I built.`,
-  "https://www.onabeat.com",
+  add/delete videos, songs, pics, and gifs to front page, and more with a site dashboard I built. Currently hosted on a free heroku dyno after I recently took the site down`,
+  "https://onabeat.herokuapp.com/",
   [
     "https://i.imgur.com/h9Bm4yj.jpeg",
     "https://i.imgur.com/7zTCFnk.png",
