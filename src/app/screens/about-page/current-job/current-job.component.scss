@@ -2,6 +2,7 @@
   max-height: 600px;
   position: relative;
   display: inline-block;
+  overflow: hidden;
   .hero-image {
     filter: brightness(50%);
     height: 100vh;
@@ -20,6 +21,7 @@
 }
 .text {
   color: white;
+  padding-top: 40px;
   .title-text {
     font-size: 50px;
     font-weight: bold;
@@ -29,5 +31,8 @@
     font-size: 27px;
     font-weight: bold;
     text-align: left;
+    @media only screen and (max-width: 400px) {
+      font-size: 22px;
+    }
   }
 }
