@@ -1,8 +1,5 @@
 @import "../../../../styles.scss";
-.repo-description {
-  // max-width: 290px;
-  // display: inline;
-}
+
 .repo-title {
   // max-width: 290px;
   font-weight: bold;
@@ -14,9 +11,17 @@
   @media (min-width: 500px) {
     margin: 15px 30px;
   }
-  .repo-col-header {
-    font-weight: bold;
-    font-size: 13px;
+
+  .repo-sub-info-container {
+    margin-top: 10px;
+    min-width: 270px;
+    .repo-col-header {
+      font-weight: bold;
+      font-size: 13px;
+    }
+    .repo-language-text {
+      font-size: 18px;
+    }
   }
 }
 .api-description-container {
