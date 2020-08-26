@@ -70,7 +70,7 @@ export class GithubRepoComponent implements OnInit {
     return color;
   }
   militaryTimeConverter(date: Date) {
-    let hours = date.getHours(); // gives the value in 24 hours format
+    let hours = date.getHours();
     const AmOrPm = hours >= 12 ? "pm" : "am";
     hours = hours % 12 || 12;
     let minutes = date.getMinutes();

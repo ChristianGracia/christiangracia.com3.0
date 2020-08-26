@@ -48,7 +48,7 @@
           >
         </div>
         <div fxLayout="column" fxLayoutGap="10px">
-          <span class="repo-col-header">Updated at</span>
+          <span class="repo-col-header">Updated At</span>
           <span>{{ formatUpdateAtDate(repo.updatedAt) }}</span>
         </div>
       </div>
@@ -56,7 +56,7 @@
     <mat-card-actions>
       <div fxLayoutAlign="center center" style="padding-bottom: 15px;">
         <button mat-raised-button color="primary" (click)="openLink(repo.url)">
-          View&nbsp;<mat-icon>search</mat-icon>
+          <strong>View</strong>&nbsp;<mat-icon>search</mat-icon>
         </button>
       </div>
     </mat-card-actions>
