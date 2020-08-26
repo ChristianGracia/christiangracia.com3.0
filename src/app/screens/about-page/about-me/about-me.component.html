@@ -1,61 +1,39 @@
-<!-- <h1 style="color: yellow; text-align: center;">Under construction 7/24/2020</h1> -->
 <div
   fxLayout="column"
   fxLayoutALign="center center"
   fxLayoutGap="20px"
   class="about-me-container"
 >
-  <!-- <div class="about-me-text-container">
-    <h1>Full Stack</h1>
-  </div> -->
-  <!-- <div class="self-pic-container">
-    <img
-      class="self-pic-image"
-      src="https://i.imgur.com/y6sSa1o.jpg"
-      height="100px"
-      width="100px"
-    />
-  </div> -->
-  <!-- <p>Under construction :)</p> -->
-
   <app-current-job></app-current-job>
-
-  <!-- <app-content-header
-    contentTitle="Skills"
-    contentDescription="What I'm good at and enjoy using"
-  ></app-content-header> -->
-
   <div
-    fxLayout="column"
-    fxLayoutAlign="center"
-    fxLayoutGap="20px"
+    fxLayout="row wrap"
+    fxLayoutAlign="center center"
     class="skill-card-container"
   >
-    <app-skill-card
-      listTitle="Languages"
-      [listItems]="languagesArray"
-    ></app-skill-card>
-    <app-skill-card
-      listTitle="Front-end"
-      [listItems]="frontEndArray"
-    ></app-skill-card>
-    <app-skill-card
-      listTitle="Back-end"
-      [listItems]="backEndArray"
-    ></app-skill-card>
-
-    <!-- <div>
-      <button mat-raised-button color="primary">See full resume</button>
-    </div> -->
-    <!-- <app-skill-card
-      listTitle="Front-end"
-      [listItems]="frontendArray"
-    ></app-skill-card>
-    <app-skill-card
-      listTitle="Back-end"
-      [listItems]="technologiesArray"
-    ></app-skill-card> -->
-    <!-- <app-skill-card listTitle="APIs" [listItems]="skillsArray"></app-skill-card> -->
-    <p class="white-text">More to come</p>
+    <mat-card class="skill-card mat-elevation-z6">
+      <mat-card-title>
+        Languages
+      </mat-card-title>
+      <mat-card-content class="card-content">
+        {{ languagesArray.join(", ") }}</mat-card-content
+      >
+    </mat-card>
+    <mat-card class="skill-card mat-elevation-z6">
+      <mat-card-title>
+        Front-end
+      </mat-card-title>
+      <mat-card-content class="card-content"
+        >{{ frontEndArray.join(", ") }}
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="skill-card mat-elevation-z6">
+      <mat-card-title>
+        Back-end
+      </mat-card-title>
+      <mat-card-content class="card-content">
+        {{ backEndArray.join(", ") }}</mat-card-content
+      >
+    </mat-card>
   </div>
+  <div style="padding-bottom: 200px;"></div>
 </div>
