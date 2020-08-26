@@ -1,24 +1,10 @@
-// .title {
-//   padding: 20px;
-// }
-// .description {
-//   width: 90vw;
-//   max-width: 500px;
-//   margin: 0 auto;
-//   text-align: left;
-// }
-
-// .container {
-//   margin-top: 20px;
-// }
 .image-container {
   max-height: 600px;
   position: relative;
-  display: inline-block; /* Make the width of box same as image */
+  display: inline-block;
   .hero-image {
     filter: brightness(50%);
     height: 100vh;
-    // max-height: 500px;
     width: 100vw;
   }
 }
@@ -28,10 +14,9 @@
   margin: 0 auto;
   left: 0;
   right: 0;
-  top: 10%; /* Adjust this value to move the positioned div up and down */
+  top: 10%;
   text-align: center;
-  width: 80%; /* Set the width of the positioned div */
-  // max-height: 500px;
+  width: 80%;
 }
 .text {
   color: white;
