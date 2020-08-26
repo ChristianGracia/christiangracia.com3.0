@@ -25,7 +25,17 @@ export class GithubRepoComponent implements OnInit {
   openLink(url: string) {
     window.open(url, "_blank");
   }
-  formatUpdateAtDate(date: string) {}
+  formatUpdateAtDate(date: string) {
+    let formattedDate = new Date(date);
+    let returnDate =
+      formattedDate.getFullYear() +
+      "-" +
+      (formattedDate.getMonth() + 1) +
+      "-" +
+      formattedDate.getDate();
+
+    return returnDate + " " + this.militaryTimeConverter(formattedDate);
+  }
   formatRepoLanguage(language: string) {
     let color = "";
 
@@ -57,5 +67,13 @@ export class GithubRepoComponent implements OnInit {
         break;
     }
     return color;
+  }
+  militaryTimeConverter(date: Date) {
+    const hours = date.getHours(); // gives the value in 24 hours format
+    const AmOrPm = hours >= 12 ? "pm" : "am";
+    hours = hours % 12 || 12;
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
+    return hours + ":" + minutes + " " + AmOrPm;
   }
 }

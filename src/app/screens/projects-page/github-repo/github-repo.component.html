@@ -32,12 +32,21 @@
       <span class="repo-description">
         {{ repo.description }}
       </span>
-      <div fxLayout="row wrap" fxLayoutGap="10px">
-        <!-- <div></div> -->
-        <span [ngStyle]="{ color: formatRepoLanguage(repo.language) }">{{
-          repo.language
-        }}</span>
-        <span>{{ repo.updatedAt }}</span>
+      <div
+        fxLayout="row wrap"
+        fxLayoutAlign="center space-between"
+        fxLayoutGap="10px"
+      >
+        <div fxLayout="column" fxLayoutGap="6px" fxLayoutAlign="center">
+          <span class="repo-col-header">Language</span>
+          <span [ngStyle]="{ color: formatRepoLanguage(repo.language) }">{{
+            repo.language
+          }}</span>
+        </div>
+        <div fxLayout="column" fxLayoutGap="10px">
+          <span class="repo-col-header">Updated at</span>
+          <span>{{ formatUpdateAtDate(repo.updatedAt) }}</span>
+        </div>
       </div>
     </mat-card-content>
     <mat-card-actions>
