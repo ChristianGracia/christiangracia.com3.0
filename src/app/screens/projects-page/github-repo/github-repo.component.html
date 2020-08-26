@@ -32,6 +32,13 @@
       <span class="repo-description">
         {{ repo.description }}
       </span>
+      <div fxLayout="row wrap" fxLayoutGap="10px">
+        <!-- <div></div> -->
+        <span [ngStyle]="{ color: formatRepoLanguage(repo.language) }">{{
+          repo.language
+        }}</span>
+        <span>{{ repo.updatedAt }}</span>
+      </div>
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="primary" (click)="openLink(repo.url)">

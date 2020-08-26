@@ -25,4 +25,37 @@ export class GithubRepoComponent implements OnInit {
   openLink(url: string) {
     window.open(url, "_blank");
   }
+  formatUpdateAtDate(date: string) {}
+  formatRepoLanguage(language: string) {
+    let color = "";
+
+    switch (language) {
+      case "Ruby":
+        color = "red";
+        // symbol = "fas fa-gem ml-2";
+        break;
+      case "Java":
+        color = "#B07219";
+        // symbol = "fab fa-java ml-2";
+        break;
+      case "JavaScript":
+        color = "#F0D91D";
+        // symbol = "fab fa-js-square ml-2";
+        break;
+      case "TypeScript":
+        color = "#61D2F8";
+        break;
+      case "C#":
+        color = "green";
+        break;
+      case "C":
+        color = "black";
+        break;
+
+      default:
+        color = "black";
+        break;
+    }
+    return color;
+  }
 }
