@@ -7,8 +7,8 @@ const LANGUAGES = [
   "C#",
   "Ruby",
   "Swift",
-  "Objective-C",
   "C",
+  "Objective-C",
   "TypeScript",
   "HTML/CSS + Sass",
 ];
@@ -17,10 +17,10 @@ const FRONTEND_SKILLS = [
   "React",
   "Angular",
   "React Native",
-  "Vue.js",
   "Mobile iOS/Android",
   "Bootstrap",
   "Material Design",
+  "Vue.js",
   "Tailwind CSS",
   "ASP.NET Web apps",
   "Java Web apps",
@@ -74,9 +74,7 @@ export class AboutMeComponent implements OnInit {
   public languagesArray: string[] = [LANGUAGES.join(", ")];
   public frontEndArray: string[] = [FRONTEND_SKILLS.join(", ")];
   // public skillsArray: string[] = [SKILLS.join(", ")];
-  public backEndArray: string[] = [
-    BACKEND_SKILLS.join(", "),
-  ];
+  public backEndArray: string[] = [BACKEND_SKILLS.join(", ")];
 
   constructor() {}
 
