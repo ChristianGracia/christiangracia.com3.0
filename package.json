@@ -8,7 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --prod --configuration production"
+    "heroku-postbuild": "ng build --prod --configuration production",
+    "build:stats": "ng build --stats-json",
+    "analyze": "webpack-bundle-analyzer dist/christian-gracia-site/stats-es2015.json"
   },
   "private": true,
   "dependencies": {
