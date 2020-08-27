@@ -1,5 +1,8 @@
 import { Component, OnInit, ElementRef, AfterViewInit } from "@angular/core";
 import { RoutingService } from "../../services/routing.service";
+import { LocationService } from "src/app/services/location.service";
+import { EmailService } from "src/app/services/email.service";
+import { LocationData } from "src/app/models/location-data.model";
 
 @Component({
   selector: "app-home-page",
@@ -8,9 +11,12 @@ import { RoutingService } from "../../services/routing.service";
 })
 export class HomePageComponent implements OnInit {
   public navigatingToSite: boolean = false;
+
   constructor(
     private elementRef: ElementRef,
-    private routingService: RoutingService
+    private routingService: RoutingService,
+    private emailService: EmailService,
+    private locationService: LocationService
   ) {}
 
   ngOnInit() {}
@@ -31,11 +37,18 @@ export class HomePageComponent implements OnInit {
       .addEventListener("touchend", (event) => {
         let currentY = event.changedTouches[0].screenY;
 
-        let offset = -60;
+        let offset = -45;
 
-        //leaving both swipe up and swipe down as a trigger for now
-        if (currentY - initialY < offset || initialY - currentY < offset) {
+        if (currentY - initialY < offset) {
           this.navigatingToSite = true;
+
+          this.locationService
+            .getLocationJSON()
+            .subscribe((locationData: LocationData) => {
+              this.emailService
+                .sendSiteVisitEmail(locationData)
+                .subscribe(() => {});
+            });
           this.routingService.navigateToSiteContent();
         }
       });
