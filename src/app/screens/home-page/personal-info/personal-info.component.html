@@ -52,7 +52,7 @@
         *ngIf="!showCopiedText"
         #emailAddress
         class="email-text"
-        (click)="copyToKeyboard(emailAddress)"
+        (click)="copyToKeyboard()"
         (mouseenter)="showCopyHint = true"
         (mouseleave)="showCopyHint = false"
         >christianmgracia@gmail.com</span
@@ -63,7 +63,7 @@
         #emailAddress
         *ngIf="!showCopiedText"
         class="email-text"
-        (click)="copyToKeyboard(emailAddress)"
+        (click)="copyToKeyboard()"
         >christianmgracia@gmail.com</span
       >
       <span *ngIf="showCopiedText" class="copy-text"
