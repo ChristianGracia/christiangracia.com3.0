@@ -20,18 +20,9 @@ export class PersonalInfoComponent implements OnInit {
 
   public showCopyHint = false;
 
-  public showDownArrow = false;
-
   ngOnInit() {}
 
-  showDownArrowAnimation() {
-    setTimeout(() => {
-      this.showDownArrow = true;
-      setTimeout(() => {
-        this.showDownArrow = false;
-      }, 4000);
-    }, 2000);
-  }
+  showDownArrowAnimation() {}
   navigateToSiteContent() {
     this.locationService
       .getLocationJSON()
