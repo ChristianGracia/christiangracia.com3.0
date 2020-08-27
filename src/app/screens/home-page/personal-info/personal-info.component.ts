@@ -1,4 +1,4 @@
-import { Component, OnInit, SystemJsNgModuleLoader } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { RoutingService } from "../../../services/routing.service";
 import { EmailService } from "src/app/services/email.service";
 import { LocationService } from "../../../services/location.service";
@@ -13,7 +13,7 @@ export class PersonalInfoComponent implements OnInit {
   constructor(
     private routingService: RoutingService,
     private emailService: EmailService,
-    private locationService: LocationService,
+    private locationService: LocationService
   ) {}
 
   public showCopiedText = false;
@@ -40,11 +40,12 @@ export class PersonalInfoComponent implements OnInit {
     }, 2000);
   }
   navigateToSiteContent() {
-    this.locationService.getLocationJSON().subscribe(
-      (locationData: LocationData) => { // (locationData: LocationData) => {
+    this.locationService
+      .getLocationJSON()
+      .subscribe((locationData: LocationData) => {
+        // (locationData: LocationData) => {
         this.emailService.sendSiteVisitEmail(locationData).subscribe(() => {});
-      },
-    );
+      });
     this.routingService.navigateToSiteContent();
   }
   copyToKeyboard() {
