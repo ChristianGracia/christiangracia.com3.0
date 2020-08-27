@@ -26,8 +26,6 @@
     <mat-card-title color="" class="white-text name-text">
       Christian Gracia
     </mat-card-title>
-    <!-- <app-lightning-bolt *ngIf="showTechAnimation"></app-lightning-bolt> -->
-
     <mat-card-content class="white-text job-location-text"
       >Software Engineer <span class="pipe-color">|</span> Providence, RI
     </mat-card-content>
@@ -52,7 +50,7 @@
         *ngIf="!showCopiedText"
         #emailAddress
         class="email-text"
-        (click)="copyToKeyboard(emailAddress)"
+        (click)="copyToKeyboard()"
         (mouseenter)="showCopyHint = true"
         (mouseleave)="showCopyHint = false"
         >christianmgracia@gmail.com</span
@@ -63,7 +61,7 @@
         #emailAddress
         *ngIf="!showCopiedText"
         class="email-text"
-        (click)="copyToKeyboard(emailAddress)"
+        (click)="copyToKeyboard()"
         >christianmgracia@gmail.com</span
       >
       <span *ngIf="showCopiedText" class="copy-text"

@@ -22,14 +22,7 @@ export class PersonalInfoComponent implements OnInit {
 
   public showDownArrow = false;
 
-  public showTechAnimation = false;
-
-  ngOnInit() {
-    this.showDownArrowAnimation();
-    setTimeout(() => {
-      this.showTechAnimation = true;
-    }, 3000);
-  }
+  ngOnInit() {}
 
   showDownArrowAnimation() {
     setTimeout(() => {
