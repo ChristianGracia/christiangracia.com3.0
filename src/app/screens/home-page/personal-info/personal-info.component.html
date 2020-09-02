@@ -55,7 +55,7 @@
         (click)="copyToKeyboard()"
         (mouseenter)="showCopyHint = true"
         (mouseleave)="showCopyHint = false"
-        >christianmgracia@gmail.com</span
+        >📋 christianmgracia@gmail.com</span
       >
       <!-- mobile -->
       <span
@@ -64,7 +64,8 @@
         *ngIf="!showCopiedText"
         class="email-text"
         (click)="copyToKeyboard()"
-        >christianmgracia@gmail.com</span
+      >
+        christianmgracia@gmail.com</span
       >
       <span *ngIf="showCopiedText" class="copy-text"
         >Copied to your clipboard!</span
@@ -98,8 +99,9 @@
       mat-raised-button
       (click)="navigateToSiteContent()"
       class="enter-button"
+      color="warn"
     >
-      <span class="enter-text">Click here to see what I do</span>
+      <span class="enter-text">Enter site</span>
     </button>
 
     <span *ngIf="showCopyHint" class="copy-hint-text"

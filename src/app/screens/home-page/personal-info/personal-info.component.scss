@@ -51,15 +51,20 @@
     font-size: 20px;
   }
   .enter-button {
-    background-color: white;
+    // background-color: white;
 
     .enter-text {
       font-weight: bold;
     }
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
     &:hover {
       color: black;
 
       background-color: yellow;
+      transition: all 0.4s ease;
+      -webkit-transition: all 0.4s ease;
+      // transform: 2;
     }
   }
   // .black-text {
