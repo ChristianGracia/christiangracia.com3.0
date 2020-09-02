@@ -1,6 +1,6 @@
 <app-content-header
   contentTitle="GitHub Repos"
-  contentDescription="My public github repositories. Click View 🔍 to see each of my repo's code."
+  contentDescription="My public github repositories. Click the 🔍 to see each of my repo's code."
 ></app-content-header>
 <div class="api-description-container">
   <span class="api-description-text">
@@ -17,7 +17,7 @@
 <div
   fxLayout="row wrap"
   fxLayoutAlign="center center"
-  style="background-color: white;"
+  style="background-color: white"
 >
   <mat-card
     *ngFor="let repo of gitRepos"
@@ -54,9 +54,14 @@
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <div fxLayoutAlign="center center" style="padding-bottom: 15px;">
-        <button mat-raised-button color="primary" (click)="openLink(repo.url)">
-          <strong>View</strong>&nbsp;<mat-icon>search</mat-icon>
+      <div fxLayoutAlign="center center" style="padding-bottom: 15px">
+        <button
+          mat-raised-button
+          color="primary"
+          style="width: 70px"
+          (click)="openLink(repo.url)"
+        >
+          <mat-icon svgIcon="search"></mat-icon>
         </button>
       </div>
     </mat-card-actions>
