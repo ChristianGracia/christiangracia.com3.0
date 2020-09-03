@@ -17,10 +17,12 @@
   </mat-card-content>
   <mat-card-content>
     <p>{{ site.bottomText }}</p>
-    <button mat-raised-button class="cg-hover-yellow" aria-label="view site">
-      <a href="{{ site.url }}" rel="noreferrer" target="_blank"
-        ><span class="cg-hover-yellow-text">View Site</span></a
-      >
-    </button>
+    <div flexLayout="column" fxLayoutAlign="center center">
+      <button mat-raised-button class="cg-hover-yellow" aria-label="view site">
+        <a href="{{ site.url }}" rel="noreferrer" target="_blank"
+          ><span class="cg-hover-yellow-text">View Site</span></a
+        >
+      </button>
+    </div>
   </mat-card-content>
 </mat-card>
