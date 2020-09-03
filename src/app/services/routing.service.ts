@@ -8,7 +8,7 @@ export class RoutingService {
   constructor(private router: Router) {}
 
   public navigateToSiteContent() {
-    this.router.navigate(["/projects"]);
+    this.router.navigate(["/main"]);
   }
 
   public navigateToHomePage() {
