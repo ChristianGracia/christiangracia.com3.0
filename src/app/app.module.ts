@@ -35,8 +35,9 @@ import { MyWebsitesComponent } from "./screens/projects-page/my-websites/my-webs
 import { SiteComponent } from "./screens/projects-page/my-websites/site/site.component";
 
 import { SlideshowModule } from "ng-simple-slideshow";
-import { ContentHeaderComponent } from './components/content-header/content-header.component';
-import { MainInfoPageComponent } from './screens/main-info-page/main-info-page.component';
+import { ContentHeaderComponent } from "./components/content-header/content-header.component";
+import { MainInfoPageComponent } from "./screens/main-info-page/main-info-page.component";
+import { SharedComponentsModule } from "./modules/shared-components/shared-components.module";
 
 export function playerFactory() {
   return player;
@@ -78,6 +79,8 @@ export function playerFactory() {
     SlideshowModule,
 
     LottieModule.forRoot({ player: playerFactory }),
+
+    SharedComponentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,5 +1,5 @@
 export const environment = {
-  production: true,
+  production: false,
   // apiUrl: "localhost:3000",
   apiUrl: "https://christiangracia-api.herokuapp.com",
 };

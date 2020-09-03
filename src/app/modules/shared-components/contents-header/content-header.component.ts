@@ -1,11 +1,11 @@
 import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
-  selector: "app-content-header",
+  selector: "app-contents-header",
   templateUrl: "./content-header.component.html",
   styleUrls: ["./content-header.component.scss"],
 })
-export class ContentHeaderComponent implements OnInit {
+export class ContentsHeaderComponent implements OnInit {
   @Input()
   contentTitle: string;
   @Input()
