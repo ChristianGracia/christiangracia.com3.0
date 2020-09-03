@@ -55,6 +55,7 @@
     </mat-form-field>
 
     <button
+      aria-label="submit"
       mat-raised-button
       color="warn"
       class="cg-hover-red"
@@ -66,7 +67,12 @@
 </section>
 <section *ngIf="emailReceived" fxLayout="column" fxLayoutAlign="center center">
   <h1>I have received your email!</h1>
-  <button (click)="goToSite()" mat-raised-button color="primary">
+  <button
+    aria-label="back"
+    (click)="goToSite()"
+    mat-raised-button
+    color="primary"
+  >
     Back to site
   </button>
 </section>
