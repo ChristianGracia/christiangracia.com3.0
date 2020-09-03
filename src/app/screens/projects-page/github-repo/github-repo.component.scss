@@ -36,3 +36,17 @@
     font-style: italic;
   }
 }
+
+.view-button {
+  width: 70px;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  &:hover {
+    color: yellow;
+
+    background-color: #d93a00;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    // transform: 2;
+  }
+}
