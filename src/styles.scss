@@ -10,3 +10,27 @@ body {
 body {
   margin: 0;
 }
+
+.cg-hover-red {
+  // background-color: #ff5722;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  &:hover {
+    color: black;
+    background-color: yellow;
+  }
+}
+.cg-hover-yellow {
+  color: black;
+  background-color: yellow;
+
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  &:hover {
+    color: yellow;
+    background-color: #d93a00;
+    .cg-hover-yellow-text {
+      color: yellow;
+    }
+  }
+}

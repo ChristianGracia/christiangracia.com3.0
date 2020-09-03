@@ -7,20 +7,7 @@
   }
 }
 
-.view-site-btn {
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  &:hover {
-    a {
-      color: yellow;
-    }
-
-    background-color: #d93a00;
-
-    // transform: 2;
-  }
+a {
+  text-decoration: none;
+  color: black;
 }
