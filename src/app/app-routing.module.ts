@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { HomePageComponent } from "./screens/home-page/home-page.component";
 import { AboutPageComponent } from "./screens/about-page/about-page.component";
-import { ProjectsPageComponent } from "./screens/projects-page/projects-page.component";
+
 import { MainInfoPageComponent } from "./screens/main-info-page/main-info-page.component";
 
 const routes: Routes = [
@@ -20,7 +20,8 @@ const routes: Routes = [
   },
   {
     path: "projects",
-    component: ProjectsPageComponent,
+    loadChildren: () =>
+      import("./modules/projects/projects.module").then((m) => m.ProjectsModule),
   },
   {
     path: "contact",
