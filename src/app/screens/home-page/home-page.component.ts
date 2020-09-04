@@ -1,8 +1,8 @@
 import { Component, OnInit, ElementRef, AfterViewInit } from "@angular/core";
 import { RoutingService } from "../../services/routing.service";
-import { LocationService } from "../../modules/shared-components/services/location.service";
-import { EmailService } from "./../../modules/shared-components/services/email.service";
-import { LocationData } from "./../../modules/shared-components/models/location-data.model";
+import { LocationService } from "../../services/location.service";
+import { EmailService } from "../../services/email.service";
+import { LocationData } from "../../models/location-data.model";
 
 @Component({
   selector: "app-home-page",

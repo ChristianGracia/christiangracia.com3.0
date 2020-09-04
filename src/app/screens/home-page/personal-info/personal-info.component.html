@@ -2,15 +2,13 @@
   fxLayout="column"
   fxLayoutAlign="center center"
   fxLayoutGap="30vh"
-  fxLayoutGap.xs="15vh"
+  fxLayoutGap.xs="140px"
   class="container"
 >
-  <mat-card fxFlex.xs="0" fxFlex="100px" class="name-card mat-elevation-z0">
-    <div class="name-container">
-      <mat-card-title class="white-text name-text" fxFlx>
-        Christian Gracia
-      </mat-card-title>
-    </div>
+  <mat-card fxFlex.xs="0px" fxFlex="100px" class="name-card mat-elevation-z0">
+    <mat-card-title class="white-text name-text name-container" fxFlx>
+      Christian Gracia
+    </mat-card-title>
 
     <mat-card-content class="white-text job-location-text"
       >Software Engineer <span class="pipe-color">|</span> Providence, RI
@@ -62,31 +60,25 @@
 
   <!-- mobile button -->
 
-  <div
-    fxLayout="row"
-    fxLayoutAlign="center center"
-    fxLayoutGap="10px"
-    fxHide.gt-xs
-    (click)="navigateToSiteContent()"
-  >
-    <span class="white-text swipe-text">Swipe up or click to enter</span>
-  </div>
-
   <!-- desktop button -->
 
-  <div
-    fxLayout="column"
-    fxLayoutAlign="center center"
-    fxLayoutGap="13vh"
-    fxHide.lt-sm
-  >
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <div
+      fxLayout="row"
+      fxLayoutAlign="center center"
+      fxHide.gt-xs
+      (click)="navigateToAbout()"
+    >
+      <span class="white-text swipe-text">Swipe up or click to enter</span>
+    </div>
     <button
       *ngIf="!showCopyHint"
       mat-raised-button
-      (click)="navigateToSiteContent()"
+      (click)="navigateToAbout()"
       class="cg-hover-red"
       color="warn"
       aria-label="enter site"
+      fxHide.lt-sm
     >
       <span class="cg-hover-redtext">Enter site</span>
     </button>

@@ -1,9 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { RoutingService } from "../../../services/routing.service";
 
-import { EmailService } from "./../../../modules/shared-components/services/email.service";
-import { LocationService } from "../../../modules/shared-components/services/location.service";
-import { LocationData } from "../../../modules/shared-components/models/location-data.model";
+import { EmailService } from "../../../services/email.service";
+import { LocationService } from "../../../services/location.service";
+import { LocationData } from "../../../models/location-data.model";
 
 @Component({
   selector: "app-personal-info",
