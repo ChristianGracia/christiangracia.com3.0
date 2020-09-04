@@ -11,29 +11,36 @@
     class="skill-card-container"
   >
     <mat-card class="skill-card mat-elevation-z6">
-      <mat-card-title>
-        Languages
-      </mat-card-title>
+      <mat-card-title> Languages </mat-card-title>
       <mat-card-content class="card-content">
         {{ languagesArray.join(", ") }}</mat-card-content
       >
     </mat-card>
     <mat-card class="skill-card mat-elevation-z6">
-      <mat-card-title>
-        Front-end
-      </mat-card-title>
+      <mat-card-title> Front-end </mat-card-title>
       <mat-card-content class="card-content"
         >{{ frontEndArray.join(", ") }}
       </mat-card-content>
     </mat-card>
     <mat-card class="skill-card mat-elevation-z6">
-      <mat-card-title>
-        Back-end
-      </mat-card-title>
+      <mat-card-title> Back-end </mat-card-title>
       <mat-card-content class="card-content">
         {{ backEndArray.join(", ") }}</mat-card-content
       >
     </mat-card>
   </div>
-  <div style="padding-bottom: 200px;"></div>
+  <div style="padding-bottom: 100px"></div>
+  <div fxLayout="column" fxLayoutAlign="center center">
+    <button
+      mat-raised-button
+      (click)="goToProjectsPage()"
+      class="cg-hover-red"
+      color="warn"
+      aria-label="enter site"
+    >
+      <span class="cg-hover-redtext">See some of my work</span>
+    </button>
+  </div>
+
+  <div style="padding-bottom: 200px"></div>
 </div>

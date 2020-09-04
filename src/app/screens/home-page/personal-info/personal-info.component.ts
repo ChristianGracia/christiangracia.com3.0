@@ -31,7 +31,7 @@ export class PersonalInfoComponent implements OnInit {
         // (locationData: LocationData) => {
         this.emailService.sendSiteVisitEmail(locationData).subscribe(() => {});
       });
-    this.routingService.navigateToSiteContent();
+    this.routingService.navigateToAbout();
   }
   copyToKeyboard() {
     this.showCopyHint = false;

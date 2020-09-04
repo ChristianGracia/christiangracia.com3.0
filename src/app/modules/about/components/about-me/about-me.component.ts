@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { RoutingService } from "../../../../services/routing.service";
 
 const LANGUAGES = [
   "JavaScript",
@@ -24,15 +25,6 @@ const FRONTEND_SKILLS = [
   "Tailwind CSS",
   "ASP.NET Web apps",
   "Java Web apps",
-  // "SQL/PostgreSQL",
-  // "NoSQL",
-  // "Git",
-  // "Docker",
-  // "Heroku",
-  // ".NET/.NET CORE",
-  // "ASP.NET MVC",
-  // "NPM",
-  // "Linux",
 ];
 
 const BACKEND_SKILLS = [
@@ -48,23 +40,6 @@ const BACKEND_SKILLS = [
   "JSON and XML APIs",
 ];
 
-const LIBRARY_AND_FRAMEWORKS = [
-  // "NodeJs",
-  // "React",
-  // "Angular",
-  // "React Native",
-  // "Rails/RoR",
-  // "Django",
-  // "Flask",
-  // "VueJS",
-  // "Redux",
-  // "NgRx",
-  // "GraphQL",
-  // "jQuery",
-  // "Bootstrap",
-  // "Material Design",
-];
-
 @Component({
   selector: "app-about-me",
   templateUrl: "./about-me.component.html",
@@ -73,12 +48,14 @@ const LIBRARY_AND_FRAMEWORKS = [
 export class AboutMeComponent implements OnInit {
   public languagesArray: string[] = [LANGUAGES.join(", ")];
   public frontEndArray: string[] = [FRONTEND_SKILLS.join(", ")];
-  // public skillsArray: string[] = [SKILLS.join(", ")];
   public backEndArray: string[] = [BACKEND_SKILLS.join(", ")];
 
-  constructor() {}
+  constructor(private routingService: RoutingService) {}
 
   ngOnInit() {
     console.log(this.languagesArray);
+  }
+  goToProjectsPage() {
+    this.routingService.navigateToProjects();
   }
 }

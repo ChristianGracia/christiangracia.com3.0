@@ -11,6 +11,14 @@ export class RoutingService {
     this.router.navigate(["/main"]);
   }
 
+  public navigateToProjects() {
+    this.router.navigate(["/projects"]);
+  }
+
+  public navigateToAbout() {
+    this.router.navigate(["/about"]);
+  }
+
   public navigateToHomePage() {
     this.router.navigate(["/"]);
   }
