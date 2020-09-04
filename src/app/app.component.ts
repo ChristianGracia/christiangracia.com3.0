@@ -40,12 +40,12 @@ export class AppComponent {
       )
     );
 
-    this.matIconRegistry.addSvgIcon(
-      "menu",
-      this.domSanitizer.bypassSecurityTrustResourceUrl(
-        "../assets/images/menu.svg"
-      )
-    );
+    // this.matIconRegistry.addSvgIcon(
+    //   "menu",
+    //   this.domSanitizer.bypassSecurityTrustResourceUrl(
+    //     "../assets/images/menu.svg"
+    //   )
+    // );
 
     // this.matIconRegistry.addSvgIcon(
     //   "bookmark",
