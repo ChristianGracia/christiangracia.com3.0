@@ -28,12 +28,11 @@ export class SocialMediaLinksComponent implements OnInit, OnDestroy {
       this.activeIconArray[index] = false;
       this.activeIconArray[nextIndex] = true;
       counter++;
-    }, 1000);
+    }, 1600);
   }
 
   ngOnDestroy() {
     clearInterval(this.timer);
-    console.log("cleared");
   }
   openLink(socialMedia: string) {
     let url = "";

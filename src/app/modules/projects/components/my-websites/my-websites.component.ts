@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Site } from "../../../shared-components/models/site.model";
+import { Site } from "../../models/site.model";
 
 const CHRISTIAN_GRACIA_SITE: Site = new Site(
   "christiangracia.com v2",
@@ -48,8 +48,5 @@ export class MyWebsitesComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
-    this.sites.forEach((x) => console.log(x));
-    console.log(this.sites);
-  }
+  ngOnInit() {}
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { Site } from "../../../../shared-components/models/site.model";
+import { Site } from "../../../models/site.model";
 
 @Component({
   selector: "app-site",
