@@ -1,10 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 import { NgForm } from "@angular/forms";
-import { EmailService } from "../../../services/email.service";
-import { EmailMessage } from "src/app/models/email-message.model";
+import { EmailService } from "../../../shared-components/services/email.service";
+import { EmailMessage } from "./../../../shared-components/models/email-message.model";
 import { RoutingService } from "src/app/services/routing.service";
-import { LocationData } from "src/app/models/location-data.model";
-import { LocationService } from "../../../services/location.service";
+
+import { LocationData } from "./../../../shared-components/models/location-data.model";
+import { LocationService } from "../../../shared-components/services/location.service";
 
 @Component({
   selector: "app-contact-form",

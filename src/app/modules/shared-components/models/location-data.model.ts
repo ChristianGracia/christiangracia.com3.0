@@ -4,9 +4,8 @@ export class LocationData {
     public city?: string,
     public country?: string,
     public query?: string,
-    public zip?: string,
-  ) {
-  }
+    public zip?: string
+  ) {}
 
   static fromJSON(data) {
     return {

@@ -5,8 +5,6 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { MaterialModule } from "./material.module";
 
-import { FlexLayoutModule } from "@angular/flex-layout";
-
 import { FormsModule } from "@angular/forms";
 
 import { LottieModule } from "ngx-lottie";
@@ -15,7 +13,6 @@ import player from "lottie-web";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HomePageComponent } from "./screens/home-page/home-page.component";
 import { AboutPageComponent } from "./screens/about-page/about-page.component";
-import { ContactPageComponent } from "./screens/contact-page/contact-page.component";
 import { HeaderComponent } from "./navigation/header/header.component";
 import { ProjectsPageComponent } from "./screens/projects-page/projects-page.component";
 import { SideNavigationBarComponent } from "./navigation/side-navigation-bar/side-navigation-bar.component";
@@ -23,7 +20,6 @@ import { PersonalInfoComponent } from "./screens/home-page/personal-info/persona
 import { AnimatedDownArrowComponent } from "./components/animated-down-arrow/animated-down-arrow.component";
 import { LightningBoltComponent } from "./components/lightning-bolt/lightning-bolt.component";
 import { SocialMediaLinksComponent } from "./screens/home-page/social-media-links/social-media-links.component";
-import { ContactFormComponent } from "./screens/contact-page/contact-form/contact-form.component";
 import { GithubRepoComponent } from "./screens/projects-page/github-repo/github-repo.component";
 import { AboutMeComponent } from "./screens/about-page/about-me/about-me.component";
 import { SkillsComponent } from "./screens/about-page/skills/skills.component";
@@ -48,7 +44,6 @@ export function playerFactory() {
     AppComponent,
     HomePageComponent,
     AboutPageComponent,
-    ContactPageComponent,
     HeaderComponent,
     ProjectsPageComponent,
     SideNavigationBarComponent,
@@ -56,7 +51,6 @@ export function playerFactory() {
     AnimatedDownArrowComponent,
     LightningBoltComponent,
     SocialMediaLinksComponent,
-    ContactFormComponent,
     GithubRepoComponent,
     AboutMeComponent,
     SkillsComponent,
@@ -72,8 +66,7 @@ export function playerFactory() {
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule,
-    FormsModule,
+
     AppRoutingModule,
     HttpClientModule,
     SlideshowModule,
