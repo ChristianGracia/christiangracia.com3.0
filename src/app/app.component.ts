@@ -40,25 +40,11 @@ export class AppComponent {
       )
     );
 
-    // this.matIconRegistry.addSvgIcon(
-    //   "menu",
-    //   this.domSanitizer.bypassSecurityTrustResourceUrl(
-    //     "../assets/images/menu.svg"
-    //   )
-    // );
-
-    // this.matIconRegistry.addSvgIcon(
-    //   "bookmark",
-    //   this.domSanitizer.bypassSecurityTrustResourceUrl(
-    //     "../assets/images/bookmark.svg"
-    //   )
-    // );
-
-    // this.matIconRegistry.addSvgIcon(
-    //   "chevron",
-    //   this.domSanitizer.bypassSecurityTrustResourceUrl(
-    //     "../assets/images/chevron.svg"
-    //   )
-    // );
+    this.matIconRegistry.addSvgIcon(
+      "menu",
+      this.domSanitizer.bypassSecurityTrustResourceUrl(
+        "../assets/images/menu.svg"
+      )
+    );
   }
 }
