@@ -38,7 +38,6 @@ export class HomePageComponent implements OnInit {
         let currentY = event.changedTouches[0].screenY;
 
         let offset = -45;
-
         if (currentY - initialY < offset) {
           this.navigatingToSite = true;
 
@@ -49,7 +48,7 @@ export class HomePageComponent implements OnInit {
                 .sendSiteVisitEmail(locationData)
                 .subscribe(() => {});
             });
-          this.routingService.navigateToSiteContent();
+          this.routingService.navigateToAbout();
         }
       });
   }
