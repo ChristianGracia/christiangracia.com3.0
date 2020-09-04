@@ -52,9 +52,7 @@ export class AboutMeComponent implements OnInit {
 
   constructor(private routingService: RoutingService) {}
 
-  ngOnInit() {
-    console.log(this.languagesArray);
-  }
+  ngOnInit() {}
   goToProjectsPage() {
     this.routingService.navigateToProjects();
   }

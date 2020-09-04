@@ -5,15 +5,8 @@ import { Component, OnInit, AfterViewInit } from "@angular/core";
   templateUrl: "./projects.component.html",
   styleUrls: ["./projects.component.scss"],
 })
-export class ProjectsComponent implements OnInit, AfterViewInit {
+export class ProjectsComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
-  ngAfterViewInit() {
-    // let top = document.getElementById("top");
-    // if (top !== null) {
-    //   top.scrollIntoView();
-    //   top = null;
-    // }
-  }
 }

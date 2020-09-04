@@ -5,28 +5,12 @@
   fxLayoutGap.xs="40vh"
   class="container"
 >
-  <mat-card fxFlex.xs="100$" fxFlex="100px" class="name-card mat-elevation-z0">
-    <div class="fire">
-      <div class="fire-left">
-        <div class="main-fire"></div>
-        <div class="particle-fire"></div>
-      </div>
-      <div class="fire-main">
-        <div class="main-fire"></div>
-        <div class="particle-fire"></div>
-      </div>
-      <div class="fire-right">
-        <div class="main-fire"></div>
-        <div class="particle-fire"></div>
-      </div>
-      <div class="fire-bottom">
-        <div class="main-fire"></div>
-      </div>
+  <mat-card fxFlex.xs="0" fxFlex="100px" class="name-card mat-elevation-z0">
+    <div class="name-container">
+      <mat-card-title class="white-text name-text" fxFlx>
+        Christian Gracia
+      </mat-card-title>
     </div>
-    <mat-card-title color="" class="white-text name-text">
-      Christian Gracia
-    </mat-card-title>
-    <!-- <app-lightning-bolt *ngIf="showTechAnimation"></app-lightning-bolt> -->
 
     <mat-card-content class="white-text job-location-text"
       >Software Engineer <span class="pipe-color">|</span> Providence, RI
@@ -71,7 +55,9 @@
         >Copied to your clipboard!</span
       >
     </mat-card-content>
-    <app-social-media-links></app-social-media-links>
+    <div style="margin-top: 25px">
+      <app-social-media-links></app-social-media-links>
+    </div>
   </mat-card>
 
   <!-- mobile button -->
@@ -83,8 +69,7 @@
     fxHide.gt-xs
     (click)="navigateToSiteContent()"
   >
-    <span class="white-text swipe-text">Swipe up or click to enter</span
-    ><mat-icon class="white-text" svgIcon="chevron"></mat-icon>
+    <span class="white-text swipe-text">Swipe up or click to enter</span>
   </div>
 
   <!-- desktop button -->
