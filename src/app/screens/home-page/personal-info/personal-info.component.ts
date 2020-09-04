@@ -24,7 +24,7 @@ export class PersonalInfoComponent implements OnInit {
   ngOnInit() {}
 
   showDownArrowAnimation() {}
-  navigateToSiteContent() {
+  navigateToAbout() {
     this.locationService
       .getLocationJSON()
       .subscribe((locationData: LocationData) => {
