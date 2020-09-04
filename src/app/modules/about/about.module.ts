@@ -7,6 +7,13 @@ import { AnimatedDownArrowComponent } from "./components/animated-down-arrow/ani
 import { AboutRoutingModule } from "./about-routing.module";
 import { AboutComponent } from "./about.component";
 
+import { LottieModule } from "ngx-lottie";
+import player from "lottie-web";
+
+export function playerFactory() {
+  return player;
+}
+
 @NgModule({
   declarations: [
     AboutMeComponent,
@@ -14,6 +21,12 @@ import { AboutComponent } from "./about.component";
     AnimatedDownArrowComponent,
     AboutComponent,
   ],
-  imports: [CommonModule, AboutRoutingModule, SharedComponentsModule],
+  imports: [
+    CommonModule,
+    AboutRoutingModule,
+    SharedComponentsModule,
+
+    LottieModule.forRoot({ player: playerFactory }),
+  ],
 })
 export class AboutModule {}

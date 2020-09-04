@@ -17,13 +17,13 @@ import { SocialMediaLinksComponent } from "./screens/home-page/social-media-link
 import { FooterComponent } from "./components/footer/footer.component";
 import { HttpClientModule } from "@angular/common/http";
 
-import { SharedComponentsModule } from "./modules/shared-components/shared-components.module";
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { MaterialModule } from "./material.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-
     HeaderComponent,
     SideNavigationBarComponent,
     PersonalInfoComponent,
@@ -33,9 +33,10 @@ import { SharedComponentsModule } from "./modules/shared-components/shared-compo
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    SharedComponentsModule,
     AppRoutingModule,
     HttpClientModule,
+    FlexLayoutModule,
+    MaterialModule,
   ],
   exports: [],
   providers: [],
