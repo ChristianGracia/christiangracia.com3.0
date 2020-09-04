@@ -56,6 +56,15 @@
     <div>
       <app-social-media-links></app-social-media-links>
     </div>
+    <div
+      fxLayout="row"
+      fxLayoutAlign="center center"
+      fxHide.gt-xs
+      (click)="navigateToAbout()"
+      style="margin-top: 40px"
+    >
+      <span class="white-text swipe-text">Swipe up or click to enter</span>
+    </div>
   </mat-card>
 
   <!-- mobile button -->
@@ -63,14 +72,6 @@
   <!-- desktop button -->
 
   <div fxLayout="column" fxLayoutAlign="center center">
-    <div
-      fxLayout="row"
-      fxLayoutAlign="center center"
-      fxHide.gt-xs
-      (click)="navigateToAbout()"
-    >
-      <span class="white-text swipe-text">Swipe up or click to enter</span>
-    </div>
     <button
       *ngIf="!showCopyHint"
       mat-raised-button
