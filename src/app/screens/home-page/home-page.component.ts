@@ -23,7 +23,7 @@ export class HomePageComponent implements OnInit {
   ngAfterViewInit(): void {
     this.elementRef.nativeElement
       .querySelector("#touch-container")
-      .addEventListener("touchstart", this.startWatchingTouch.bind(this));
+      .addEventListener("touchstart", this.startWatchingTouch.bind(this), !1);
   }
   startWatchingTouch(event) {
     if (!this.navigatingToSite) {
@@ -34,22 +34,26 @@ export class HomePageComponent implements OnInit {
   handleSwipeUp(initialY: number) {
     this.elementRef.nativeElement
       .querySelector("#touch-container")
-      .addEventListener("touchend", (event) => {
-        let currentY = event.changedTouches[0].screenY;
+      .addEventListener(
+        "touchend",
+        (event) => {
+          let currentY = event.changedTouches[0].screenY;
 
-        let offset = -45;
-        if (currentY - initialY < offset) {
-          this.navigatingToSite = true;
+          let offset = -45;
+          if (currentY - initialY < offset) {
+            this.navigatingToSite = true;
 
-          this.locationService
-            .getLocationJSON()
-            .subscribe((locationData: LocationData) => {
-              this.emailService
-                .sendSiteVisitEmail(locationData)
-                .subscribe(() => {});
-            });
-          this.routingService.navigateToAbout();
-        }
-      });
+            this.locationService
+              .getLocationJSON()
+              .subscribe((locationData: LocationData) => {
+                this.emailService
+                  .sendSiteVisitEmail(locationData)
+                  .subscribe(() => {});
+              });
+            this.routingService.navigateToAbout();
+          }
+        },
+        !1
+      );
   }
 }
