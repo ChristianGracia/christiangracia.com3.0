@@ -1,5 +1,9 @@
 # christiangracia3.0
 
+# Modular + LazyLoading
+
+each page on this site except the home page is its own lazy loaded module with components, modals, and services
+
 This repo contains the code for my personal website reritten from scratch for the third time but this time in Angular
 
 this code is live at https://www.christiangracia.com
