@@ -10,10 +10,10 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {}
   ngAfterViewInit() {
-    let top = document.getElementById("top");
-    if (top !== null) {
-      top.scrollIntoView();
-      top = null;
-    }
+    // let top = document.getElementById("top");
+    // if (top !== null) {
+    //   top.scrollIntoView();
+    //   top = null;
+    // }
   }
 }
