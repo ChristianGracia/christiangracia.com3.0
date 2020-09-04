@@ -6,6 +6,7 @@ import { GithubRepoComponent } from "./components/github-repo/github-repo.compon
 import { MyWebsitesComponent } from "./components/my-websites/my-websites.component";
 import { SiteComponent } from "./components/my-websites/site/site.component";
 import { SharedComponentsModule } from "../shared-components/shared-components.module";
+import { SlideshowModule } from "ng-simple-slideshow";
 
 @NgModule({
   declarations: [
@@ -14,6 +15,11 @@ import { SharedComponentsModule } from "../shared-components/shared-components.m
     MyWebsitesComponent,
     SiteComponent,
   ],
-  imports: [CommonModule, ProjectsRoutingModule, SharedComponentsModule],
+  imports: [
+    CommonModule,
+    ProjectsRoutingModule,
+    SharedComponentsModule,
+    SlideshowModule,
+  ],
 })
 export class ProjectsModule {}

@@ -11,14 +11,12 @@ import { HeaderComponent } from "./navigation/header/header.component";
 
 import { SideNavigationBarComponent } from "./navigation/side-navigation-bar/side-navigation-bar.component";
 import { PersonalInfoComponent } from "./screens/home-page/personal-info/personal-info.component";
-import { LightningBoltComponent } from "./components/lightning-bolt/lightning-bolt.component";
+
 import { SocialMediaLinksComponent } from "./screens/home-page/social-media-links/social-media-links.component";
 
 import { FooterComponent } from "./components/footer/footer.component";
 import { HttpClientModule } from "@angular/common/http";
-import { SkillCardComponent } from "./components/skill-card/skill-card.component";
 
-import { MainInfoPageComponent } from "./screens/main-info-page/main-info-page.component";
 import { SharedComponentsModule } from "./modules/shared-components/shared-components.module";
 
 @NgModule({
@@ -27,17 +25,10 @@ import { SharedComponentsModule } from "./modules/shared-components/shared-compo
     HomePageComponent,
 
     HeaderComponent,
-
     SideNavigationBarComponent,
     PersonalInfoComponent,
-
-    LightningBoltComponent,
     SocialMediaLinksComponent,
-
     FooterComponent,
-    SkillCardComponent,
-
-    MainInfoPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +37,7 @@ import { SharedComponentsModule } from "./modules/shared-components/shared-compo
     AppRoutingModule,
     HttpClientModule,
   ],
-  // exports: [MaterialModule],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent],
 })

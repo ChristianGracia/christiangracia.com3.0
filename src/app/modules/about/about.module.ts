@@ -1,8 +1,8 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { SkillsComponent } from "./skills/skills.component";
-import { CurrentJobComponent } from "./current-job/current-job.component";
-import { AboutMeComponent } from "./about-me/about-me.component";
+import { SkillsComponent } from "./components/skills/skills.component";
+import { CurrentJobComponent } from "./components/current-job/current-job.component";
+import { AboutMeComponent } from "./components/about-me/about-me.component";
 import { SharedComponentsModule } from "../shared-components/shared-components.module";
 import { AnimatedDownArrowComponent } from "./components/animated-down-arrow/animated-down-arrow.component";
 import { AboutRoutingModule } from "./about-routing.module";

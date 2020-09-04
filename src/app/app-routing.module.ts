@@ -2,17 +2,12 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { HomePageComponent } from "./screens/home-page/home-page.component";
 
-import { MainInfoPageComponent } from "./screens/main-info-page/main-info-page.component";
-
 const routes: Routes = [
   {
     path: "",
     component: HomePageComponent,
   },
-  {
-    path: "main",
-    component: MainInfoPageComponent,
-  },
+
   {
     path: "about",
     loadChildren: () =>

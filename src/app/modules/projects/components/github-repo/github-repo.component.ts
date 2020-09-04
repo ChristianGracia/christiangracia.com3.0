@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { GithubService } from "../../../shared-components/services/github.service";
-import { Repo } from "../../../shared-components/models/github-repo.model";
+import { GithubService } from "../../services/github.service";
+import { Repo } from "../../models/github-repo.model";
 
 @Component({
   selector: "app-github-repo",
