@@ -1,3 +1,13 @@
 @import "../../../styles.scss";
 #touch-container {
+  top: 0;
+  position: absolute;
+  background-image: url("../../../assets/images/space.webp");
+  z-index: -1;
+  width: 100%;
+
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  overflow: hidden !important;
 }

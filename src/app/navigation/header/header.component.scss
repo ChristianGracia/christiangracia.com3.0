@@ -29,6 +29,30 @@ a {
   background-color: white;
   margin: 6px 0;
   &:hover {
-    background-color: yellow;
+    background-color: #dc0005;
+  }
+}
+
+.darkenHeader {
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      color: #dc0005;
+    }
+  }
+
+  .active-link {
+    color: #dc0005;
+  }
+  .menu-row {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    &:hover {
+      background-color: #dc0005;
+    }
   }
 }

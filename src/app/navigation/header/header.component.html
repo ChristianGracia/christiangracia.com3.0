@@ -1,4 +1,4 @@
-<mat-toolbar class="toolbar" id="top">
+<mat-toolbar class="toolbar" id="top" [ngClass]="{ darkenHeader: notOnRoot }">
   <div fxHide.gt-xs fxFlex fxLayout="row" fxLayoutAlign="space-between">
     <button
       mat-icon-button
