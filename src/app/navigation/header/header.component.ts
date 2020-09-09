@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { Router, NavigationEnd } from "@angular/router";
 
 @Component({
   selector: "app-header",
@@ -6,11 +7,18 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
   styleUrls: ["./header.component.scss"],
 })
 export class HeaderComponent implements OnInit {
+  public notOnRoot: boolean = false;
   @Output()
   sidenavToggle = new EventEmitter<void>();
-  constructor() {}
+  constructor(private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.notOnRoot = event.url.length > 1 ? true : false;
+      }
+    });
+  }
   onToggleSidenav() {
     this.sidenavToggle.emit();
   }

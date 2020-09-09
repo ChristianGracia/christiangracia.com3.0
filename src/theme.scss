@@ -7,22 +7,6 @@ $dark-accent: mat-palette($mat-blue);
 
 $dark-warn: mat-palette($mat-deep-orange);
 
-$custom-background-color: #000000;
-
 $custom-theme: mat-light-theme($dark-primary, $dark-accent, $dark-warn);
-
-$background: map-get($custom-theme, background);
-$background: map_merge(
-  $background,
-  (
-    background: $custom-background-color,
-  )
-);
-$custom-theme: map_merge(
-  $custom-theme,
-  (
-    background: $background,
-  )
-);
 
 @include angular-material-theme($custom-theme);
