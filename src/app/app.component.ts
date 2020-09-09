@@ -39,12 +39,5 @@ export class AppComponent {
         "../assets/images/search.svg"
       )
     );
-
-    this.matIconRegistry.addSvgIcon(
-      "menu",
-      this.domSanitizer.bypassSecurityTrustResourceUrl(
-        "../assets/images/menu.svg"
-      )
-    );
   }
 }

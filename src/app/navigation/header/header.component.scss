@@ -23,3 +23,12 @@ a {
 .active-link {
   color: yellow;
 }
+.menu-row {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  &:hover {
+    background-color: yellow;
+  }
+}

@@ -9,6 +9,7 @@ import { AboutComponent } from "./about.component";
 
 import { LottieModule } from "ngx-lottie";
 import player from "lottie-web";
+import { AboutSiteComponent } from './components/about-site/about-site.component';
 
 export function playerFactory() {
   return player;
@@ -20,6 +21,7 @@ export function playerFactory() {
     CurrentJobComponent,
     AnimatedDownArrowComponent,
     AboutComponent,
+    AboutSiteComponent,
   ],
   imports: [
     CommonModule,
