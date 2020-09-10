@@ -56,12 +56,21 @@
     </mat-card-content>
     <mat-card-actions>
       <div fxLayoutAlign="center center" style="padding-bottom: 15px">
-        <button
+        <!-- <button
           mat-raised-button
           style="width: 70px"
           class="cg-hover-yellow"
           (click)="openLink(repo.url)"
           aria-label="view repo"
+        >
+          <mat-icon svgIcon="search"></mat-icon>
+        </button> -->
+        <button
+          mat-raised-button
+          style="width: 70px"
+          class="cg-hover-yellow"
+          (click)="openRepoCommitModal(repo.name)"
+          aria-label="view commits"
         >
           <mat-icon svgIcon="search"></mat-icon>
         </button>

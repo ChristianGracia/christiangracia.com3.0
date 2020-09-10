@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { GithubService } from "../../services/github.service";
+import { GithubService } from "../../../shared-components/services/github.service";
 import { Repo } from "../../models/github-repo.model";
+import { ViewCommitModalComponent } from "../../modals/view-commit-modal/view-commit-modal.component";
+import { MatDialog } from "@angular/material/dialog";
 
 @Component({
   selector: "app-github-repo",
@@ -10,7 +12,7 @@ import { Repo } from "../../models/github-repo.model";
 export class GithubRepoComponent implements OnInit {
   public gitRepos: Repo[] = [];
   window: Window = window;
-  constructor(private githubService: GithubService) {}
+  constructor(private githubService: GithubService, public dialog: MatDialog) {}
 
   ngOnInit() {
     this.getGithubRepos();
@@ -24,6 +26,17 @@ export class GithubRepoComponent implements OnInit {
 
   openLink(url: string) {
     window.open(url, "_blank");
+  }
+  openRepoCommitModal(repoName: string) {
+    const dialogRef = this.dialog.open(ViewCommitModalComponent, {
+      data: {
+        repo: repoName,
+      },
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      // console.log(`Dialog result: ${result}`);
+    });
   }
   formatUpdateAtDate(date: string) {
     let formattedDate = new Date(date);
