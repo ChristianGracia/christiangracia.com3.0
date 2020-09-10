@@ -3,7 +3,7 @@
 .container {
   .name-card {
     height: 40px;
-    margin-top: 100px;
+    margin-top: 20vh;
     background-color: transparent;
   }
   .white-text {
@@ -59,6 +59,21 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #111;
+.enter-button {
+  background-color: white;
+
+  color: black;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  .enter-button-text {
+    font-weight: bold;
+    font-size: 21px;
+
+    &:hover {
+      color: white;
+    }
+  }
+  &:hover {
+    background-color: red;
+  }
 }

@@ -1,18 +1,22 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { MatIconRegistry } from "@angular/material";
 import { DomSanitizer } from "@angular/platform-browser";
+import { Router, NavigationEnd } from "@angular/router";
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = "christian-gracia-site";
+
+  public notOnRoot: boolean = false;
 
   constructor(
     private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer
+    private domSanitizer: DomSanitizer,
+    private router: Router
   ) {
     this.matIconRegistry.addSvgIcon(
       "linkedin",
@@ -39,5 +43,14 @@ export class AppComponent {
         "../assets/images/search.svg"
       )
     );
+  }
+
+  ngOnInit() {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.notOnRoot = event.url.length > 1 ? true : false;
+        console.log(this.notOnRoot);
+      }
+    });
   }
 }
