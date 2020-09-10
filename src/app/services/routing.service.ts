@@ -7,10 +7,6 @@ import { Router } from "@angular/router";
 export class RoutingService {
   constructor(private router: Router) {}
 
-  public navigateToSiteContent() {
-    this.router.navigate(["/main"]);
-  }
-
   public navigateToProjects() {
     this.router.navigate(["/projects"]);
   }
