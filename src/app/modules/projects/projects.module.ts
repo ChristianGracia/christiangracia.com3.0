@@ -7,6 +7,8 @@ import { MyWebsitesComponent } from "./components/my-websites/my-websites.compon
 import { SiteComponent } from "./components/my-websites/site/site.component";
 import { SharedComponentsModule } from "../shared-components/shared-components.module";
 import { SlideshowModule } from "ng-simple-slideshow";
+import { ViewCommitModalComponent } from "./modals/view-commit-modal/view-commit-modal.component";
+import { MatDialogModule } from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -14,12 +16,15 @@ import { SlideshowModule } from "ng-simple-slideshow";
     GithubRepoComponent,
     MyWebsitesComponent,
     SiteComponent,
+    ViewCommitModalComponent,
   ],
   imports: [
     CommonModule,
     ProjectsRoutingModule,
     SharedComponentsModule,
     SlideshowModule,
+    MatDialogModule,
   ],
+  entryComponents: [ViewCommitModalComponent],
 })
 export class ProjectsModule {}
