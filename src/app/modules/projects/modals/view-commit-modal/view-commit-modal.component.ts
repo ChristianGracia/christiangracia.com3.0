@@ -17,6 +17,9 @@ export class ViewCommitModalComponent implements OnInit {
   public commits: Commit[] = [];
   public numberOfCommits: number = 30;
   public outOfCommits: boolean = false;
+  // public length: number = 0;
+  // public pageSize: number = 0;
+
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
     private githubService: GithubService
@@ -32,6 +35,7 @@ export class ViewCommitModalComponent implements OnInit {
       .subscribe((data) => {
         this.commits = data;
         this.loadingCommits = false;
+        // this.length = data.length;
         if (this.numberOfCommits !== data.length) {
           this.outOfCommits = true;
           this.numberOfCommits = data.length;
