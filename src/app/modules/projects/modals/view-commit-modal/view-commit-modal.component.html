@@ -1,25 +1,32 @@
 <h2 mat-dialog-title class="repo-name">{{ data.repo }}</h2>
+<a href="{{ data.url }}" rel="noreferrer" target="_blank"
+  >View full repo on GitHub<mat-icon
+    svgIcon="github"
+    class="social-link"
+  ></mat-icon
+></a>
 <p>Showing last 1 - {{ numberOfCommits }}</p>
 <div *ngIf="!outOfCommits">
   <button mat-button (click)="seeMoreCommits()">See More</button>
 </div>
 <mat-dialog-content *ngIf="!loadingCommits" class="mat-typography">
-  <mat-list *ngFor="let commit of commits; let i = index">
-    <mat-list-item fxLayout="column">
-      <div matLine>
-        <strong> {{ i + 1 }} </strong> Time: {{ formatDate(commit.time) }}
-      </div>
-
-      <div matLine>
-        {{ commit.message }}
-      </div>
-      <div matLine>
-        <a href="commit.url" rel="noreferrer" target="_blank"
-          >Link to commit on github</a
-        >
-      </div>
-    </mat-list-item>
-  </mat-list>
+  <mat-card *ngFor="let commit of commits; let i = index" class="commit-card">
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item fxLayout="column">
+          <div class="commit-message" matLine>
+            {{ commit.message }}
+          </div>
+          <div matLine>
+            <a href="{{ commit.url }}" rel="noreferrer" target="_blank"
+              >Link to full commit on github</a
+            >
+          </div>
+          <div class="commit-time" matLine>{{ formatDate(commit.time) }}</div>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
 </mat-dialog-content>
 <mat-dialog-content *ngIf="loadingCommits" class="mat-typography">
   <div fxLayout="column" fxLayoutAlign="center center">
@@ -30,6 +37,12 @@
   ></mat-dialog-content
 >
 <mat-dialog-actions align="end">
+  <!-- <mat-paginator
+    [length]="100"
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+  >
+  </mat-paginator> -->
   <!-- <button mat-button mat-dialog-close>Cancel</button> -->
   <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Close</button>
 </mat-dialog-actions>

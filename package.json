@@ -13,7 +13,8 @@
     "analyze": "webpack-bundle-analyzer dist/christian-gracia-site/stats.json",
     "clean-build": "rm -rf dist/ && npm run build",
     "build-prod": "ng build --prod",
-    "clean": "rm -rf dist/"
+    "clean": "rm -rf dist/",
+    "stats": "npm run build:stats && npm run analyze"
   },
   "private": true,
   "dependencies": {
