@@ -1,3 +1,14 @@
+<mat-dialog-actions align="end" style="padding-bottom: 10px">
+  <!-- <mat-paginator
+    [length]="100"
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+  >
+  </mat-paginator> -->
+  <!-- <button mat-button mat-dialog-close>Cancel</button> -->
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>X</button>
+</mat-dialog-actions>
+
 <h2 mat-dialog-title class="repo-name">{{ data.repo }}</h2>
 <a href="{{ data.url }}" rel="noreferrer" target="_blank"
   >View full repo on GitHub<mat-icon

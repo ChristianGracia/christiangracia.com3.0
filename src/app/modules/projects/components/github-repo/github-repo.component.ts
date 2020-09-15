@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { GithubService } from "../../../shared-components/services/github.service";
 import { Repo } from "../../models/github-repo.model";
 import { ViewCommitModalComponent } from "../../modals/view-commit-modal/view-commit-modal.component";
-import { MatDialog } from "@angular/material/dialog";
+import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 
 @Component({
   selector: "app-github-repo",
@@ -28,12 +28,21 @@ export class GithubRepoComponent implements OnInit {
     window.open(url, "_blank");
   }
   openRepoCommitModal(repoName: string, repoUrl: string) {
-    const dialogRef = this.dialog.open(ViewCommitModalComponent, {
+    let config = new MatDialogConfig();
+    config = {
+      // position: {
+      //   top: "20px",
+
+      // },
+      height: "80%",
+      width: "100vw",
+      panelClass: "full-screen-modal",
       data: {
         repo: repoName,
         url: repoUrl,
       },
-    });
+    };
+    const dialogRef = this.dialog.open(ViewCommitModalComponent, config);
 
     dialogRef.afterClosed().subscribe((result) => {
       // console.log(`Dialog result: ${result}`);
