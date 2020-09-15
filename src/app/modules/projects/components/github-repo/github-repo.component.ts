@@ -27,10 +27,11 @@ export class GithubRepoComponent implements OnInit {
   openLink(url: string) {
     window.open(url, "_blank");
   }
-  openRepoCommitModal(repoName: string) {
+  openRepoCommitModal(repoName: string, repoUrl: string) {
     const dialogRef = this.dialog.open(ViewCommitModalComponent, {
       data: {
         repo: repoName,
+        url: repoUrl,
       },
     });
 

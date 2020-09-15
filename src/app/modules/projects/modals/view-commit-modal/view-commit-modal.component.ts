@@ -4,6 +4,7 @@ import { GithubService } from "../../../shared-components/services/github.servic
 import { Commit } from "src/app/modules/shared-components/models/commit.model";
 export interface DialogData {
   repo: string;
+  url: string;
 }
 
 @Component({

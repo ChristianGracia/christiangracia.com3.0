@@ -1,4 +1,7 @@
 <h2 mat-dialog-title class="repo-name">{{ data.repo }}</h2>
+<a href="{{ data.url }}" rel="noreferrer" target="_blank"
+  >View full repo on GitHub</a
+>
 <p>Showing last 1 - {{ numberOfCommits }}</p>
 <div *ngIf="!outOfCommits">
   <button mat-button (click)="seeMoreCommits()">See More</button>
@@ -14,8 +17,8 @@
         {{ commit.message }}
       </div>
       <div matLine>
-        <a href="commit.url" rel="noreferrer" target="_blank"
-          >Link to commit on github</a
+        <a href="{{ commit.url }}" rel="noreferrer" target="_blank"
+          >Link to this commit on github</a
         >
       </div>
     </mat-list-item>
@@ -30,6 +33,12 @@
   ></mat-dialog-content
 >
 <mat-dialog-actions align="end">
+  <mat-paginator
+    [length]="100"
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+  >
+  </mat-paginator>
   <!-- <button mat-button mat-dialog-close>Cancel</button> -->
   <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Close</button>
 </mat-dialog-actions>
