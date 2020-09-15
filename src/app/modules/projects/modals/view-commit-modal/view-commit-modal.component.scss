@@ -3,3 +3,15 @@
 .repo-name {
   font-weight: bold;
 }
+
+.commit-card {
+  .commit-message {
+    width: 300px;
+  }
+  .commit-time {
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  margin-top: 16px;
+}
