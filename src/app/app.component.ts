@@ -48,8 +48,10 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
-        this.notOnRoot = event.url.length > 1 ? true : false;
-        console.log(this.notOnRoot);
+        this.notOnRoot =
+          event.url.length > 1 && event.url.substr(0, 2) !== "/?"
+            ? true
+            : false;
       }
     });
   }
