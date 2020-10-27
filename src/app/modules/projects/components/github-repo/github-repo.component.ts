@@ -27,6 +27,7 @@ export class GithubRepoComponent implements OnInit {
   openLink(url: string) {
     window.open(url, "_blank");
   }
+
   openRepoCommitModal(repoName: string, repoUrl: string) {
     let config = new MatDialogConfig();
     config = {
@@ -48,18 +49,17 @@ export class GithubRepoComponent implements OnInit {
       // console.log(`Dialog result: ${result}`);
     });
   }
+
   formatUpdateAtDate(date: string) {
     let formattedDate = new Date(date);
-    let returnDate =
-      formattedDate.getMonth() +
-      1 +
-      "-" +
-      formattedDate.getDate() +
-      "-" +
-      formattedDate.getFullYear();
 
-    return this.militaryTimeConverter(formattedDate) + " " + returnDate;
+    return (
+      this.militaryTimeConverter(formattedDate) +
+      " " +
+      formattedDate.toLocaleDateString("en-US")
+    );
   }
+
   formatRepoLanguage(language: string) {
     let color = "";
 
@@ -92,9 +92,10 @@ export class GithubRepoComponent implements OnInit {
     }
     return color;
   }
+
   militaryTimeConverter(date: Date) {
     let hours = date.getHours();
-    const AmOrPm = hours >= 12 ? "pm" : "am";
+    const AmOrPm = hours >= 12 ? "PM" : "AM";
     hours = hours % 12 || 12;
     let minutes = date.getMinutes();
     let formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
