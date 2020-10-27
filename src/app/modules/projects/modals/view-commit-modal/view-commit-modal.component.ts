@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from "@angular/core";
 import { MAT_DIALOG_DATA } from "@angular/material/dialog";
 import { GithubService } from "../../../shared-components/services/github.service";
 import { Commit } from "src/app/modules/shared-components/models/commit.model";
+import { formatDateAndTime } from "src/app/util/dateMethods";
 export interface DialogData {
   repo: string;
   url: string;
@@ -43,25 +44,7 @@ export class ViewCommitModalComponent implements OnInit {
       });
   }
   formatDate(date: string) {
-    let formattedDate = new Date(date);
-    let returnDate =
-      formattedDate.getMonth() +
-      1 +
-      "-" +
-      formattedDate.getDate() +
-      "-" +
-      formattedDate.getFullYear();
-
-    return this.militaryTimeConverter(formattedDate) + " " + returnDate;
-  }
-  militaryTimeConverter(date: Date) {
-    let hours = date.getHours();
-    const AmOrPm = hours >= 12 ? "pm" : "am";
-    hours = hours % 12 || 12;
-    let minutes = date.getMinutes();
-    let formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
-    const seconds = date.getSeconds();
-    return hours + ":" + formattedMinutes + " " + AmOrPm;
+    return formatDateAndTime(date);
   }
   seeMoreCommits() {
     this.numberOfCommits += 30;

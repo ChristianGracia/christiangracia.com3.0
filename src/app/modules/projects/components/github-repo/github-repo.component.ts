@@ -3,6 +3,7 @@ import { GithubService } from "../../../shared-components/services/github.servic
 import { Repo } from "../../models/github-repo.model";
 import { ViewCommitModalComponent } from "../../modals/view-commit-modal/view-commit-modal.component";
 import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
+import { formatDateAndTime } from "../../../../util/dateMethods";
 
 @Component({
   selector: "app-github-repo",
@@ -51,13 +52,7 @@ export class GithubRepoComponent implements OnInit {
   }
 
   formatUpdateAtDate(date: string) {
-    let formattedDate = new Date(date);
-
-    return (
-      this.militaryTimeConverter(formattedDate) +
-      " " +
-      formattedDate.toLocaleDateString("en-US")
-    );
+    return formatDateAndTime(date);
   }
 
   formatRepoLanguage(language: string) {
@@ -91,15 +86,5 @@ export class GithubRepoComponent implements OnInit {
         break;
     }
     return color;
-  }
-
-  militaryTimeConverter(date: Date) {
-    let hours = date.getHours();
-    const AmOrPm = hours >= 12 ? "PM" : "AM";
-    hours = hours % 12 || 12;
-    let minutes = date.getMinutes();
-    let formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
-    const seconds = date.getSeconds();
-    return hours + ":" + formattedMinutes + " " + AmOrPm;
   }
 }
