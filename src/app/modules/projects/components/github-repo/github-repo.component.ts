@@ -36,7 +36,7 @@ export class GithubRepoComponent implements OnInit {
   openRepoCommitModal(repoName: string, repoUrl: string) {
     let config = new MatDialogConfig();
     config = {
-      height: "80%",
+      height: "100vh",
       width: "100vw",
       panelClass: "full-screen-modal",
       data: {
