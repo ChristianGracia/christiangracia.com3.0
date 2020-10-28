@@ -2,6 +2,7 @@
 
 .repo-title {
   font-weight: bold;
+
   cursor: pointer;
   &:hover {
     color: grey;
@@ -15,16 +16,24 @@
     margin: 15px 30px;
   }
 
-  .repo-sub-info-container {
-    margin-top: 10px;
-    min-width: 270px;
-    .repo-col-header {
-      font-weight: bold;
-      font-size: 13px;
-      text-align: center;
-    }
+  .repo-language-container {
+    margin-top: -6px;
+    margin-bottom: 10px;
+    // min-width: 270px;
+    // .repo-col-header {
+    //   font-weight: bold;
+    //   font-size: 13px;
+    //   text-align: center;
+    // }
     .repo-language-text {
-      font-size: 18px;
+      font-size: 16px;
+    }
+  }
+  .repo-date-container {
+    margin-bottom: 10px;
+    .repo-date-text {
+      font-size: 12px;
+      font-style: italic;
     }
   }
 }

@@ -19,11 +19,6 @@
       ></a>
     </div>
   </div>
-
-  <!-- <p>Showing last 1 - {{ numberOfCommits }}</p> -->
-  <!-- <div>
-    <button mat-button (click)="seeMoreCommits()">See More</button>
-  </div> -->
   <mat-dialog-content *ngIf="!loadingCommits" class="card-container">
     <mat-card *ngFor="let commit of commits; let i = index" class="commit-card">
       <mat-card-content>
@@ -43,12 +38,11 @@
       </mat-card-content>
     </mat-card>
   </mat-dialog-content>
-  <mat-dialog-content *ngIf="loadingCommits" class="mat-typography">
+  <mat-dialog-content *ngIf="loadingCommits">
     <div fxLayout="column" fxLayoutAlign="center center">
       Loading commits
       <mat-spinner></mat-spinner>
     </div>
-
     ></mat-dialog-content
   >
 </div>
