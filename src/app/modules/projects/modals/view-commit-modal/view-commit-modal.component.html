@@ -25,9 +25,13 @@
         <mat-list>
           <mat-list-item fxLayout="column">
             <div class="commit-message" matLine>
-              {{ commit.message }}
+              {{
+                commit.message.length > 40
+                  ? commit.message.substr(0, 40) + "..."
+                  : commit.message
+              }}
             </div>
-            <div matLine>
+            <div matLine class="github-link-container">
               <a href="{{ commit.url }}" rel="noreferrer" target="_blank"
                 >See this commit on github</a
               >

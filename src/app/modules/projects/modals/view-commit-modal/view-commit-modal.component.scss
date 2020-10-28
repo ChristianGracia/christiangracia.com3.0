@@ -14,11 +14,12 @@
     height: 20px;
   }
   .card-container {
-    height: 400px;
   }
   .commit-card {
+    .github-link-container {
+      margin-top: 20px;
+    }
     .commit-message {
-      width: 300px;
     }
     .commit-time {
       font-weight: bold;
@@ -33,4 +34,8 @@
       font-size: 24px;
     }
   }
+}
+::ng-deep .mat-line {
+  word-wrap: break-word !important;
+  white-space: pre-wrap !important;
 }
