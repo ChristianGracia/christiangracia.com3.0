@@ -3,6 +3,7 @@
 .repo-title {
   // max-width: 290px;
   font-weight: bold;
+  cursor: pointer;
 }
 .repo-card {
   max-width: 300px;
@@ -18,11 +19,15 @@
     .repo-col-header {
       font-weight: bold;
       font-size: 13px;
+      text-align: center;
     }
     .repo-language-text {
       font-size: 18px;
     }
   }
+}
+.github-container {
+  margin-top: 40px;
 }
 .api-description-container {
   text-align: center;
@@ -34,5 +39,12 @@
     margin-top: 12px;
     font-size: 14px;
     font-style: italic;
+  }
+}
+
+.repo-loader-container {
+  margin-top: 20px;
+  .repo-loader {
+    color: black;
   }
 }

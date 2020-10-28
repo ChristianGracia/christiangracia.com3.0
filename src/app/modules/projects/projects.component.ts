@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
   selector: "app-projects",
@@ -8,5 +8,8 @@ import { Component, OnInit, AfterViewInit } from "@angular/core";
 export class ProjectsComponent implements OnInit {
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    const element = document.querySelector("mat-sidenav-content") || window;
+    element.scrollTo(0, 0);
+  }
 }

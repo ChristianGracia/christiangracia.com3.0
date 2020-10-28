@@ -1,1 +1,9 @@
 @import "../../../styles.scss";
+
+.page-container {
+  background-color: white;
+  .construction-text {
+    font-size: 26px;
+    font-style: italic;
+  }
+}

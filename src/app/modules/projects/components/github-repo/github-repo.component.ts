@@ -15,14 +15,18 @@ export class GithubRepoComponent implements OnInit {
   window: Window = window;
   constructor(private githubService: GithubService, public dialog: MatDialog) {}
 
+  public loadingRepos: boolean = false;
+
   ngOnInit() {
     this.getGithubRepos();
   }
 
   getGithubRepos() {
-    this.githubService
-      .getAllRepos()
-      .subscribe((repos: Repo[]) => (this.gitRepos = repos));
+    this.loadingRepos = true;
+    this.githubService.getAllRepos().subscribe((repos: Repo[]) => {
+      this.gitRepos = repos;
+      this.loadingRepos = false;
+    });
   }
 
   openLink(url: string) {

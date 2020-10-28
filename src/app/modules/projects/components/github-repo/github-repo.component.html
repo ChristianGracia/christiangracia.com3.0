@@ -16,9 +16,18 @@
   >
 </div>
 <div
+  *ngIf="loadingRepos"
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  class="repo-loader-container"
+>
+  <mat-spinner></mat-spinner>
+</div>
+<div
   fxLayout="row wrap"
   fxLayoutAlign="center center"
-  style="background-color: white"
+  class="github-container"
+  *ngIf="!loadingRepos"
 >
   <mat-card
     *ngFor="let repo of gitRepos"
@@ -27,9 +36,9 @@
     class="repo-card mat-elevation-z6"
   >
     <mat-card-title class="repo-title">
-      {{ repo.name }}
+      <a (click)="openLink(repo.url)"> {{ repo.name }}</a>
     </mat-card-title>
-    <!-- <a (click)="openLink(repo.url)">LINK</a> -->
+
     <mat-card-content>
       <span class="repo-description">
         {{ repo.description }}
@@ -57,15 +66,6 @@
     </mat-card-content>
     <mat-card-actions>
       <div fxLayoutAlign="center center" style="padding-bottom: 15px">
-        <!-- <button
-          mat-raised-button
-          style="width: 70px"
-          class="cg-hover-yellow"
-          (click)="openLink(repo.url)"
-          aria-label="view repo"
-        >
-          <mat-icon svgIcon="search"></mat-icon>
-        </button> -->
         <button
           mat-raised-button
           style="width: 70px"
