@@ -1,21 +1,36 @@
 @import "../../../../../styles.scss";
 
-.repo-name {
-  font-weight: bold;
-}
-.social-link {
-  color: black;
-  margin-top: 6px;
-  height: 20px;
-}
-.commit-card {
-  .commit-message {
-    width: 300px;
-  }
-  .commit-time {
-    font-weight: bold;
-    font-size: 12px;
+.modal-container {
+  .repo-name-container {
+    padding-bottom: 40px;
+    .repo-name {
+      font-weight: bold;
+    }
   }
 
-  margin-top: 16px;
+  .social-link {
+    color: black;
+    margin-top: 6px;
+    height: 20px;
+  }
+  .card-container {
+    height: 400px;
+  }
+  .commit-card {
+    .commit-message {
+      width: 300px;
+    }
+    .commit-time {
+      font-weight: bold;
+      font-size: 12px;
+    }
+
+    margin-top: 16px;
+  }
+  .close-button-container {
+    margin-bottom: 20px;
+    .close-button-text {
+      font-size: 24px;
+    }
+  }
 }

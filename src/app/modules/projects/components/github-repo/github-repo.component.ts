@@ -36,10 +36,6 @@ export class GithubRepoComponent implements OnInit {
   openRepoCommitModal(repoName: string, repoUrl: string) {
     let config = new MatDialogConfig();
     config = {
-      // position: {
-      //   top: "20px",
-
-      // },
       height: "80%",
       width: "100vw",
       panelClass: "full-screen-modal",
@@ -50,9 +46,7 @@ export class GithubRepoComponent implements OnInit {
     };
     const dialogRef = this.dialog.open(ViewCommitModalComponent, config);
 
-    dialogRef.afterClosed().subscribe((result) => {
-      // console.log(`Dialog result: ${result}`);
-    });
+    dialogRef.afterClosed().subscribe((result) => {});
   }
 
   formatUpdateAtDate(date: string) {

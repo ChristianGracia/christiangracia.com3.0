@@ -1,9 +1,11 @@
 @import "../../../../../styles.scss";
 
 .repo-title {
-  // max-width: 290px;
   font-weight: bold;
   cursor: pointer;
+  &:hover {
+    color: grey;
+  }
 }
 .repo-card {
   max-width: 300px;
