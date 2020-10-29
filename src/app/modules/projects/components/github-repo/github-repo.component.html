@@ -55,7 +55,10 @@
     </mat-card-content>
     <div class="repo-date-container">
       <span class="repo-date-text">
-        Last updated at {{ formatUpdateAtDate(repo.updatedAt) }}</span
+        Last updated at
+        <span class="repo-date-value">{{
+          formatUpdateAtDate(repo.updatedAt)
+        }}</span></span
       >
     </div>
     <!-- <mat-card-content>

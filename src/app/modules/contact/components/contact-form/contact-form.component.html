@@ -54,15 +54,17 @@
       >
     </mat-form-field>
 
-    <button
-      aria-label="submit"
-      mat-raised-button
-      color="warn"
-      class="cg-hover-red"
-      [disabled]="contactForm.invalid"
-    >
-      Submit
-    </button>
+    <div class="submit-button-container">
+      <button
+        aria-label="submit"
+        mat-raised-button
+        color="warn"
+        class="cg-hover-red"
+        [disabled]="contactForm.invalid"
+      >
+        Submit
+      </button>
+    </div>
   </form>
 </section>
 <section *ngIf="emailReceived" fxLayout="column" fxLayoutAlign="center center">
