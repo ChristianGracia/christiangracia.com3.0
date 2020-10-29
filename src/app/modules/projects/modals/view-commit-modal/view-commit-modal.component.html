@@ -15,36 +15,37 @@
     </div>
     <div>
       <a href="{{ data.url }}" rel="noreferrer" target="_blank"
-        >View repo<mat-icon svgIcon="github" class="social-link"></mat-icon
+        >View on GitHub
+        <mat-icon svgIcon="github" class="social-link"></mat-icon
       ></a>
     </div>
+  </div>
+  <div class="view-repo-text-container">
+    <span class="view-repo-text" *ngIf="totalCommits == 100"
+      >Viewing last {{ totalCommits }} commits
+    </span>
+    <span class="view-repo-text" *ngIf="totalCommits < 100"
+      >Viewing all {{ totalCommits }} commits
+    </span>
   </div>
   <mat-dialog-content *ngIf="!loadingCommits" class="card-container">
     <mat-card *ngFor="let commit of commits; let i = index" class="commit-card">
       <mat-card-content>
-        <mat-list>
-          <mat-list-item fxLayout="column">
-            <div class="commit-message" matLine>
-              {{
-                commit.message.length > 40
-                  ? commit.message.substr(0, 40) + "..."
-                  : commit.message
-              }}
-            </div>
-            <div matLine class="github-link-container">
-              <a href="{{ commit.url }}" rel="noreferrer" target="_blank"
-                >See this commit on github</a
-              >
-            </div>
-            <div class="commit-time" matLine>{{ formatDate(commit.time) }}</div>
-          </mat-list-item>
-        </mat-list>
+        <span class="commit-number">#{{ totalCommits - i }}</span>
+
+        <div class="commit-message" matLine>{{ commit.message }}</div>
+        <div class="github-link-container">
+          <a href="{{ commit.url }}" rel="noreferrer" target="_blank"
+            >See this commit on github</a
+          >
+        </div>
+        <div class="commit-time" matLine>{{ formatDate(commit.time) }}</div>
       </mat-card-content>
     </mat-card>
   </mat-dialog-content>
   <mat-dialog-content *ngIf="loadingCommits">
     <div fxLayout="column" fxLayoutAlign="center center">
-      Loading commits
+      <p>Loading commits</p>
       <mat-spinner></mat-spinner>
     </div>
   </mat-dialog-content>

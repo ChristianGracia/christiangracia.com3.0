@@ -16,8 +16,9 @@ export interface DialogData {
 export class ViewCommitModalComponent implements OnInit {
   public loadingCommits: boolean = false;
   public commits: Commit[] = [];
-  public numberOfCommits: number = 100;
+  public numberOfCommits: number = 1000;
   public outOfCommits: boolean = false;
+  public totalCommits: number;
   // public length: number = 0;
   // public pageSize: number = 0;
 
@@ -37,6 +38,7 @@ export class ViewCommitModalComponent implements OnInit {
         console.log(data);
         this.commits = data;
         this.loadingCommits = false;
+        this.totalCommits = data.length;
         // this.length = data.length;
         // if (this.numberOfCommits !== data.length) {
         //   this.outOfCommits = true;

@@ -7,23 +7,34 @@
       font-weight: bold;
     }
   }
+  .view-repo-text-container {
+    margin-bottom: 12px;
+    .view-repo-text {
+      font-weight: bold;
+    }
+  }
 
   .social-link {
     color: black;
     margin-top: 6px;
     height: 20px;
   }
-  .card-container {
-  }
+
   .commit-card {
     .github-link-container {
       margin-top: 20px;
+      margin-bottom: 4px;
     }
     .commit-message {
+      margin-top: 5px;
     }
+
     .commit-time {
       font-weight: bold;
       font-size: 12px;
+    }
+    .commit-number {
+      @extend .commit-time;
     }
 
     margin-top: 16px;
@@ -34,8 +45,4 @@
       font-size: 24px;
     }
   }
-}
-::ng-deep .mat-line {
-  word-wrap: break-word !important;
-  white-space: pre-wrap !important;
 }
