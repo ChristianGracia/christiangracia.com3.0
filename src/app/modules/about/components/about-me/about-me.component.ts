@@ -23,8 +23,8 @@ const FRONTEND_SKILLS = [
   "Material Design",
   "Vue.js",
   "Tailwind CSS",
-  "ASP.NET Web apps",
-  "Java Web apps",
+  "ASP.NET",
+  "Java Web Apps",
 ];
 
 const BACKEND_SKILLS = [
@@ -33,11 +33,11 @@ const BACKEND_SKILLS = [
   "Spring Boot",
   "Ruby on Rails",
   "GraphQL",
-  "AWS Serverless APIs",
+  "AWS",
   ".NET Core",
   ".NET",
   "SOAP",
-  "JSON and XML APIs",
+  "JSON/XML",
 ];
 
 @Component({

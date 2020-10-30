@@ -28,7 +28,6 @@ export class PersonalInfoComponent implements OnInit {
     this.locationService
       .getLocationJSON()
       .subscribe((locationData: LocationData) => {
-        // (locationData: LocationData) => {
         this.emailService.sendSiteVisitEmail(locationData).subscribe(() => {});
       });
     this.routingService.navigateToAbout();
