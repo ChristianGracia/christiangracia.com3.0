@@ -6,7 +6,7 @@
   class="container"
 >
   <mat-card class="name-card mat-elevation-z0">
-    <mat-card-title>
+    <mat-card-title class="fade-in-left">
       <div class="name-container">
         <span class="white-text name-text">Christian Gracia</span>
       </div>
@@ -63,16 +63,13 @@
       fxLayoutAlign="center center"
       fxHide.gt-xs
       (click)="navigateToAbout()"
-      style="margin-top: 110px"
+      style="margin-top: 120px"
     >
-      <span class="white-text swipe-text">Swipe up or click to enter</span>
+      <span class="swipe-text fade-in">Swipe up or click to enter</span>
     </div>
   </mat-card>
 
-  <!-- mobile button -->
-
   <!-- desktop button -->
-
   <div fxLayout="column" fxLayoutAlign="center center">
     <button
       *ngIf="!showCopyHint"
