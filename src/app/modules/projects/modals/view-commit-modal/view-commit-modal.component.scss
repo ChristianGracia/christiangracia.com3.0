@@ -18,6 +18,10 @@
     margin-top: 6px;
     height: 20px;
   }
+  .card-container {
+    padding-bottom: 20px;
+    overflow-x: hidden;
+  }
 
   .commit-card {
     .github-link-container {
@@ -31,9 +35,6 @@
     .commit-time {
       font-weight: bold;
       font-size: 12px;
-    }
-    .commit-number {
-      @extend .commit-time;
     }
 
     margin-top: 16px;

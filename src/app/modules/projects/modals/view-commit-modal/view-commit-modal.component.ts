@@ -16,11 +16,12 @@ export interface DialogData {
 export class ViewCommitModalComponent implements OnInit {
   public loadingCommits: boolean = false;
   public commits: Commit[] = [];
+  public displayedCommits: Commit[] = [];
   public numberOfCommits: number = 1000;
   public outOfCommits: boolean = false;
   public totalCommits: number;
-  // public length: number = 0;
-  // public pageSize: number = 0;
+  page = 0;
+  size = 3;
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
@@ -39,18 +40,21 @@ export class ViewCommitModalComponent implements OnInit {
         this.commits = data;
         this.loadingCommits = false;
         this.totalCommits = data.length;
-        // this.length = data.length;
-        // if (this.numberOfCommits !== data.length) {
-        //   this.outOfCommits = true;
-        //   this.numberOfCommits = data.length;
-        // }
+        this.getData({ pageIndex: this.page, pageSize: this.size });
       });
   }
   formatDate(date: string) {
     return formatDateAndTime(date);
   }
-  // seeMoreCommits() {
-  //   this.numberOfCommits += 30;
-  //   this.loadCommits();
-  // }
+
+  getData(obj) {
+    let index = 0,
+      startingIndex = obj.pageIndex * obj.pageSize,
+      endingIndex = startingIndex + obj.pageSize;
+
+    this.displayedCommits = this.commits.filter(() => {
+      index++;
+      return index > startingIndex && index <= endingIndex ? true : false;
+    });
+  }
 }

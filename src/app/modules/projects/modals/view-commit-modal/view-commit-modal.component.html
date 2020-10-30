@@ -28,11 +28,22 @@
       >Viewing all {{ totalCommits }} commits
     </span>
   </div>
+  <div class="paginator-container">
+    <mat-paginator
+      [length]="commits.length"
+      [pageSize]="size"
+      [pageIndex]="page"
+      [pageSizeOptions]="[1, 3, 5, 25, 50, 100]"
+      (page)="getData($event)"
+    >
+    </mat-paginator>
+  </div>
   <mat-dialog-content *ngIf="!loadingCommits" class="card-container">
-    <mat-card *ngFor="let commit of commits; let i = index" class="commit-card">
+    <mat-card
+      *ngFor="let commit of displayedCommits; let i = index"
+      class="commit-card"
+    >
       <mat-card-content>
-        <span class="commit-number">#{{ totalCommits - i }}</span>
-
         <div class="commit-message" matLine>{{ commit.message }}</div>
         <div class="github-link-container">
           <a href="{{ commit.url }}" rel="noreferrer" target="_blank"
