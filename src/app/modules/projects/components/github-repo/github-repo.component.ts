@@ -12,7 +12,11 @@ import { formatDateAndTime } from "../../../../util/dateMethods";
 })
 export class GithubRepoComponent implements OnInit {
   public gitRepos: Repo[] = [];
+  public data: Repo[] = [];
   window: Window = window;
+  page = 0;
+  size = 3;
+
   constructor(private githubService: GithubService, public dialog: MatDialog) {}
 
   public loadingRepos: boolean = false;
@@ -26,6 +30,7 @@ export class GithubRepoComponent implements OnInit {
     this.githubService.getAllRepos().subscribe((repos: Repo[]) => {
       this.gitRepos = repos;
       this.loadingRepos = false;
+      this.getData({ pageIndex: this.page, pageSize: this.size });
     });
   }
 
@@ -84,5 +89,15 @@ export class GithubRepoComponent implements OnInit {
         break;
     }
     return color;
+  }
+  getData(obj) {
+    let index = 0,
+      startingIndex = obj.pageIndex * obj.pageSize,
+      endingIndex = startingIndex + obj.pageSize;
+
+    this.data = this.gitRepos.filter(() => {
+      index++;
+      return index > startingIndex && index <= endingIndex ? true : false;
+    });
   }
 }

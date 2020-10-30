@@ -34,6 +34,11 @@
     }
   }
 }
+.paginator-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 .github-container {
   margin-top: 40px;
 }

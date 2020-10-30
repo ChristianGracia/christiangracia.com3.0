@@ -23,6 +23,16 @@
 >
   <mat-spinner></mat-spinner>
 </div>
+<div class="paginator-container">
+  <mat-paginator
+    [length]="gitRepos.length"
+    [pageSize]="size"
+    [pageIndex]="page"
+    [pageSizeOptions]="[1, 2, 3, 5, 8, 13, 21]"
+    (page)="getData($event)"
+  >
+  </mat-paginator>
+</div>
 <div
   fxLayout="row wrap"
   fxLayoutAlign="center center"
@@ -30,7 +40,7 @@
   *ngIf="!loadingRepos"
 >
   <mat-card
-    *ngFor="let repo of gitRepos"
+    *ngFor="let repo of data"
     fxLayout="column"
     fxLayoutAlign="center"
     class="repo-card mat-elevation-z6"
@@ -61,28 +71,6 @@
         }}</span></span
       >
     </div>
-    <!-- <mat-card-content>
-      <div
-        class="repo-sub-info-container"
-        fxLayout="row"
-        fxLayoutAlign="space-around"
-      >
-        <div fxLayout="column" fxLayoutGap="6px">
-          <span class="repo-col-header">Primary Language</span>
-          <span
-            class="repo-language-text"
-            [ngStyle]="{ color: formatRepoLanguage(repo.language) }"
-            >{{ repo.language }}</span
-          >
-        </div>
-        <div fxLayout="column" fxLayoutGap="10px">
-          <span class="repo-col-header">Updated At</span>
-          <span class="repo-date-text">{{
-            formatUpdateAtDate(repo.updatedAt)
-          }}</span>
-        </div>
-      </div>
-    </mat-card-content> -->
     <mat-card-actions>
       <div fxLayoutAlign="center center" style="padding-bottom: 15px">
         <button
