@@ -40,8 +40,11 @@
       >
     </mat-form-field>
 
-    <mat-form-field class="" color="accent">
+    <mat-form-field color="accent">
       <textarea
+        cdkTextareaAutosize
+        cdkAutosizeMinRows="4"
+        cdkAutosizeMaxRows="10"
         matInput
         placeholder="Leave a message"
         ngModel
