@@ -23,16 +23,7 @@
 >
   <mat-spinner></mat-spinner>
 </div>
-<div class="paginator-container">
-  <mat-paginator
-    [length]="gitRepos.length"
-    [pageSize]="size"
-    [pageIndex]="page"
-    [pageSizeOptions]="[1, 2, 3, 5, 8, 13, 21]"
-    (page)="getData($event)"
-  >
-  </mat-paginator>
-</div>
+
 <div
   fxLayout="row wrap"
   fxLayoutAlign="center center"
@@ -85,4 +76,14 @@
       </div>
     </mat-card-actions>
   </mat-card>
+</div>
+<div class="paginator-container">
+  <mat-paginator
+    [length]="gitRepos.length"
+    [pageSize]="size"
+    [pageIndex]="page"
+    [pageSizeOptions]="[1, 2, 3, 5, 8, 13, 21]"
+    (page)="getData($event)"
+  >
+  </mat-paginator>
 </div>
