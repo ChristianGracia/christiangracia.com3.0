@@ -21,7 +21,7 @@ export class ViewCommitModalComponent implements OnInit {
   public outOfCommits: boolean = false;
   public totalCommits: number;
   page = 0;
-  size = 3;
+  size = 25;
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: DialogData,

@@ -2,7 +2,7 @@
 
 .modal-container {
   .repo-name-container {
-    padding-bottom: 40px;
+    // padding-bottom: 40px;
     .repo-name {
       font-weight: bold;
       color: #f7d000;
@@ -20,28 +20,27 @@
     height: 20px;
   }
   .card-container {
-    padding-bottom: 20px;
-    overflow-x: hidden;
-  }
+    // padding-bottom: 20px;
+    // overflow-x: hidden;
 
-  .commit-card {
-    .github-link-container {
-      margin-top: 20px;
-      margin-bottom: 4px;
-    }
-    .commit-message {
-      margin-top: 5px;
-    }
+    .commit-card {
+      margin-bottom: 36px;
+      .github-link-container {
+        margin-top: 20px;
+        margin-bottom: 4px;
+      }
+      .commit-message {
+        margin-top: 5px;
+      }
 
-    .commit-time {
-      font-weight: bold;
-      font-size: 12px;
+      .commit-time {
+        font-weight: bold;
+        font-size: 12px;
+      }
     }
-
-    margin-top: 16px;
   }
   .close-button-container {
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     .close-button-text {
       font-size: 24px;
     }

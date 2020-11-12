@@ -38,10 +38,10 @@
     >
     </mat-paginator>
   </div>
-  <mat-dialog-content *ngIf="!loadingCommits" class="card-container">
+  <div *ngIf="!loadingCommits" class="card-container">
     <mat-card
       *ngFor="let commit of displayedCommits; let i = index"
-      class="commit-card"
+      class="commit-card mat-elevation-z6"
     >
       <mat-card-content>
         <div class="commit-message" matLine>{{ commit.message }}</div>
@@ -53,7 +53,7 @@
         <div class="commit-time" matLine>{{ formatDate(commit.time) }}</div>
       </mat-card-content>
     </mat-card>
-  </mat-dialog-content>
+  </div>
   <mat-dialog-content *ngIf="loadingCommits">
     <div fxLayout="column" fxLayoutAlign="center center">
       <p>Loading commits</p>
