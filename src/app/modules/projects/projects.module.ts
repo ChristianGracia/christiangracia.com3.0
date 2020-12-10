@@ -8,6 +8,7 @@ import { SiteComponent } from "./components/my-websites/site/site.component";
 import { SharedComponentsModule } from "../shared-components/shared-components.module";
 import { SlideshowModule } from "ng-simple-slideshow";
 import { ViewCommitModalComponent } from "./modals/view-commit-modal/view-commit-modal.component";
+import { ViewSiteModalComponent } from "./modals/view-site-modal/view-site-modal.component";
 import { MatDialogModule } from "@angular/material/dialog";
 
 @NgModule({
@@ -17,6 +18,7 @@ import { MatDialogModule } from "@angular/material/dialog";
     MyWebsitesComponent,
     SiteComponent,
     ViewCommitModalComponent,
+    ViewSiteModalComponent,
   ],
   imports: [
     CommonModule,
@@ -25,6 +27,6 @@ import { MatDialogModule } from "@angular/material/dialog";
     SlideshowModule,
     MatDialogModule,
   ],
-  entryComponents: [ViewCommitModalComponent],
+  entryComponents: [ViewCommitModalComponent, ViewSiteModalComponent],
 })
 export class ProjectsModule {}
