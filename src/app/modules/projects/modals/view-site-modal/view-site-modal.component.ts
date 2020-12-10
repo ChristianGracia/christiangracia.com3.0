@@ -20,6 +20,6 @@ export class ViewSiteModalComponent implements OnInit {
 
     setTimeout(() => {
       this.showSlowLoadingText = false;
-    }, 3000);
+    }, 60000);
   }
 }
