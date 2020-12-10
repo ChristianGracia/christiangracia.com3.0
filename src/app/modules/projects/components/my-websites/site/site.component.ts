@@ -18,8 +18,10 @@ export class SiteComponent implements OnInit {
   viewSite(siteUrl: string) {
     let config = new MatDialogConfig();
     config = {
-      height: "100vh",
-      width: "110vw",
+      maxWidth: "100vw",
+      maxHeight: "100vh",
+      height: "100%",
+      width: "100%",
       panelClass: "full-screen-modal",
       data: {
         url: siteUrl,
