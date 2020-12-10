@@ -4,6 +4,21 @@
       <span class="close-button-text">X</span>
     </button>
   </div>
+  <div
+    *ngIf="data.url.match('herokuapp') && showSlowLoadingText"
+    class="free-server-container"
+  >
+    This site is hosted on a free server which can take 1-2 mins to wake up from
+    sleep
+  </div>
+
+  <div align="center" class="view-site-button-container">
+    <button mat-raised-button class="cg-hover-yellow" aria-label="view site">
+      <a href="{{ data.url }}" rel="noreferrer" target="_blank"
+        ><span class="cg-hover-yellow-text">View full directly</span></a
+      >
+    </button>
+  </div>
 
   <iframe [src]="data.url | safe" width="100%"></iframe>
 </div>

@@ -19,7 +19,7 @@ export class SiteComponent implements OnInit {
     let config = new MatDialogConfig();
     config = {
       height: "100vh",
-      width: "100vw",
+      width: "110vw",
       panelClass: "full-screen-modal",
       data: {
         url: siteUrl,
