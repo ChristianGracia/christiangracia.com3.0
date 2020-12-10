@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 import { NgForm } from "@angular/forms";
 import { EmailService } from "../../../../services/email.service";
 import { EmailMessage } from "../../../../models/email-message.model";
@@ -13,6 +13,7 @@ import { LocationService } from "../../../../services/location.service";
   styleUrls: ["./contact-form.component.scss"],
 })
 export class ContactFormComponent implements OnInit {
+  @Output() emailReceivedEvent = new EventEmitter<boolean>();
   constructor(
     private emailService: EmailService,
     private routingService: RoutingService,
@@ -37,6 +38,7 @@ export class ContactFormComponent implements OnInit {
     this.emailService.sendContactEmail(messageParams).subscribe((data: any) => {
       if (data.name) {
         this.emailReceived = true;
+        this.emailReceivedEvent.emit(true);
       }
     });
   }

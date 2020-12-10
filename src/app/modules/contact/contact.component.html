@@ -1,9 +1,12 @@
 <div fxLayout="column" fxLayoutAlign="center center" class="page-container">
   <app-content-header
+    *ngIf="showHeader"
     contentTitle="Contact"
     contentDescription="Say hi with an email!"
   ></app-content-header>
 
-  <app-contact-form></app-contact-form>
+  <app-contact-form
+    (emailReceivedEvent)="hideHeader($event)"
+  ></app-contact-form>
   <div style="padding-bottom: 300px"></div>
 </div>

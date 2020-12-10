@@ -15,7 +15,7 @@ export class GithubRepoComponent implements OnInit {
   public data: Repo[] = [];
   window: Window = window;
   page = 0;
-  size = 3;
+  size = 5;
 
   constructor(private githubService: GithubService, public dialog: MatDialog) {}
 
@@ -84,7 +84,7 @@ export class GithubRepoComponent implements OnInit {
         color = "green";
         break;
       case "Rust":
-        color = "#DEA584";
+        color = "#B34313";
         break;
       default:
         color = "black";
