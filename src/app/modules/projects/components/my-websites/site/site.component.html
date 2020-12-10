@@ -18,10 +18,13 @@
   <mat-card-content>
     <p>{{ site.bottomText }}</p>
     <div flexLayout="column" fxLayoutAlign="center center">
-      <button mat-raised-button class="cg-hover-yellow" aria-label="view site">
-        <a href="{{ site.url }}" rel="noreferrer" target="_blank"
-          ><span class="cg-hover-yellow-text">View Site</span></a
-        >
+      <button
+        (click)="viewSite(site.url)"
+        mat-raised-button
+        class="cg-hover-yellow"
+        aria-label="view site"
+      >
+        View Site
       </button>
     </div>
   </mat-card-content>
