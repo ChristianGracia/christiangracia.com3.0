@@ -10,6 +10,7 @@ import { SlideshowModule } from "ng-simple-slideshow";
 import { ViewCommitModalComponent } from "./modals/view-commit-modal/view-commit-modal.component";
 import { ViewSiteModalComponent } from "./modals/view-site-modal/view-site-modal.component";
 import { MatDialogModule } from "@angular/material/dialog";
+import { SafePipe } from "./services/safe.pipe";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MatDialogModule } from "@angular/material/dialog";
     SiteComponent,
     ViewCommitModalComponent,
     ViewSiteModalComponent,
+    SafePipe,
   ],
   imports: [
     CommonModule,

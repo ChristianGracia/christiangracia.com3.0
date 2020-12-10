@@ -10,10 +10,6 @@
     fxLayoutGap="-25px"
     class="site-container"
   >
-    <iframe
-      src="https://christiangracia-api.herokuapp.com/"
-      width="100%"
-      height="100%"
-    ></iframe>
+    <iframe [src]="data.url | safe" width="100%" height="100%"></iframe>
   </div>
 </div>

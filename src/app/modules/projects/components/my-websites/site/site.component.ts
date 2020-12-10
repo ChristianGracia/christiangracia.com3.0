@@ -15,15 +15,14 @@ export class SiteComponent implements OnInit {
 
   ngOnInit() {}
 
-  viewSite() {
+  viewSite(siteUrl: string) {
     let config = new MatDialogConfig();
     config = {
       height: "100vh",
       width: "100vw",
       panelClass: "full-screen-modal",
       data: {
-        // repo: repoName,
-        // url: repoUrl,
+        url: siteUrl,
       },
     };
     const dialogRef = this.dialog.open(ViewSiteModalComponent, config);
