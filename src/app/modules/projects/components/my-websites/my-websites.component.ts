@@ -37,13 +37,29 @@ const NFL_SITE: Site = new Site(
   ]
 );
 
+const CHRISTIAN_GRACIA_API: Site = new Site(
+  "Christian Gracia API",
+  "TypeScript Node.js API back-end that serves my website content, sends me emails, and more",
+  "https://christiangracia-api.herokuapp.com",
+  [
+    "https://imgur.com/1upVQ9n.png",
+    "https://imgur.com/9z9e44E.png",
+    "https://imgur.com/t2tX6mv.png",
+  ]
+);
+
 @Component({
   selector: "app-my-websites",
   templateUrl: "./my-websites.component.html",
   styleUrls: ["./my-websites.component.scss"],
 })
 export class MyWebsitesComponent implements OnInit {
-  public sites: Site[] = [ON_A_BEAT_SITE, NFL_SITE, CHRISTIAN_GRACIA_SITE];
+  public sites: Site[] = [
+    CHRISTIAN_GRACIA_API,
+    ON_A_BEAT_SITE,
+    NFL_SITE,
+    CHRISTIAN_GRACIA_SITE,
+  ];
 
   constructor() {}
 
