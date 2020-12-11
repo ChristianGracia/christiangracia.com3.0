@@ -7,9 +7,9 @@ const CHRISTIAN_GRACIA_SITE: Site = new Site(
   React/Redux + Sass front-end.`,
   "https://christiangracia-old.herokuapp.com/",
   [
-    "https://i.imgur.com/dga9J4G.jpg",
-    "https://i.imgur.com/SKBvjbr.jpg",
-    "https://i.imgur.com/gNBNVGJ.jpg",
+    "https://imgur.com/571eBHE.jpg",
+    "https://imgur.com/avITmTE.jpg",
+    "https://imgur.com/mzRJGSM.jpg",
   ]
 );
 
