@@ -4,12 +4,18 @@
       <span class="close-button-text">X</span>
     </button>
   </div>
+
   <div
-    *ngIf="data.url.match('herokuapp') && showSlowLoadingText"
-    class="free-server-container"
+    *ngIf="data.url.match('herokuapp') && iframeLoading"
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    class="repo-loader-container"
   >
-    This site is hosted on a free server which can take 1-2 mins to wake up from
-    sleep
+    <div class="free-server-container">
+      This site is hosted on a free server which can take 1-2 mins to wake up
+      from sleep
+    </div>
+    <mat-spinner></mat-spinner>
   </div>
 
   <div align="center" class="view-site-button-container">
@@ -20,6 +26,6 @@
     </button>
   </div>
 </div>
-<div class="iframe-container">
-  <iframe [src]="data.url | safe" width="100%"></iframe>
+<div [class.is-hidden]="iframeLoading" class="iframe-container">
+  <iframe id="site-iframe" [src]="data.url | safe" width="100%"></iframe>
 </div>

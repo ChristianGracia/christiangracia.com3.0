@@ -12,14 +12,15 @@ export interface DialogData {
   styleUrls: ["./view-site-modal.component.scss"],
 })
 export class ViewSiteModalComponent implements OnInit {
-  public showSlowLoadingText = true;
+  public iframeLoading = true;
   constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
   ngOnInit() {
-    console.log(this.data.url);
+    const iframe = document.getElementById("site-iframe");
+    iframe.addEventListener("load", this.iframeLoaded.bind(this));
+  }
 
-    setTimeout(() => {
-      this.showSlowLoadingText = false;
-    }, 60000);
+  iframeLoaded() {
+    this.iframeLoading = false;
   }
 }
