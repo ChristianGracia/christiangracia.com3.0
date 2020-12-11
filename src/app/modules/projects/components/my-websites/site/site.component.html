@@ -6,12 +6,13 @@
     <slideshow
       [height]="'350px'"
       [minHeight]="'325px'"
-      [autoPlay]="true"
-      [showArrows]="false"
+      [autoPlay]="false"
+      [showArrows]="true"
       [imageUrls]="site.imageUrls"
       [lazyLoad]="site.imageUrls?.length > 1"
       [autoPlayWaitForLazyLoad]="true"
       [showDots]="true"
+      dotColor="black"
     >
     </slideshow>
   </mat-card-content>
