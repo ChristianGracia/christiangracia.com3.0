@@ -57,4 +57,8 @@ export class ViewCommitModalComponent implements OnInit {
       return index > startingIndex && index <= endingIndex ? true : false;
     });
   }
+
+  openSite(url: string) {
+    window.open(url, "_blank");
+  }
 }
