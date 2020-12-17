@@ -15,7 +15,7 @@
     </div>
     <div>
       <a href="{{ data.url }}" rel="noreferrer" target="_blank"
-        >View on GitHub
+        >View this repo on GitHub
         <mat-icon svgIcon="github" class="social-link"></mat-icon
       ></a>
     </div>
@@ -45,12 +45,20 @@
     >
       <mat-card-content>
         <div class="commit-message" matLine>{{ commit.message }}</div>
-        <div class="github-link-container">
-          <a href="{{ commit.url }}" rel="noreferrer" target="_blank"
-            >See this commit on github</a
-          >
+        <div class="commit-time" matLine>
+          <div>Time: {{ formatDate(commit.time) }}</div>
+          <div class="view-on-git-container">
+            <button
+              mat-raised-button
+              class="cg-hover-red"
+              color="warn"
+              aria-label="view commit"
+              (click)="openSite(commit.url)"
+            >
+              <span class="cg-hover-redtext"> View full commit</span>
+            </button>
+          </div>
         </div>
-        <div class="commit-time" matLine>{{ formatDate(commit.time) }}</div>
       </mat-card-content>
     </mat-card>
   </div>
