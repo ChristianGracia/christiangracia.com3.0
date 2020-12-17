@@ -46,18 +46,18 @@
       <mat-card-content>
         <div class="commit-message" matLine>{{ commit.message }}</div>
         <div class="commit-time" matLine>
-          <div>Time: {{ formatDate(commit.time) }}</div>
-          <div class="view-on-git-container">
-            <button
-              mat-raised-button
-              class="cg-hover-red"
-              color="warn"
-              aria-label="view commit"
-              (click)="openSite(commit.url)"
-            >
-              <span class="cg-hover-redtext"> View full commit</span>
-            </button>
-          </div>
+          Time: {{ formatDate(commit.time) }}
+        </div>
+        <div class="view-on-git-container">
+          <button
+            mat-raised-button
+            class="cg-hover-red"
+            color="warn"
+            aria-label="view commit"
+            (click)="openSite(commit.url)"
+          >
+            <span class="cg-hover-redtext"> View full commit</span>
+          </button>
         </div>
       </mat-card-content>
     </mat-card>
