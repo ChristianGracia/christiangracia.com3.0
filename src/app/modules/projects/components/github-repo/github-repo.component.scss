@@ -1,21 +1,22 @@
 @import "../../../../../styles.scss";
 
-.repo-title {
-  font-weight: bold;
-  max-width: 220px;
-  text-align: center;
-  margin: 0 auto;
-
-  cursor: pointer;
-  &:hover {
-    color: grey;
-  }
-}
 .repo-card {
   width: 300px;
   margin: 30px 5px;
   @media (min-width: 500px) {
     margin: 15px 30px;
+  }
+  .repo-title {
+    font-weight: bold;
+
+    text-align: center;
+    margin: 16px 0 auto;
+    color: #151747;
+
+    cursor: pointer;
+    &:hover {
+      color: grey;
+    }
   }
 
   .repo-language-container {
@@ -27,6 +28,9 @@
   }
   .repo-description-container {
     margin: 20px 0;
+    .repo-description {
+      font-size: 16px;
+    }
   }
   .repo-date-container {
     margin-bottom: 10px;
