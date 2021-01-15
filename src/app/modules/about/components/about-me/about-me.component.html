@@ -29,8 +29,22 @@
       >
     </mat-card>
   </div>
-  <div style="padding-bottom: 100px"></div>
-  <div fxLayout="column" fxLayoutAlign="center center">
+
+  <div
+    class="current-project-container"
+    fxLayout="column"
+    fxLayoutALign="center center"
+  >
+    <div class="current-project-title">Curently working on...</div>
+    <div class="current-project-text">
+      <a href="http://marketfeels.com" target="_blank">marketfeels.com</a>
+    </div>
+  </div>
+  <div
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    class="see-work-btn-container"
+  >
     <button
       mat-raised-button
       (click)="goToProjectsPage()"
