@@ -2,6 +2,9 @@
 
 .repo-title {
   font-weight: bold;
+  max-width: 220px;
+  text-align: center;
+  margin: 0 auto;
 
   cursor: pointer;
   &:hover {
@@ -9,8 +12,7 @@
   }
 }
 .repo-card {
-  max-width: 300px;
-  min-width: 300px;
+  width: 300px;
   margin: 30px 5px;
   @media (min-width: 500px) {
     margin: 15px 30px;
@@ -22,6 +24,9 @@
     .repo-language-text {
       font-size: 16px;
     }
+  }
+  .repo-description-container {
+    margin: 20px 0;
   }
   .repo-date-container {
     margin-bottom: 10px;
