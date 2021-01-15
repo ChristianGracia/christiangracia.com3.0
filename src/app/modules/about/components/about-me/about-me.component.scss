@@ -19,4 +19,17 @@
       font-size: 16px;
     }
   }
+  .current-project-container {
+    margin: 100px 0;
+    .current-project-title {
+      font-weight: bold;
+      text-align: center;
+    }
+    .current-project-text {
+      text-align: center;
+    }
+  }
+  .see-work-btn-container {
+    margin-top: 50px;
+  }
 }
