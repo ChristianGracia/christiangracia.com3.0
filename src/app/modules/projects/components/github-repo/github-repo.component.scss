@@ -6,6 +6,10 @@
   @media (min-width: 500px) {
     margin: 15px 30px;
   }
+  &:hover {
+    color: grey;
+    transform: scale(1.07);
+  }
   .repo-title {
     font-weight: bold;
 
@@ -16,6 +20,7 @@
     cursor: pointer;
     &:hover {
       color: grey;
+      transform: scale(1.07);
     }
   }
 
