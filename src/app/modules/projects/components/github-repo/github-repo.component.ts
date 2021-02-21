@@ -86,6 +86,9 @@ export class GithubRepoComponent implements OnInit {
       case "Rust":
         color = "#B34313";
         break;
+      case "Swift":
+        color = "#F7B0BB";
+        break;
       default:
         color = "black";
         break;
