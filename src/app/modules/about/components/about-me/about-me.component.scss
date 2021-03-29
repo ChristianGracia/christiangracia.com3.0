@@ -5,20 +5,21 @@
     color: white;
   }
   .skill-card-container {
-  }
-  .skill-card {
-    width: 25vw;
-    min-width: 250px;
-    min-height: 100px;
-    margin-top: 30px;
-    .skill-header {
-      color: #ff5722;
+    .skill-card {
+      width: 25vw;
+      min-width: 250px;
+      min-height: 100px;
+
+      .skill-header {
+        color: #ff5722;
+      }
+      .card-content {
+        font-weight: bold;
+        font-size: 16px;
+      }
     }
-    .card-content {
-      font-weight: bold;
-      font-size: 16px;
-    }
   }
+
   .current-project-container {
     margin: 100px 0;
     .current-project-title {
