@@ -1,0 +1,28 @@
+<app-content-header
+  contentTitle="Skills"
+  contentDescription=""
+></app-content-header>
+<div
+  fxLayout="row wrap"
+  fxLayoutAlign="space-around"
+  class="skill-card-container"
+>
+  <mat-card class="skill-card mat-elevation-z6">
+    <mat-card-title class="skill-header"> Languages </mat-card-title>
+    <mat-card-content class="card-content">
+      {{ languagesArray.join(", ") }}</mat-card-content
+    >
+  </mat-card>
+  <mat-card class="skill-card mat-elevation-z6">
+    <mat-card-title class="skill-header"> Front-end </mat-card-title>
+    <mat-card-content class="card-content"
+      >{{ frontEndArray.join(", ") }}
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="skill-card mat-elevation-z6">
+    <mat-card-title class="skill-header"> Back-end </mat-card-title>
+    <mat-card-content class="card-content">
+      {{ backEndArray.join(", ") }}</mat-card-content
+    >
+  </mat-card>
+</div>

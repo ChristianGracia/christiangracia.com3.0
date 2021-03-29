@@ -4,5 +4,23 @@
   fxLayoutAlign="center center"
   class="about-container"
 >
-  <app-about-me> </app-about-me>
+  <app-about-hero-image></app-about-hero-image>
+  <app-job-history></app-job-history>
+  <app-skills></app-skills>
+  <div
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    class="see-work-btn-container"
+  >
+    <button
+      mat-raised-button
+      (click)="goToProjectsPage()"
+      class="cg-hover-red"
+      color="warn"
+      aria-label="enter site"
+    >
+      <span class="cg-hover-redtext">See some of my work</span>
+    </button>
+  </div>
+  <div style="padding-bottom: 200px"></div>
 </div>

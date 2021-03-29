@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { RoutingService } from "../../../../services/routing.service";
 
 const LANGUAGES = [
   "JavaScript",
@@ -41,19 +40,16 @@ const BACKEND_SKILLS = [
 ];
 
 @Component({
-  selector: "app-about-me",
-  templateUrl: "./about-me.component.html",
-  styleUrls: ["./about-me.component.scss"],
+  selector: "app-skills",
+  templateUrl: "./skills.component.html",
+  styleUrls: ["./skills.component.scss"],
 })
-export class AboutMeComponent implements OnInit {
+export class SkillsComponent implements OnInit {
   public languagesArray: string[] = [LANGUAGES.join(", ")];
   public frontEndArray: string[] = [FRONTEND_SKILLS.join(", ")];
   public backEndArray: string[] = [BACKEND_SKILLS.join(", ")];
 
-  constructor(private routingService: RoutingService) {}
+  constructor() {}
 
   ngOnInit() {}
-  goToProjectsPage() {
-    this.routingService.navigateToProjects();
-  }
 }
