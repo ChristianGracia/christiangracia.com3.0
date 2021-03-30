@@ -32,6 +32,8 @@ const BACKEND_SKILLS = [
   "Spring Boot",
   "Ruby on Rails",
   "GraphQL",
+  "Flask",
+  "Django",
   "AWS",
   ".NET Core",
   ".NET",

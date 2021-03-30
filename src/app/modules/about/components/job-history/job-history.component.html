@@ -1,27 +1,26 @@
-<div
-  fxLayout="column"
-  fxLayoutAlign="space-around center"
-  fxLayoutGap="20px"
-  class="job-history-container"
->
+<div class="job-history-container">
   <app-content-header
     contentTitle="Job History"
     contentDescription=""
   ></app-content-header>
-  <div
-    fxLayout="row"
-    fxLayoutAlign="space-between start"
-    class="company-card mat-elevation-z6"
-  >
-    <p class="company-name">Velentium</p>
-    <p class="company-years">March 2021 - Present</p>
-  </div>
-  <div
-    fxLayout="row"
-    fxLayoutAlign="space-between start"
-    class="company-card mat-elevation-z6"
-  >
-    <p class="company-name">Magellan Jets</p>
-    <p class="company-years">January 2020 - March 2021</p>
+  <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
+    <div fxLayout="column" class="company-card mat-elevation-z6">
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <p class="company-name">Velentium</p>
+        <p class="company-years">Mar 2021 - Present</p>
+      </div>
+      <p class="job-description">Coming Soon :)</p>
+    </div>
+    <div fxLayout="column" class="company-card mat-elevation-z6">
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <p class="company-name">Magellan Jets</p>
+        <p class="company-years">Jan 2020 - Mar 2021</p>
+      </div>
+      <p class="job-description">
+        I built Salesforce integrated web/mobile applications with Angular,
+        React Native, and Java as well as back-end API's with Ruby/RoR and
+        NodeJs.
+      </p>
+    </div>
   </div>
 </div>
