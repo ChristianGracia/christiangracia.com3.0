@@ -6,12 +6,8 @@ import { Component, OnInit, Input } from "@angular/core";
   styleUrls: ["./content-header.component.scss"],
 })
 export class ContentHeaderComponent implements OnInit {
-  @Input()
-  contentTitle: string;
-  @Input()
-  contentDescription: string;
-
+  @Input() public contentTitle: string;
+  @Input() public contentDescription: string;
   constructor() {}
-
   ngOnInit() {}
 }

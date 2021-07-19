@@ -13,9 +13,9 @@ import { formatDateAndTime } from "../../../../util/dateMethods";
 export class GithubRepoComponent implements OnInit {
   public gitRepos: Repo[] = [];
   public data: Repo[] = [];
-  window: Window = window;
-  page = 0;
-  size = 5;
+  public page = 0;
+  public size = 5;
+  private window: Window = window;
 
   constructor(private githubService: GithubService, public dialog: MatDialog) {}
 
@@ -25,20 +25,11 @@ export class GithubRepoComponent implements OnInit {
     this.getGithubRepos();
   }
 
-  getGithubRepos() {
-    this.loadingRepos = true;
-    this.githubService.getAllRepos().subscribe((repos: Repo[]) => {
-      this.gitRepos = repos;
-      this.loadingRepos = false;
-      this.getData({ pageIndex: this.page, pageSize: this.size });
-    });
-  }
-
-  openLink(url: string) {
+  public openLink(url: string) {
     window.open(url, "_blank");
   }
 
-  openRepoCommitModal(repoName: string, repoUrl: string) {
+  public openRepoCommitModal(repoName: string, repoUrl: string) {
     let config = new MatDialogConfig();
     config = {
       height: "100vh",
@@ -54,11 +45,11 @@ export class GithubRepoComponent implements OnInit {
     dialogRef.afterClosed().subscribe((result) => {});
   }
 
-  formatUpdateAtDate(date: string) {
+  public formatUpdateAtDate(date: string) {
     return formatDateAndTime(date);
   }
 
-  formatRepoLanguage(language: string) {
+  public formatRepoLanguage(language: string) {
     let color = "";
 
     switch (language) {
@@ -95,7 +86,7 @@ export class GithubRepoComponent implements OnInit {
     }
     return color;
   }
-  getData(obj) {
+  public getData(obj) {
     let index = 0,
       startingIndex = obj.pageIndex * obj.pageSize,
       endingIndex = startingIndex + obj.pageSize;
@@ -103,6 +94,15 @@ export class GithubRepoComponent implements OnInit {
     this.data = this.gitRepos.filter(() => {
       index++;
       return index > startingIndex && index <= endingIndex ? true : false;
+    });
+  }
+
+  private getGithubRepos() {
+    this.loadingRepos = true;
+    this.githubService.getAllRepos().subscribe((repos: Repo[]) => {
+      this.gitRepos = repos;
+      this.loadingRepos = false;
+      this.getData({ pageIndex: this.page, pageSize: this.size });
     });
   }
 }

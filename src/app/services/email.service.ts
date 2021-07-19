@@ -11,20 +11,19 @@ export class EmailService {
   constructor(private http: HttpClient) {}
 
   public sendContactEmail(emailMessage: EmailMessage) {
+    const { name, email, message } = emailMessage;
     let emailBody = {
-      name: emailMessage.name,
-      email: emailMessage.email,
-      message: emailMessage.message,
+      name: name,
+      email: email,
+      message: message,
     };
-    return this.http.post(environment.apiUrl + "/email/send-email", {
-      ...emailBody,
-    });
+    return this.http.post(environment.apiUrl + "/email/send-email", emailBody);
   }
 
   public sendSiteVisitEmail(locationData: LocationData) {
     return this.http.post(
       environment.apiUrl + "/email/site-visit",
-      locationData,
+      locationData
     );
   }
 }
