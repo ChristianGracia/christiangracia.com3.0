@@ -13,23 +13,20 @@ import { LocationService } from "../../../../services/location.service";
   styleUrls: ["./contact-form.component.scss"],
 })
 export class ContactFormComponent implements OnInit {
-  @Output() emailReceivedEvent = new EventEmitter<boolean>();
+  @Output() private emailReceivedEvent = new EventEmitter<boolean>();
   constructor(
     private emailService: EmailService,
     private routingService: RoutingService,
     private locationService: LocationService
   ) {}
 
-  emailReceived: boolean = false;
+  public emailReceived: boolean = false;
 
   ngOnInit() {}
 
-  submit(form: NgForm) {
-    const messageParams = new EmailMessage(
-      form.value.name,
-      form.value.email,
-      form.value.message
-    );
+  public submit(form: NgForm) {
+    const { name, email, message } = form.value;
+    const messageParams = new EmailMessage(name, email, message);
     this.locationService
       .getLocationJSON()
       .subscribe((locationData: LocationData) => {
@@ -43,7 +40,7 @@ export class ContactFormComponent implements OnInit {
     });
   }
 
-  goToSite() {
+  public goToSite() {
     this.routingService.navigateToHomePage();
   }
 }
