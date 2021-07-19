@@ -20,8 +20,8 @@ export class ViewCommitModalComponent implements OnInit {
   public numberOfCommits: number = 1000;
   public outOfCommits: boolean = false;
   public totalCommits: number;
-  page = 0;
-  size = 25;
+  public page = 0;
+  public size = 25;
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
@@ -31,23 +31,12 @@ export class ViewCommitModalComponent implements OnInit {
   ngOnInit() {
     this.loadCommits();
   }
-  loadCommits() {
-    this.loadingCommits = true;
-    this.githubService
-      .getAllCommitsOfRepo(this.data.repo, this.numberOfCommits)
-      .subscribe((data) => {
-        console.log(data);
-        this.commits = data;
-        this.loadingCommits = false;
-        this.totalCommits = data.length;
-        this.getData({ pageIndex: this.page, pageSize: this.size });
-      });
-  }
-  formatDate(date: string) {
+
+  public formatDate(date: string) {
     return formatDateAndTime(date);
   }
 
-  getData(obj) {
+  public getData(obj) {
     let index = 0,
       startingIndex = obj.pageIndex * obj.pageSize,
       endingIndex = startingIndex + obj.pageSize;
@@ -58,7 +47,19 @@ export class ViewCommitModalComponent implements OnInit {
     });
   }
 
-  openSite(url: string) {
+  public openSite(url: string) {
     window.open(url, "_blank");
+  }
+
+  private loadCommits() {
+    this.loadingCommits = true;
+    this.githubService
+      .getAllCommitsOfRepo(this.data.repo, this.numberOfCommits)
+      .subscribe((data) => {
+        this.commits = data;
+        this.loadingCommits = false;
+        this.totalCommits = data.length;
+        this.getData({ pageIndex: this.page, pageSize: this.size });
+      });
   }
 }
