@@ -10,7 +10,7 @@ export class AboutComponent implements OnInit {
   constructor(private routingService: RoutingService) {}
 
   ngOnInit() {}
-  goToProjectsPage() {
+  public goToProjectsPage() {
     this.routingService.navigateToProjects();
   }
 }
