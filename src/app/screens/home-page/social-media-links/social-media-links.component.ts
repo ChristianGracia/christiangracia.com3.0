@@ -8,33 +8,20 @@ const SOCIAL_MEDIA_LINKS = ["github", "twitter", "linkedin"];
   styleUrls: ["./social-media-links.component.scss"],
 })
 export class SocialMediaLinksComponent implements OnInit, OnDestroy {
-  activeIconArray: boolean[] = [false, false, false];
+  public activeIconArray: boolean[] = [false, false, false];
+  public socialMediaLinks: string[] = SOCIAL_MEDIA_LINKS;
+  private timer: number;
 
-  socialMediaLinks: string[] = SOCIAL_MEDIA_LINKS;
-  window: Window = window;
-  timer: number;
   constructor() {}
 
   ngOnInit() {
     this.renderActiveLinkHighlight();
   }
 
-  renderActiveLinkHighlight() {
-    let counter = 0;
-    this.timer = setInterval(() => {
-      let index = counter % 3;
-      let nextIndex = (index + 1) % 3;
-
-      this.activeIconArray[index] = false;
-      this.activeIconArray[nextIndex] = true;
-      counter++;
-    }, 1600);
-  }
-
   ngOnDestroy() {
     clearInterval(this.timer);
   }
-  openLink(socialMedia: string) {
+  public openLink(socialMedia: string) {
     let url = "";
     switch (socialMedia) {
       case "github":
@@ -50,5 +37,17 @@ export class SocialMediaLinksComponent implements OnInit, OnDestroy {
         break;
     }
     window.open(url, "_blank");
+  }
+
+  private renderActiveLinkHighlight() {
+    let counter = 0;
+    this.timer = window.setInterval(() => {
+      let index = counter % 3;
+      let nextIndex = (index + 1) % 3;
+
+      this.activeIconArray[index] = false;
+      this.activeIconArray[nextIndex] = true;
+      counter++;
+    }, 1800);
   }
 }
