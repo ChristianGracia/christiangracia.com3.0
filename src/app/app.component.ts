@@ -9,8 +9,6 @@ import { Router, NavigationEnd } from "@angular/router";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent implements OnInit {
-  title = "christian-gracia-site";
-
   public notOnRoot: boolean = false;
 
   constructor(

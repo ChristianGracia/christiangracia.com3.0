@@ -17,10 +17,12 @@ export class ViewSiteModalComponent implements OnInit {
 
   ngOnInit() {
     const iframe = document.getElementById("site-iframe");
-    iframe.addEventListener("load", this.iframeLoaded.bind(this));
+    iframe.addEventListener("load", this.iframeLoaded.bind(this), {
+      passive: true,
+    });
   }
 
-  iframeLoaded() {
+  private iframeLoaded() {
     this.iframeLoading = false;
   }
 }

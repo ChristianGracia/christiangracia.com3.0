@@ -24,7 +24,9 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.elementRef.nativeElement
       .querySelector("#touch-container")
-      .addEventListener("touchstart", this.startWatchingTouch.bind(this), !1);
+      .addEventListener("touchstart", this.startWatchingTouch.bind(this), {
+        passive: true,
+      });
   }
 
   private handleSwipeUp(initialY: number) {
@@ -49,7 +51,7 @@ export class HomePageComponent implements OnInit, AfterViewInit {
             this.routingService.navigateToAbout();
           }
         },
-        !1
+        { passive: true }
       );
   }
 
