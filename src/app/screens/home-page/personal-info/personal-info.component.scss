@@ -24,8 +24,6 @@
   }
   .email-container {
     font-size: 18px;
-    .email-icon-container {
-    }
     .email-text {
       transition: all 0.2s ease-in-out;
       &:hover {
@@ -60,7 +58,6 @@
 
 .enter-button {
   background-color: white;
-
   color: black;
   transition: all 0.4s ease;
   -webkit-transition: all 0.4s ease;
