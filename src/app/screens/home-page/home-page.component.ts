@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, AfterViewInit } from "@angular/core";
+import { Component, ElementRef, OnInit, AfterViewInit } from "@angular/core";
 import { RoutingService } from "../../services/routing.service";
 import { LocationService } from "../../services/location.service";
 import { EmailService } from "../../services/email.service";
@@ -9,7 +9,7 @@ import { LocationData } from "../../models/location-data.model";
   templateUrl: "./home-page.component.html",
   styleUrls: ["./home-page.component.scss"],
 })
-export class HomePageComponent implements OnInit {
+export class HomePageComponent implements OnInit, AfterViewInit {
   public navigatingToSite: boolean = false;
 
   constructor(
@@ -20,18 +20,14 @@ export class HomePageComponent implements OnInit {
   ) {}
 
   ngOnInit() {}
+
   ngAfterViewInit(): void {
     this.elementRef.nativeElement
       .querySelector("#touch-container")
       .addEventListener("touchstart", this.startWatchingTouch.bind(this), !1);
   }
-  startWatchingTouch(event) {
-    if (!this.navigatingToSite) {
-      this.handleSwipeUp(event.changedTouches[0].screenY);
-    }
-  }
 
-  handleSwipeUp(initialY: number) {
+  private handleSwipeUp(initialY: number) {
     this.elementRef.nativeElement
       .querySelector("#touch-container")
       .addEventListener(
@@ -55,5 +51,11 @@ export class HomePageComponent implements OnInit {
         },
         !1
       );
+  }
+
+  private startWatchingTouch(event: any) {
+    if (!this.navigatingToSite) {
+      this.handleSwipeUp(event.changedTouches[0].screenY);
+    }
   }
 }
