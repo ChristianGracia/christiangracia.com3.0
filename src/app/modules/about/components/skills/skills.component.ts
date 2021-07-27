@@ -27,7 +27,7 @@ const FRONTEND_SKILLS = [
 ];
 
 const BACKEND_SKILLS = [
-  "RESTful API Design",
+  "RESTful APIs",
   "NodeJS",
   "Spring Boot",
   "Ruby on Rails",
@@ -35,6 +35,7 @@ const BACKEND_SKILLS = [
   "Flask",
   "Django",
   "AWS",
+  "GCP",
 ];
 
 @Component({
