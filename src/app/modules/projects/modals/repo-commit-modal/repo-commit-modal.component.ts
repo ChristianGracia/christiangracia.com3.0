@@ -31,7 +31,7 @@ export class RepoCommitModalComponent implements OnInit {
   public page = 0;
   public size = 25;
 
-  displayedColumns: string[] = ["message", "time", "url"];
+  displayedColumns: string[] = ["time", "message", "url"];
 
   @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
 
