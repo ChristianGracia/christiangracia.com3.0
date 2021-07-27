@@ -1,20 +1,7 @@
 <app-content-header
   contentTitle="GitHub Repos"
-  contentDescription="All my public repositories on GitHub. Click the 🔍 to view recent commits"
+  contentDescription="All my public repositories on GitHub. Click the 🔍 to view update history"
 ></app-content-header>
-<div class="api-description-container">
-  <span class="api-description-text">
-    Click
-    <a
-      href="https://christiangracia-api.herokuapp.com/github/all-repos"
-      target="_blank"
-      rel="noreferrer"
-      >here</a
-    >
-    to see the JSON that is used to render each card below from my back-end
-    API</span
-  >
-</div>
 <div
   *ngIf="loadingRepos"
   fxLayout="column"
@@ -86,4 +73,17 @@
     (page)="getData($event)"
   >
   </mat-paginator>
+</div>
+<div class="api-description-container" *ngIf="data.length">
+  <div class="api-description-text">
+    The data above are rendered from JSON received my API backend
+  </div>
+  <div class="api-description-url">
+    <a
+      href="https://christiangracia-api.herokuapp.com/github/all-repos"
+      target="_blank"
+      rel="noreferrer"
+      >View JSON</a
+    >
+  </div>
 </div>
