@@ -35,10 +35,6 @@ const BACKEND_SKILLS = [
   "Flask",
   "Django",
   "AWS",
-  ".NET Core",
-  ".NET",
-  "SOAP",
-  "JSON/XML",
 ];
 
 @Component({
