@@ -7,31 +7,12 @@
     <div
       *ngFor="let job of jobs"
       fxLayout="column"
-      class="company-card mat-elevation-z6"
+      class="company-card"
+      fxLayoutGap="5px"
     >
-      <div fxLayout="row" fxLayoutAlign="space-between center">
-        <p class="company-name">{{ job.company }}</p>
-        <p class="company-years">{{ job.range }}</p>
-      </div>
+      <p class="company-name">{{ job.company }}</p>
       <p class="job-description">{{ job.description }}</p>
+      <p class="company-years">{{ job.range }}</p>
     </div>
-    <!-- <div fxLayout="column" class="company-card mat-elevation-z6">
-      <div fxLayout="row" fxLayoutAlign="space-between center">
-        <p class="company-name">Velentium</p>
-        <p class="company-years">Mar 2021 - Present</p>
-      </div>
-      <p class="job-description">Coming Soon :)</p>
-    </div>
-    <div fxLayout="column" class="company-card mat-elevation-z6">
-      <div fxLayout="row" fxLayoutAlign="space-between center">
-        <p class="company-name">Magellan Jets</p>
-        <p class="company-years">Jan 2020 - Mar 2021</p>
-      </div>
-      <p class="job-description">
-        I built Salesforce integrated web/mobile applications with Angular,
-        React Native, and Java as well as back-end API's with Ruby/RoR and
-        NodeJs.
-      </p>
-    </div> -->
   </div>
 </div>
