@@ -50,6 +50,12 @@
     table {
       width: 100%;
     }
+    .mat-elevation-z8 {
+      overflow-x: auto;
+    }
+    .mat-table.mat-table {
+      min-width: 450px;
+    }
   }
   .w-100 {
     width: 100px;
