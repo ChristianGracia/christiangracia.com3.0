@@ -6,7 +6,6 @@ import { MyWebsitesComponent } from "./components/my-websites/my-websites.compon
 import { SiteComponent } from "./components/my-websites/site/site.component";
 import { SharedComponentsModule } from "../shared-components/shared-components.module";
 import { SlideshowModule } from "ng-simple-slideshow";
-import { ViewCommitModalComponent } from "./modals/view-commit-modal/view-commit-modal.component";
 import { ViewSiteModalComponent } from "./modals/view-site-modal/view-site-modal.component";
 import { MatDialogModule } from "@angular/material/dialog";
 import { SafePipe } from "./services/safe.pipe";
@@ -18,7 +17,6 @@ import { RepoCommitModalComponent } from "./modals/repo-commit-modal/repo-commit
     GithubRepoComponent,
     MyWebsitesComponent,
     SiteComponent,
-    ViewCommitModalComponent,
     ViewSiteModalComponent,
     SafePipe,
     RepoCommitModalComponent,
@@ -29,10 +27,6 @@ import { RepoCommitModalComponent } from "./modals/repo-commit-modal/repo-commit
     SlideshowModule,
     MatDialogModule,
   ],
-  entryComponents: [
-    ViewCommitModalComponent,
-    RepoCommitModalComponent,
-    ViewSiteModalComponent,
-  ],
+  entryComponents: [RepoCommitModalComponent, ViewSiteModalComponent],
 })
 export class ProjectsModule {}
