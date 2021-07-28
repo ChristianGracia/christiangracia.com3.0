@@ -7,16 +7,14 @@
     margin: 15px 30px;
   }
   &:hover {
+    cursor: pointer;
     transform: scale(1.07);
   }
   .repo-title {
     font-weight: bold;
-
     text-align: center;
     margin: 16px 0 auto;
     color: #151747;
-
-    cursor: pointer;
     &:hover {
       color: grey;
       transform: scale(1.07);
@@ -61,10 +59,14 @@
 
   margin: 0px 10px 0px 20px;
   .api-description-text {
-    width: 285px;
-    margin-top: 12px;
     font-size: 14px;
     font-style: italic;
+  }
+  .api-description-url {
+    margin-top: 15px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
   }
 }
 

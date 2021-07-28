@@ -1,5 +1,4 @@
 import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
 import { ProjectsComponent } from "./projects.component";
 import { ProjectsRoutingModule } from "./projects-routing.module";
 import { GithubRepoComponent } from "./components/github-repo/github-repo.component";
@@ -11,6 +10,7 @@ import { ViewCommitModalComponent } from "./modals/view-commit-modal/view-commit
 import { ViewSiteModalComponent } from "./modals/view-site-modal/view-site-modal.component";
 import { MatDialogModule } from "@angular/material/dialog";
 import { SafePipe } from "./services/safe.pipe";
+import { RepoCommitModalComponent } from "./modals/repo-commit-modal/repo-commit-modal.component";
 
 @NgModule({
   declarations: [
@@ -21,14 +21,18 @@ import { SafePipe } from "./services/safe.pipe";
     ViewCommitModalComponent,
     ViewSiteModalComponent,
     SafePipe,
+    RepoCommitModalComponent,
   ],
   imports: [
-    CommonModule,
     ProjectsRoutingModule,
     SharedComponentsModule,
     SlideshowModule,
     MatDialogModule,
   ],
-  entryComponents: [ViewCommitModalComponent, ViewSiteModalComponent],
+  entryComponents: [
+    ViewCommitModalComponent,
+    RepoCommitModalComponent,
+    ViewSiteModalComponent,
+  ],
 })
 export class ProjectsModule {}

@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { GithubService } from "../../../shared-components/services/github.service";
 import { Repo } from "../../models/github-repo.model";
-import { ViewCommitModalComponent } from "../../modals/view-commit-modal/view-commit-modal.component";
+import { RepoCommitModalComponent } from "../../modals/repo-commit-modal/repo-commit-modal.component";
 import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
 import { formatDateAndTime } from "../../../../util/dateMethods";
 
@@ -15,7 +15,6 @@ export class GithubRepoComponent implements OnInit {
   public data: Repo[] = [];
   public page = 0;
   public size = 5;
-  private window: Window = window;
 
   constructor(private githubService: GithubService, public dialog: MatDialog) {}
 
@@ -23,10 +22,6 @@ export class GithubRepoComponent implements OnInit {
 
   ngOnInit() {
     this.getGithubRepos();
-  }
-
-  public openLink(url: string) {
-    window.open(url, "_blank");
   }
 
   public openRepoCommitModal(repoName: string, repoUrl: string) {
@@ -40,7 +35,7 @@ export class GithubRepoComponent implements OnInit {
         url: repoUrl,
       },
     };
-    const dialogRef = this.dialog.open(ViewCommitModalComponent, config);
+    const dialogRef = this.dialog.open(RepoCommitModalComponent, config);
 
     dialogRef.afterClosed().subscribe((result) => {});
   }

@@ -8,4 +8,7 @@
     <span class="content-header">{{ contentTitle }}</span>
   </div>
   <span class="content-description-text">{{ contentDescription }}</span>
+  <div *ngIf="contentClickText" class="content-click-text">
+    {{ contentClickText }}
+  </div>
 </div>

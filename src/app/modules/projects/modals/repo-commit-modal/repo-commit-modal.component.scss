@@ -1,0 +1,57 @@
+@import "../../../../../styles.scss";
+
+.modal-container {
+  .repo-container {
+    .repo-name {
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #f7d000;
+    }
+  }
+  .social-link {
+    color: black;
+    margin-top: 6px;
+    height: 20px;
+  }
+  .repo-update-text {
+    font-weight: bold;
+    margin: 20px 0;
+    font-size: 20px;
+  }
+  .card-container {
+    .commit-card {
+      margin-bottom: 36px;
+      .view-on-git-container {
+        margin-top: 4px;
+      }
+
+      .commit-message {
+        margin-top: 5px;
+        word-wrap: break-word;
+      }
+
+      .commit-time {
+        font-weight: bold;
+        font-size: 12px;
+      }
+    }
+  }
+  .close-button-container {
+    .close-button-text {
+      font-size: 24px;
+    }
+  }
+  .search-icon {
+    cursor: pointer;
+  }
+  .table-container {
+    width: 100%;
+    table {
+      width: 100%;
+    }
+  }
+  .w-100 {
+    width: 100px;
+  }
+}

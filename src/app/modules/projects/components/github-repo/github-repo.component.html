@@ -1,20 +1,8 @@
 <app-content-header
   contentTitle="GitHub Repos"
-  contentDescription="All my public repositories on GitHub. Click the 🔍 to view recent commits"
+  contentDescription="All my public repositories on GitHub"
+  contentClickText="Click repos below to view more"
 ></app-content-header>
-<div class="api-description-container">
-  <span class="api-description-text">
-    Click
-    <a
-      href="https://christiangracia-api.herokuapp.com/github/all-repos"
-      target="_blank"
-      rel="noreferrer"
-      >here</a
-    >
-    to see the JSON that is used to render each card below from my back-end
-    API</span
-  >
-</div>
 <div
   *ngIf="loadingRepos"
   fxLayout="column"
@@ -35,9 +23,10 @@
     fxLayout="column"
     fxLayoutAlign="center"
     class="repo-card mat-elevation-z6"
+    (click)="openRepoCommitModal(repo.name, repo.url)"
   >
     <mat-card-title class="repo-title">
-      <a (click)="openLink(repo.url)"> {{ repo.name.split("-").join(" ") }}</a>
+      {{ repo.name.split("-").join(" ") }}
     </mat-card-title>
 
     <mat-card-content class="repo-description-container">
@@ -62,19 +51,6 @@
         }}</span></span
       >
     </div>
-    <mat-card-actions>
-      <div fxLayoutAlign="center center" style="padding-bottom: 15px">
-        <button
-          mat-raised-button
-          style="width: 70px"
-          class="cg-hover-yellow"
-          (click)="openRepoCommitModal(repo.name, repo.url)"
-          aria-label="view commits"
-        >
-          <mat-icon svgIcon="search"></mat-icon>
-        </button>
-      </div>
-    </mat-card-actions>
   </mat-card>
 </div>
 <div class="paginator-container">
@@ -86,4 +62,16 @@
     (page)="getData($event)"
   >
   </mat-paginator>
+</div>
+<div class="api-description-container" *ngIf="data.length">
+  <div class="api-description-text">
+    The data above is server side rendered from my API
+    <a
+      class="api-description-url"
+      href="https://christiangracia-api.herokuapp.com/github/all-repos"
+      target="_blank"
+      rel="noreferrer"
+      >View JSON data</a
+    >
+  </div>
 </div>
