@@ -24,20 +24,12 @@ export interface DialogData {
 export class RepoCommitModalComponent implements OnInit {
   public loadingCommits: boolean = false;
   public commits: Commit[] = [];
-  public displayedCommits: Commit[] = [];
-  public numberOfCommits: number = 1000;
-  public outOfCommits: boolean = false;
-  public totalCommits: number;
-  public page = 0;
-  public size = 25;
+  public pageSize = 25;
+  public totalCommits;
 
   displayedColumns: string[] = ["time", "message", "url"];
 
   @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
-
-  // ngAfterViewInit() {
-  //   this.dataSource.paginator = this.paginator;
-  // }
 
   dataSource;
   constructor(
@@ -50,35 +42,19 @@ export class RepoCommitModalComponent implements OnInit {
   public formatDate(date: string) {
     return formatDateAndTime(date);
   }
-  public getData(obj) {
-    let index = 0,
-      startingIndex = obj.pageIndex * obj.pageSize,
-      endingIndex = startingIndex + obj.pageSize;
-    this.displayedCommits = this.commits.filter(() => {
-      index++;
-      return index > startingIndex && index <= endingIndex ? true : false;
-    });
-  }
   public openSite(url: string) {
     window.open(url, "_blank");
   }
   private loadCommits() {
     this.loadingCommits = true;
     this.githubService
-      .getAllCommitsOfRepo(this.data.repo, this.numberOfCommits)
+      .getAllCommitsOfRepo(this.data.repo, 1000)
       .subscribe((data) => {
-        this.dataSource = new MatTableDataSource<any>(
-          data.map((item) => ({
-            message: item.message,
-            time: item.time,
-            url: item.url,
-          }))
-        );
+        this.dataSource = new MatTableDataSource<any>(data);
         this.dataSource.paginator = this.paginator;
         this.commits = data;
+        this.totalCommits = this.commits.length;
         this.loadingCommits = false;
-        this.totalCommits = data.length;
-        this.getData({ pageIndex: this.page, pageSize: this.size });
       });
   }
 }
