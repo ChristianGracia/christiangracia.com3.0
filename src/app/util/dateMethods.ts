@@ -10,12 +10,7 @@ function militaryTimeConverter(date: Date) {
 }
 function formatDateAndTime(date: string) {
   let formattedDate = new Date(date);
-  let hours = formattedDate.getHours();
-  const dayOrNight = hours > 19 || hours < 5 ? "🌙" : "🌞";
   return (
-    " " +
-    dayOrNight +
-    " " +
     militaryTimeConverter(formattedDate) +
     " " +
     formattedDate.toLocaleDateString("en-US")

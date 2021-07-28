@@ -1,22 +1,14 @@
-.search-icon {
-  cursor: pointer;
-}
 @import "../../../../../styles.scss";
 
 .modal-container {
-  .repo-name-container {
-    margin: 20px 0;
+  .repo-container {
     .repo-name {
+      margin-top: 20px;
+      font-size: 22px;
       font-weight: bold;
       color: #f7d000;
     }
   }
-  .view-repo-text-container {
-    .view-repo-text {
-      font-weight: bold;
-    }
-  }
-
   .social-link {
     color: black;
     margin-top: 6px;
@@ -24,6 +16,8 @@
   }
   .repo-update-text {
     font-weight: bold;
+    margin: 20px 0;
+    font-size: 20px;
   }
   .card-container {
     .commit-card {
@@ -46,6 +40,15 @@
   .close-button-container {
     .close-button-text {
       font-size: 24px;
+    }
+  }
+  .search-icon {
+    cursor: pointer;
+  }
+  .table-container {
+    width: 100%;
+    table {
+      width: 100%;
     }
   }
 }

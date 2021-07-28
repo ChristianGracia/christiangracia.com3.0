@@ -1,25 +1,21 @@
 <div class="modal-container">
   <div class="close-button-container" align="end">
-    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>
+    <button mat-button [mat-dialog-close]="true">
       <span class="close-button-text">X</span>
     </button>
   </div>
-  <div
-    fxLayout="column"
-    fxLayoutAlign="center center"
-    fxLayoutGap="20px"
-    class="repo-name-container"
-  >
-    <div mat-dialog-title class="repo-name">
+  <div fxLayout="column" fxLayoutAlign="center center" class="repo-container">
+    <div class="repo-name">
       {{ data.repo }}
     </div>
-    <div mat-dialog-title class="repo-update-text">Recent Updates</div>
-    <div>
+    <div class="view-repo-text-container">
       <a href="{{ data.url }}" rel="noreferrer" target="_blank"
         >View this repo on GitHub
         <mat-icon svgIcon="github" class="social-link"></mat-icon
       ></a>
     </div>
+    <div class="repo-update-text">Recent Updates</div>
+
     <div class="table-container">
       <div class="mat-elevation-z8">
         <table
