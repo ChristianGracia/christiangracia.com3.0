@@ -15,7 +15,6 @@ export class GithubRepoComponent implements OnInit {
   public data: Repo[] = [];
   public page = 0;
   public size = 5;
-  private window: Window = window;
 
   constructor(private githubService: GithubService, public dialog: MatDialog) {}
 
@@ -23,10 +22,6 @@ export class GithubRepoComponent implements OnInit {
 
   ngOnInit() {
     this.getGithubRepos();
-  }
-
-  public openLink(url: string) {
-    window.open(url, "_blank");
   }
 
   public openRepoCommitModal(repoName: string, repoUrl: string) {
