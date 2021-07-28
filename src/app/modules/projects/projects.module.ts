@@ -1,5 +1,4 @@
 import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
 import { ProjectsComponent } from "./projects.component";
 import { ProjectsRoutingModule } from "./projects-routing.module";
 import { GithubRepoComponent } from "./components/github-repo/github-repo.component";
@@ -25,7 +24,6 @@ import { RepoCommitModalComponent } from "./modals/repo-commit-modal/repo-commit
     RepoCommitModalComponent,
   ],
   imports: [
-    CommonModule,
     ProjectsRoutingModule,
     SharedComponentsModule,
     SlideshowModule,

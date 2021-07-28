@@ -1,5 +1,4 @@
 import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
 import { SharedComponentsModule } from "../shared-components/shared-components.module";
 import { AnimatedDownArrowComponent } from "./components/animated-down-arrow/animated-down-arrow.component";
 import { AboutRoutingModule } from "./about-routing.module";
@@ -24,7 +23,6 @@ export function playerFactory() {
     JobHistoryComponent,
   ],
   imports: [
-    CommonModule,
     AboutRoutingModule,
     SharedComponentsModule,
 
