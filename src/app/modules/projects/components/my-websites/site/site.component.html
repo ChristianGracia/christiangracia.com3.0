@@ -1,4 +1,4 @@
-<mat-card class="site-card mat-elevation-z6">
+<mat-card class="site-card mat-elevation-z6" (click)="viewSite(site.url)">
   <mat-card-title class="site-title">
     {{ site.title }}
   </mat-card-title>
@@ -6,8 +6,8 @@
     <slideshow
       [height]="'350px'"
       [minHeight]="'325px'"
-      [autoPlay]="false"
-      [showArrows]="true"
+      [autoPlay]="true"
+      [showArrows]="false"
       [imageUrls]="site.imageUrls"
       [lazyLoad]="site.imageUrls?.length > 1"
       [autoPlayWaitForLazyLoad]="true"
@@ -18,15 +18,5 @@
   </mat-card-content>
   <mat-card-content>
     <p>{{ site.bottomText }}</p>
-    <div flexLayout="column" fxLayoutAlign="center center">
-      <button
-        (click)="viewSite(site.url)"
-        mat-raised-button
-        class="cg-hover-yellow"
-        aria-label="view site"
-      >
-        View Site
-      </button>
-    </div>
   </mat-card-content>
 </mat-card>
