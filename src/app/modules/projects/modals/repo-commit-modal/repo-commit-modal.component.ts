@@ -27,11 +27,11 @@ export class RepoCommitModalComponent implements OnInit {
   public pageSize = 25;
   public totalCommits;
 
-  displayedColumns: string[] = ["time", "message", "url"];
+  displayedColumns: string[] = ["time", "message"];
 
   @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
 
-  dataSource;
+  public dataSource;
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
     private githubService: GithubService
