@@ -16,7 +16,7 @@
   }
   .repo-update-text {
     font-weight: bold;
-    margin: 20px 0;
+    margin-top: 40px;
     font-size: 20px;
   }
   .card-container {
@@ -53,5 +53,10 @@
   }
   .w-100 {
     width: 100px;
+  }
+  .click-commit-text {
+    margin-bottom: 20px;
+    font-size: 11px;
+    font-weight: bold;
   }
 }
