@@ -22,7 +22,7 @@
     *ngFor="let repo of data"
     fxLayout="column"
     fxLayoutAlign="center"
-    class="repo-card mat-elevation-z6"
+    class="repo-card mat-elevation-z6 clickable"
     (click)="openRepoCommitModal(repo.name, repo.url)"
   >
     <mat-card-title class="repo-title">
