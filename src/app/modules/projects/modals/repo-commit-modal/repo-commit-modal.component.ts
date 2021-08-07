@@ -51,9 +51,10 @@ export class RepoCommitModalComponent implements OnInit {
       .getAllCommitsOfRepo(this.data.repo, 1000)
       .subscribe((data) => {
         this.dataSource = new MatTableDataSource<any>(data);
-        this.dataSource.paginator = this.paginator;
+        setTimeout(() => (this.dataSource.paginator = this.paginator));
         this.commits = data;
         this.totalCommits = this.commits.length;
+        console.log(this.totalCommits);
         this.loadingCommits = false;
       });
   }
