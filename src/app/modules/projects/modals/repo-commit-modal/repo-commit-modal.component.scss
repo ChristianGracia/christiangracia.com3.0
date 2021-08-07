@@ -44,18 +44,16 @@
   }
   .table-container {
     width: 100%;
+    overflow-x: auto;
     table {
       width: 100%;
     }
-    .mat-elevation-z8 {
-      overflow-x: auto;
+    .mat-row:hover {
+      background-color: black;
+      td {
+        color: white;
+      }
     }
-    .mat-table.mat-table {
-      min-width: 450px;
-    }
-  }
-  .w-100 {
-    width: 100px;
   }
   .click-commit-text {
     margin-bottom: 20px;

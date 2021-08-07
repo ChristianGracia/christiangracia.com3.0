@@ -7,6 +7,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatTableModule } from "@angular/material/table";
+import { MatRippleModule } from "@angular/material/core";
 import { CommonModule } from "@angular/common";
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { CommonModule } from "@angular/common";
     MatProgressSpinnerModule,
     MatPaginatorModule,
     MatTableModule,
+    MatRippleModule,
     CommonModule,
   ],
   declarations: [ContentHeaderComponent],
@@ -26,6 +28,7 @@ import { CommonModule } from "@angular/common";
     MatProgressSpinnerModule,
     MatPaginatorModule,
     MatTableModule,
+    MatRippleModule,
     CommonModule,
   ],
 })
