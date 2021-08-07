@@ -19,24 +19,6 @@
     margin-top: 40px;
     font-size: 20px;
   }
-  .card-container {
-    .commit-card {
-      margin-bottom: 36px;
-      .view-on-git-container {
-        margin-top: 4px;
-      }
-
-      .commit-message {
-        margin-top: 5px;
-        word-wrap: break-word;
-      }
-
-      .commit-time {
-        font-weight: bold;
-        font-size: 12px;
-      }
-    }
-  }
   .close-button-container {
     .close-button-text {
       font-size: 24px;
@@ -45,7 +27,16 @@
   .table-container {
     width: 100%;
     overflow-x: auto;
+    td {
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+    .time {
+      width: 30px;
+    }
+
     table {
+      padding: 10px 0px;
       width: 100%;
     }
     .mat-row:hover {

@@ -3,10 +3,14 @@ function militaryTimeConverter(date: Date) {
   const AmOrPm = hours >= 12 ? "PM" : "AM";
 
   hours = hours % 12 || 12;
+  let spacing = "";
+  if (hours < 10) {
+    spacing = " ";
+  }
   let minutes = date.getMinutes();
   let formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
 
-  return hours + ":" + formattedMinutes + " " + AmOrPm;
+  return hours + ":" + formattedMinutes + " " + AmOrPm + spacing;
 }
 function formatDateAndTime(date: string) {
   let formattedDate = new Date(date);
