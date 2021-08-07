@@ -8,6 +8,11 @@
   }
   &:hover {
     transform: scale(1.07);
+    background-color: black;
+    color: white;
+    .repo-title {
+      color: yellow;
+    }
   }
   .repo-title {
     font-weight: bold;
@@ -15,7 +20,6 @@
     margin: 16px 0 auto;
     color: #151747;
     &:hover {
-      color: grey;
       transform: scale(1.07);
     }
   }
