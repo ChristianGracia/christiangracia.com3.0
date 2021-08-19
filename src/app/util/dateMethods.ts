@@ -1,4 +1,4 @@
-function militaryTimeConverter(date: Date) {
+const militaryTimeConverter = (date: Date) => {
   let hours = date.getHours();
   const AmOrPm = hours >= 12 ? "PM" : "AM";
 
@@ -7,14 +7,14 @@ function militaryTimeConverter(date: Date) {
   let formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
 
   return hours + ":" + formattedMinutes + " " + AmOrPm;
-}
-function formatDateAndTime(date: string) {
+};
+const formatDateAndTime = (date: string) => {
   let formattedDate = new Date(date);
   return (
     militaryTimeConverter(formattedDate) +
     " " +
     formattedDate.toLocaleDateString("en-US")
   );
-}
+};
 
 export { militaryTimeConverter, formatDateAndTime };
