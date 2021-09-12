@@ -3,20 +3,14 @@ import { Site } from "../../../shared-components/models/site.model";
 
 const NFL_SITE: Site = new Site(
   "Nature's Frontier Landscaping",
-  "React front-end + NodeJS back-end site I made for Nature's Frontier Landscaping. Live at nflandscaping.com. Will be rewritten soon, I made this while just learning React",
-  "https://www.nflandscaping.com",
-  [
-    "https://i.imgur.com/TTgeW7Y.jpeg",
-    "https://i.imgur.com/dufsNaC.png",
-    "https://i.imgur.com/TIkU3jl.png",
-  ]
+  "Rewritting this site in TypeScript + adding server side rendering. I made this site when I first started learning React and want to redo + redesign",
+  "https://www.nflandscaping.com"
 );
 
 const MARKETFEELS: Site = new Site(
   "MarketFeels",
-  "Server side rendered React + Redux finance site written in TypeScript",
-  "https://marketfeels.com",
-  ["https://i.imgur.com/D1ualvH.jpeg"]
+  "Working on the ability to view finance info, post on social medias using bots (hype), add machine learning models, etc",
+  "https://marketfeels.com"
 );
 @Component({
   selector: "app-side-projects",
