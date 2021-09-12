@@ -9,6 +9,7 @@ import player from "lottie-web";
 import { SkillsComponent } from "./components/skills/skills.component";
 import { AboutHeroImageComponent } from "./components/about-hero-image/about-hero-image.component";
 import { JobHistoryComponent } from "./components/job-history/job-history.component";
+import { SideProjectsComponent } from './components/side-projects/side-projects.component';
 
 export function playerFactory() {
   return player;
@@ -21,6 +22,7 @@ export function playerFactory() {
     SkillsComponent,
     AboutHeroImageComponent,
     JobHistoryComponent,
+    SideProjectsComponent,
   ],
   imports: [
     AboutRoutingModule,
