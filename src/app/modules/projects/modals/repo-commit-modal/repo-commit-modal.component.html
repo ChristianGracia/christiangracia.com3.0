@@ -23,7 +23,7 @@
     >
       <table mat-table [dataSource]="dataSource">
         <ng-container matColumnDef="time" class="data-item">
-          <th mat-header-cell *matHeaderCellDef>Time</th>
+          <th mat-header-cell width="20%" *matHeaderCellDef>Time</th>
           <td mat-cell *matCellDef="let element">
             {{ formatDate(element.time) }}
           </td>
