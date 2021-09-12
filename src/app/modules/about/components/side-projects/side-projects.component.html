@@ -3,4 +3,14 @@
     contentTitle="Current Focus"
     contentDescription="In my freetime I am working on..."
   ></app-content-header>
+
+  <mat-card
+    *ngFor="let site of sites"
+    class="site-card mat-elevation-z6 clickable"
+  >
+    <mat-card-title class="site-title">
+      {{ site.title }}
+    </mat-card-title>
+    <mat-card-content>{{ site.bottomText }}</mat-card-content>
+  </mat-card>
 </div>
