@@ -1,7 +1,7 @@
 <section class="contact-form" *ngIf="!emailReceived">
   <form
     fxLayout="column"
-    fxLayoutGap="16px"
+    fxLayoutGap="10px"
     fxLayoutAlign="center center"
     #contactForm="ngForm"
     (ngSubmit)="submit(contactForm)"
@@ -43,7 +43,7 @@
     <mat-form-field color="accent">
       <textarea
         cdkTextareaAutosize
-        cdkAutosizeMinRows="4"
+        cdkAutosizeMinRows="2"
         cdkAutosizeMaxRows="10"
         matInput
         placeholder="Leave a message"
