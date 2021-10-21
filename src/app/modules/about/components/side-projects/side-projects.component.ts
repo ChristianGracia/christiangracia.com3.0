@@ -15,7 +15,7 @@ const MARKETFEELS: Site = new Site(
 
 const CG4: Site = new Site(
   "Christiangracia.com4.0",
-  "My new site I am writing that will replace this one soon. Featuring Angular12, complete server sider rendering, minimal css, full use of Material themes, all around better",
+  "My new site I am writing that will replace this one soon. Featuring Angular12, complete server side rendering, minimal css, full use of Material themes, all around better",
   "https://cg-playground.herokuapp.com/"
 );
 @Component({
